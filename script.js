@@ -1,41 +1,53 @@
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("dot");
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-
-    for (let j = 0; j < dots.length; j++) {
-        dots[j].className = dots[j].className.replace(" active", "");
-    }
-
-    slides[slideIndex - 1].style.display = "flex";  
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides, 5000); // Zmień slajd co 5 sekund
-}
-
-document.getElementById('hamburger').onclick = function() {
-    const navMenu = document.querySelector('nav ul');
-    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-};
-
-// Funkcja do zmiany slajdów na podstawie kliknięcia
-function currentSlide(n) {
-    slideIndex = n;
-    showSlides();
-}
-
-// Animacja ładowania
-window.addEventListener('load', function() {
-    const loader = document.querySelector('.loader');
-    loader.style.opacity = '0';
+// Loader timeout
+window.addEventListener("load", function() {
+    const loader = document.querySelector(".loader");
     setTimeout(() => {
-        loader.style.display = 'none';
-    }, 500);
+        loader.classList.add("hidden");
+    }, 1000);
+});
+
+// Slider functionality
+let currentSlideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.transform = `translateX(-${index * 100}%)`;
+        dots[i].classList.remove('active');
+    });
+    dots[index].classList.add('active');
+}
+
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+        showSlide(i);
+        currentSlideIndex = i;
+    });
+});
+
+// Back to top functionality
+const backToTopBtn = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
+    }
+});
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Mobile menu toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
 });
