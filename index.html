@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Side Of Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+</head>
+<body>
+    <div class="loader"></div>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Better Side Of Gaming</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#join">Join Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slide" style="background-image: url('images/slider1.jpg');">
+                <h2>Welcome to the Best Gaming Community</h2>
+            </div>
+            <div class="slide" style="background-image: url('images/slider2.jpg');">
+                <h2>Join Us for Exciting Tournaments</h2>
+            </div>
+            <div class="slide" style="background-image: url('images/slider3.jpg');">
+                <h2>Connect with Fellow Gamers</h2>
+            </div>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a community of gamers dedicated to providing a fun and supportive environment. Join us for events, discussions, and a place to make friends.</p>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <div class="event-list">
+                <div class="event" data-aos="fade-up">
+                    <h3>Game Night</h3>
+                    <p>Date: Every Friday</p>
+                    <p>Join us for weekly game nights with fun challenges and prizes!</p>
+                </div>
+                <div class="event" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Tournament</h3>
+                    <p>Date: Monthly</p>
+                    <p>Compete in our monthly tournaments for glory and rewards!</p>
+                </div>
+                <div class="event" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Community Meet-Up</h3>
+                    <p>Date: Quarterly</p>
+                    <p>Meet other members and discuss your favorite games!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community">
+        <div class="container">
+            <h2>Our Community</h2>
+            <p>We pride ourselves on having a friendly and supportive community. Join our Discord to connect with others and participate in discussions.</p>
+            <a href="https://discord.gg/Tr3BQPER34" class="btn">Join Our Discord</a>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item" data-aos="fade-up">
+                <h3>What games do you play?</h3>
+                <p>We play a variety of games, including FPS, RPG, and strategy games. Join us to find out more!</p>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                <h3>How can I participate in events?</h3>
+                <p>You can sign up for events in the designated channels on our Discord server.</p>
+            </div>
+            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                <h3>Is there an age limit?</h3>
+                <p>We encourage a mature environment, so we prefer members to be 18+, but good behavior is what truly matters.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="join">
+        <div class="container">
+            <h2>Join Us Today!</h2>
+            <p>Become part of our amazing gaming community. Click the button below to join our Discord server!</p>
+            <a href="https://discord.gg/Tr3BQPER34" class="btn">Join Our Discord</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Better Side Of Gaming. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+    </script>
+</body>
+</html>
