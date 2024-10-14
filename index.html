@@ -16,7 +16,7 @@
         <div class="container">
             <h1 class="logo">Better Side Of Gaming</h1>
             <nav>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#community">Community</a></li>
@@ -49,14 +49,25 @@
         </div>
     </div>
 
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up">
         <div class="container">
             <h2>About Us</h2>
-            <p>We are a community of gamers dedicated to providing a fun and supportive environment. Join us for events, discussions, and a place to make friends.</p>
+            <div class="about-content">
+                <img src="images/about.jpg" alt="About us image">
+                <div class="about-text">
+                    <p>We are a community of gamers dedicated to providing a fun and supportive environment. Whether you're new to gaming or a seasoned player, our community is here to welcome you!</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Weekly game nights</li>
+                        <li><i class="fas fa-check"></i> Monthly tournaments</li>
+                        <li><i class="fas fa-check"></i> Friendly and helpful community</li>
+                        <li><i class="fas fa-check"></i> Professional administration</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="events" class="events">
+    <section id="events" class="events" data-aos="fade-up">
         <div class="container">
             <h2>Upcoming Events</h2>
             <div class="event-list">
@@ -64,48 +75,58 @@
                     <h3>Game Night</h3>
                     <p>Date: Every Friday</p>
                     <p>Join us for weekly game nights with fun challenges and prizes!</p>
+                    <a href="#" class="btn">Join Event</a>
                 </div>
                 <div class="event" data-aos="fade-up" data-aos-delay="100">
                     <h3>Tournament</h3>
                     <p>Date: Monthly</p>
                     <p>Compete in our monthly tournaments for glory and rewards!</p>
+                    <a href="#" class="btn">Sign Up</a>
                 </div>
                 <div class="event" data-aos="fade-up" data-aos-delay="200">
                     <h3>Community Meet-Up</h3>
                     <p>Date: Quarterly</p>
                     <p>Meet other members and discuss your favorite games!</p>
+                    <a href="#" class="btn">RSVP</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="community" class="community">
+    <section id="community" class="community" data-aos="fade-up">
         <div class="container">
             <h2>Our Community</h2>
-            <p>We pride ourselves on having a friendly and supportive community. Join our Discord to connect with others and participate in discussions.</p>
-            <a href="https://discord.gg/Tr3BQPER34" class="btn">Join Our Discord</a>
+            <div class="community-content">
+                <div class="community-text">
+                    <p>We pride ourselves on having a friendly and supportive community. Join our Discord to connect with others and participate in discussions.</p>
+                    <a href="https://discord.gg/Tr3BQPER34" class="btn">Join Our Discord</a>
+                </div>
+                <img src="images/community.jpg" alt="Community image">
+            </div>
         </div>
     </section>
 
-    <section id="faq" class="faq">
+    <section id="faq" class="faq" data-aos="fade-up">
         <div class="container">
             <h2>Frequently Asked Questions</h2>
-            <div class="faq-item" data-aos="fade-up">
-                <h3>What games do you play?</h3>
-                <p>We play a variety of games, including FPS, RPG, and strategy games. Join us to find out more!</p>
-            </div>
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-                <h3>How can I participate in events?</h3>
-                <p>You can sign up for events in the designated channels on our Discord server.</p>
-            </div>
-            <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>Is there an age limit?</h3>
-                <p>We encourage a mature environment, so we prefer members to be 18+, but good behavior is what truly matters.</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What games do you play?</h3>
+                    <p>We play a variety of games, including FPS, RPG, and strategy games. Join us to find out more!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I participate in events?</h3>
+                    <p>You can sign up for events in the designated channels on our Discord server.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there an age limit?</h3>
+                    <p>We encourage a mature environment, so we prefer members to be 18+, but good behavior is what truly matters.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="join" class="join">
+    <section id="join" class="join" data-aos="fade-up">
         <div class="container">
             <h2>Join Us Today!</h2>
             <p>Become part of our amazing gaming community. Click the button below to join our Discord server!</p>
@@ -117,6 +138,7 @@
         <div class="container">
             <p>&copy; 2024 Better Side Of Gaming. All Rights Reserved.</p>
         </div>
+        <a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
     </footer>
 
     <script src="script.js"></script>
