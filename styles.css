@@ -46,6 +46,22 @@ body {
     text-align: left;
 }
 
+.container-center{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+    text-align: center;
+}
+
+.container-right{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+    text-align: right;
+}
+
 /* Header Styles */
 header {
     background-color: #121212;
@@ -273,6 +289,7 @@ h2 {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 1em;
 }
 
 .btn:hover {
