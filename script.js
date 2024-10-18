@@ -4,6 +4,9 @@
         const loader = document.querySelector(".loader");
         setTimeout(() => {
             loader.classList.add("hidden");
+            nextSlide();
+            nextSlide();
+            nextSlide();
         }, 1000);
     });
 
@@ -14,15 +17,17 @@
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.style.transform = `translateX(-${index * 100}%)`;
-            dots[i].classList.remove('active');
+            slide.classList.remove('active'); // Remove active class from all slides
+            slide.style.transform = `translateX(-${index * 100}%)`; // Move slide into view
         });
-        dots[index].classList.add('active');
+        slides[index].classList.add('active'); // Add active class to the current slide for fade-in effect
+        dots.forEach(dot => dot.classList.remove('active')); // Remove active class from all dots
+        dots[index].classList.add('active'); // Add active class to the current dot
     }
 
     // Automatically change slides every 5 seconds
     function nextSlide() {
-        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length; // Update index to show next slide
         showSlide(currentSlideIndex);
     }
 
@@ -109,5 +114,41 @@
         } else {
             header.classList.remove('scrolled');
         }
+    });
+
+    // Change slide on button click
+    document.querySelector('.prev').addEventListener('click', () => {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length; // Go to previous slide
+        showSlide(currentSlideIndex);
+        resetSlideInterval(); // Restart interval
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        nextSlide();
+        resetSlideInterval(); // Restart interval
+    });
+
+    // Keyboard Navigation for the slider
+    window.addEventListener('keydown', (event) => {
+        if (event.key === "ArrowLeft") {
+            // Show previous slide
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showSlide(currentSlideIndex);
+            resetSlideInterval(); // Restart interval
+        } else if (event.key === "ArrowRight") {
+            // Show next slide
+            nextSlide();
+            resetSlideInterval(); // Restart interval
+        }
+    });
+
+    // Pause the slider on mouse over
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseover', () => {
+        clearInterval(slideInterval); // Pause auto slide on mouse over
+    });
+
+    sliderContainer.addEventListener('mouseout', () => {
+        slideInterval = setInterval(nextSlide, 5000); // Resume auto slide on mouse out
     });
 })();

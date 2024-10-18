@@ -32,22 +32,26 @@
 
     <div class="slider">
         <div class="slider-container">
-            <div class="slide" style="background-image: url('images/Gaming BSOG.png');">
+            <a href="https://example.com/gaming-community" class="slide" style="background-image: url('images/Gaming BSOG.png');">
                 <h2>Welcome to the Best Gaming Community</h2>
-            </div>
-            <div class="slide" style="background-image: url('images/Community BSOG.png');">
+            </a>
+            <a href="https://example.com/tournaments" class="slide" style="background-image: url('images/Community BSOG.png');">
                 <h2>Join Us for Exciting Tournaments</h2>
-            </div>
-            <div class="slide" style="background-image: url('images/Connect With Friends BSOG.png');">
+            </a>
+            <a href="https://example.com/connect-with-friends" class="slide" style="background-image: url('images/Connect With Friends BSOG.png');">
                 <h2>Connect with Fellow Gamers</h2>
-            </div>
+            </a>
         </div>
         <div class="slider-dots">
             <span class="dot active" onclick="currentSlide(0)"></span>
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
         </div>
-    </div>    
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    
+    
 
     <section id="aboutus" class="about" data-aos="fade-up">
         <div class="container-center">
