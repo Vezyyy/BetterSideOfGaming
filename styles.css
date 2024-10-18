@@ -173,29 +173,43 @@ nav {
 
 /* Slider Styles */
 .slider {
-    margin-top: 100px;
-    overflow: hidden;
+    margin-top: 10em;
+    overflow: hidden; /* Ukrywa nadmiarowe części slajdów */
     position: relative;
+    width: 100vw; /* Ustaw szerokość na 100% widoku */
 }
 
 .slider-container {
     display: flex;
     transition: transform 0.5s ease;
+    width: 100%; /* Upewnij się, że kontener zajmuje 100% szerokości */
 }
 
 .slide {
-    min-width: 100%;
-    height: 750px;
-    background-size: cover;
-    background-position: center;
+    min-width: 100%; /* Ustaw minimalną szerokość na 100% */
+    height: 750px; /* Możesz dostosować tę wartość */
+    background-size: contain; /* Użyj contain, aby cały obraz był widoczny */
+    background-position: center; /* Ustawia środek obrazu */
+    background-repeat: no-repeat; /* Zapobiega powtarzaniu się tła */
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease;
+    margin: 0; /* Upewnij się, że nie ma marginesów */
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sprawia, że obrazek dopasowuje się, zachowując proporcje */
+    object-position: center; /* Ustawienie obrazka na środku */
 }
 
 .slide h2 {
-    background-color: rgba(0, 0, 0, 0.651);
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.76);
     padding: 20px;
     border-radius: 10px;
     color: #ffffff;
@@ -206,10 +220,11 @@ nav {
 
 .slider-dots {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .dot {
@@ -228,8 +243,49 @@ nav {
 .dot.active {
     transition: ease-in-out 0.5s;
     background-color: #ffffff;
-    transform: scale(1.3)
+    transform: scale(1.3);
 }
+
+/* Responsive Slider Adjustments */
+@media (max-width: 1200px) {
+    .slider {
+        height: 500px; /* Dostosowanie wysokości na średnie ekrany */
+        margin-top: 10em;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 400px; /* Dostosowanie wysokości dla tabletów */
+        margin-top: 0em;
+    }
+
+    .slide h2 {
+        font-size: 2rem;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .slider {
+        height: 500px; /* Dostosowanie wysokości dla telefonów komórkowych */
+    }
+
+    .slide h2 {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    .dot.active {
+        transform: scale(1.2);
+    }
+}
+
 
 /* Section Styles */
 section {
