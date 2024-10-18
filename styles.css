@@ -3,6 +3,18 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Dotted red border */
+.line {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 75%;
+    width: 80%;
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie elementów wewnątrz linii */
+    margin: 0 auto; /* Wyśrodkowanie całej linii w kontenerze */
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,6 +48,19 @@ body {
 .loader.hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+/* Main Images */
+
+.main-images {
+    width: 100%;
+    max-width: 750px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+    margin-bottom: 2em;
+    border-radius: 10%;
+    border: #f4f4f4 solid 2px;
 }
 
 /* Container Styles */
@@ -147,6 +172,7 @@ nav {
     cursor: pointer;
     transition: transform 0.3s ease;
     position: relative;
+    text-align: center;
 }
 
 .hamburger.open i {
@@ -346,10 +372,13 @@ h2 {
 .about-content img,
 .community-content img {
     width: 100%;
-    max-width: 500px;
+    max-width: 750px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
+    margin-bottom: 2em;
+    border-radius: 10%;
+    border: #f4f4f4 solid 2px;
 }
 
 .about-content img:hover,

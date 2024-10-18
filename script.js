@@ -79,7 +79,9 @@
         { text: 'Events', icon: 'fas fa-calendar-alt' },
         { text: 'Community', icon: 'fas fa-users' },
         { text: 'Join Us', icon: 'fas fa-user-plus' },
-        { text: 'FAQ', icon: 'fas fa-question-circle' }
+        { text: 'FAQ', icon: 'fas fa-question-circle' },
+        { text: 'Join Discord', icon: 'fab fa-discord' },
+        { text: 'Apply to Administrator', icon: 'fas fa-user-shield' } 
     ];
 
     // Create menu items dynamically
@@ -95,7 +97,7 @@
         // Change hamburger color on click
         hamburger.style.color = navMenu.classList.contains('active') ? '#66ff91' : '#f4f4f4';
     });
-
+    
     // Close mobile menu when clicking outside
     document.addEventListener('click', (event) => {
         const isClickInside = navMenu.contains(event.target) || hamburger.contains(event.target);
@@ -105,6 +107,18 @@
             hamburger.style.color = '#f4f4f4'; // Reset color
         }
     });
+    
+    // Close mobile menu when clicking on any menu item
+    const menuLinks = document.querySelectorAll('#nav-menu a');
+    
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active'); // Zamknięcie menu
+            hamburger.classList.remove('open'); // Zmiana ikony hamburgera
+            hamburger.style.color = '#f4f4f4'; // Resetowanie koloru hamburgera
+        });
+    });
+    
 
     // Sticky header effect
     window.addEventListener('scroll', () => {
