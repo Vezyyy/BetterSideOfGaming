@@ -361,38 +361,82 @@ nav {
     border-bottom: 2px solid #50fa7b;
 }
 
+/* Hamburger Menu */
+
+.ham-container {
+    display: flex; /* Umożliwienie flexbox */
+    flex-direction: column; /* Ułożenie elementów w kolumnie */
+    justify-content: center; /* Wyśrodkowanie elementów */
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    padding: 10px; /* Padding dla lepszego wyglądu */
+}
+
 .hamburger {
-    display: none;
-    width: 10%;
-    color: #f4f4f4;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    position: relative;
-    text-align: center;
+    display: block; /* Widoczny na urządzeniach mobilnych */
+    width: 40px; /* Szerokość hamburgera */
+    height: 40px; /* Wysokość hamburgera */
+    color: #f4f4f4; /* Kolor ikon */
+    cursor: pointer; /* Wskazanie, że można klikać */
+    transition: transform 0.3s ease; /* Płynne przejście */
+    position: relative; /* Umożliwia pozycjonowanie wewnętrznych elementów */
+}
+
+/* Ukryj hamburgera na komputerach */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; /* Hamburger ukryty na większych ekranach */
+    }
+}
+
+/* Pozostała część Twojego CSS dla hamburgera */
+.hamburger i {
+    font-size: 2rem; /* Rozmiar ikony hamburgera */
 }
 
 .hamburger.open i {
-    display: none;
+    display: none; /* Ukryj ikonę, gdy hamburger jest otwarty */
 }
 
 .hamburger.open::before,
 .hamburger.open::after {
     content: "";
     position: absolute;
-    top: 0;
     left: 0;
     width: 2em;
     height: 0.2em;
     background: #f4f4f4;
+    transition: transform 0.3s ease;
 }
 
 .hamburger.open::before {
     transform: rotate(45deg);
+    top: 50%;
+    transform-origin: center;
 }
 
 .hamburger.open::after {
     transform: rotate(-45deg);
+    top: 50%;
+    transform-origin: center;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2em;
+    height: 0.2em;
+    background: #f4f4f4;
+    transition: transform 0.3s ease;
+}
+
+.hamburger::before {
+    top: 30%;
+}
+
+.hamburger::after {
+    top: 70%;
 }
 
 /* Slider Styles */
@@ -628,6 +672,7 @@ h2 {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 2em;
 }
 
 .btn-apply{
