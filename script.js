@@ -1,4 +1,3 @@
-// Function to initialize the website
 (function () {
     // Loader timeout
     window.addEventListener("load", function () {
@@ -21,6 +20,21 @@
         dots[index].classList.add('active');
     }
 
+    // Automatically change slides every 5 seconds
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+    }
+
+    // Declare slideInterval variable to allow restarting
+    let slideInterval = setInterval(nextSlide, 5000); // Change slides every 5 seconds
+
+    // Reset the auto slide interval
+    function resetSlideInterval() {
+        clearInterval(slideInterval); // Clear the previous interval
+        slideInterval = setInterval(nextSlide, 5000); // Restart interval
+    }
+
     // Event delegation for dots
     document.querySelector('.slider-dots').addEventListener('click', (event) => {
         const target = event.target;
@@ -28,6 +42,7 @@
             const index = Array.from(dots).indexOf(target);
             showSlide(index);
             currentSlideIndex = index;
+            resetSlideInterval();  // Restart auto slide change after manual interaction
         }
     });
 
