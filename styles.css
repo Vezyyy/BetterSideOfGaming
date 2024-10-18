@@ -269,6 +269,13 @@ body {
     text-align: center;
 }
 
+.container-center-staff {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
 .container-right {
     max-width: 90%;
     margin: 0 auto;
@@ -594,11 +601,6 @@ h2 {
     border: #f4f4f4 solid 2px;
 }
 
-.about-content img:hover,
-.community-content img:hover {
-    transform: scale(1.05);
-}
-
 .about-list,
 .faq-list {
     margin-top: 20px;
@@ -626,7 +628,10 @@ h2 {
     text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 1em;
+}
+
+.btn-apply{
+    margin-bottom: 4em;
 }
 
 /* Efekt hover dla przycisku */
@@ -649,6 +654,7 @@ footer {
     text-align: center;
     padding: 20px;
     position: relative;
+    border-top: 2px solid white;
 }
 
 /* Back to Top Button */
@@ -754,4 +760,59 @@ footer {
 .section-animate.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Main Staff */
+.staff {
+    background-color: #252525; /* Dark background for the staff section */
+    padding: 40px 0; /* Add padding to top and bottom */
+    text-align: center; /* Center text in the section */
+}
+
+.staff h2 {
+    font-size: 2.5em; /* Larger font for emphasis */
+    margin-bottom: 20px; /* Space below the title */
+    color: #fff; /* White color for text */
+}
+
+.staff-grid {
+    display: flex; /* Use flex layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center items */
+    gap: 20px; /* Space between flex items */
+    padding: 0 20px; /* Side padding */
+}
+
+.staff-member {
+    background-color: #333; /* Darker card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    overflow: hidden; /* Clip overflow for rounded corners */
+    padding: 20px; /* Padding inside the card */
+    transition: transform 0.3s; /* Smooth scale on hover */
+    max-width: 40em; /* Limit width of each member card */
+    flex: 1 1 200px; /* Allow cards to grow, shrink and have a base width */
+    text-align: center; /* Center text inside each card */
+}
+
+.staff-member:hover {
+    transform: scale(1.05); /* Scale up on hover for emphasis */
+}
+
+.staff-member img {
+    width: 10em; /* Make images responsive */
+    height: 10em; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular images */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.staff-member h3 {
+    margin: 10px 0; /* Space above and below name */
+    color: #fff; /* White color for names */
+    font-size: 1.5em; /* Larger font for names */
+}
+
+.staff-member p {
+    color: #e0e0e0; /* Slightly lighter text for descriptions */
+    line-height: 1.5; /* Improved readability */
 }
