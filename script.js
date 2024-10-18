@@ -32,7 +32,7 @@
     }
 
     // Declare slideInterval variable to allow restarting
-    let slideInterval = setInterval(nextSlide, 5000); // Change slides every 5 seconds
+    let slideInterval = setInterval(nextSlide, 3000); // Change slides every 3 seconds
 
     // Reset the auto slide interval
     function resetSlideInterval() {
@@ -81,7 +81,7 @@
         { text: 'Join Us', icon: 'fas fa-user-plus' },
         { text: 'FAQ', icon: 'fas fa-question-circle' },
         { text: 'Join Discord', icon: 'fab fa-discord' },
-        { text: 'Apply to Administrator', icon: 'fas fa-user-shield' } 
+        { text: 'Apply to Administrator', icon: 'fas fa-user-shield' }
     ];
 
     // Create menu items dynamically
@@ -97,7 +97,7 @@
         // Change hamburger color on click
         hamburger.style.color = navMenu.classList.contains('active') ? '#66ff91' : '#f4f4f4';
     });
-    
+
     // Close mobile menu when clicking outside
     document.addEventListener('click', (event) => {
         const isClickInside = navMenu.contains(event.target) || hamburger.contains(event.target);
@@ -107,10 +107,10 @@
             hamburger.style.color = '#f4f4f4'; // Reset color
         }
     });
-    
+
     // Close mobile menu when clicking on any menu item
     const menuLinks = document.querySelectorAll('#nav-menu a');
-    
+
     menuLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active'); // Zamknięcie menu
@@ -118,7 +118,7 @@
             hamburger.style.color = '#f4f4f4'; // Resetowanie koloru hamburgera
         });
     });
-    
+
 
     // Sticky header effect
     window.addEventListener('scroll', () => {
@@ -165,4 +165,27 @@
     sliderContainer.addEventListener('mouseout', () => {
         slideInterval = setInterval(nextSlide, 5000); // Resume auto slide on mouse out
     });
+
+    // Apply To Admin - Google Forms
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("openModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Otwórz modal przy kliknięciu przycisku
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // Zamknij modal przy kliknięciu na "x"
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // Zamknij modal przy kliknięciu poza modalem
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 })();

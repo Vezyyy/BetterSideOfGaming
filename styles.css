@@ -1,3 +1,5 @@
+/* OTHER */
+
 /* General Styles */
 html {
     scroll-behavior: smooth;
@@ -9,10 +11,198 @@ html {
     border-radius: 75%;
     width: 80%;
     display: flex;
-    justify-content: center; /* Wyśrodkowanie elementów wewnątrz linii */
-    margin: 0 auto; /* Wyśrodkowanie całej linii w kontenerze */
+    justify-content: center;
+    /* Wyśrodkowanie elementów wewnątrz linii */
+    margin: 0 auto;
+    /* Wyśrodkowanie całej linii w kontenerze */
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+/* Blinking Text */
+
+.blinking-text {
+    animation: blink-animation 1.5s infinite;
+    /* Płynna animacja */
+    color: #66ff91;
+    /* Kolor tekstu */
+}
+
+.blinking-text {
+    animation: blink-animation 2s infinite;
+    /* Płynna animacja trwa 2 sekundy */
+    color: #66ff91;
+    /* Domyślny kolor tekstu */
+}
+
+.blinking-text {
+    animation: blink-animation 2s infinite;
+    /* Płynna animacja trwa 2 sekundy */
+    color: #66ff91;
+    /* Domyślny kolor tekstu */
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 1;
+        /* Tekst w pełni widoczny */
+        color: #66ff91;
+        /* Kolor początkowy */
+        transform: scale(1.1);
+        /* Powiększenie tekstu */
+    }
+
+    25% {
+        opacity: 0.5;
+        /* Tekst półprzezroczysty */
+        color: #66c2ff;
+        /* Zmiana koloru */
+        transform: scale(1);
+        /* Normalny rozmiar */
+    }
+
+    50% {
+        opacity: 0.2;
+        /* Tekst bardziej przezroczysty */
+        color: #b566ff;
+        /* Zmiana koloru */
+        transform: scale(1.1);
+        /* Powiększenie tekstu */
+    }
+
+    75% {
+        opacity: 0.5;
+        /* Tekst półprzezroczysty */
+        color: #7566ff;
+        /* Zmiana koloru */
+        transform: scale(1);
+        /* Normalny rozmiar */
+    }
+
+    100% {
+        opacity: 1;
+        /* Tekst znów w pełni widoczny */
+        color: #66ff91;
+        /* Powrót do koloru początkowego */
+        transform: scale(1.1);
+        /* Powiększenie tekstu */
+    }
+}
+
+/* Google Forms - Apply Admin */
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed; /* Stay in the same position */
+    z-index: 1000; /* Above other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent */
+    backdrop-filter: blur(8px); /* Background blur effect */
+    animation: fadeIn 0.4s; /* Fade-in animation */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #1e1e2f; /* Dark themed background */
+    margin: 10% auto; /* 10% from top, centered horizontally */
+    padding: 30px; /* Increased padding */
+    border: 1px solid #444; /* Darker border */
+    width: 80%; /* Width of modal */
+    max-width: 600px; /* Max width */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Depth shadow */
+    animation: slideIn 0.4s; /* Slide-in animation */
+}
+
+/* Close Button */
+.close {
+    color: #ff4d4d; /* Red color */
+    float: right; /* Align to the right */
+    font-size: 24px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.close:hover,
+.close:focus {
+    color: #ff1a1a; /* Darker red on hover */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Apply Button */
+.btn-apply {
+    display: inline-block;
+    width: 100%; /* Full width */
+    max-width: 300px; /* Max width */
+    height: 60px; /* Button height */
+    background-color: #50fa7b; /* Button color */
+    color: #121212; /* Text color */
+    padding: 10px 20px;
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing */
+    border-radius: 8px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    box-shadow: 0 4px 15px rgba(0, 255, 119, 0.4); /* Button shadow */
+    margin: 1em auto; /* Center button */
+    font-size: 18px; /* Font size */
+}
+
+.btn-apply:hover {
+    background-color: #41e074; /* Lighter color on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Submit Button Inside Modal */
+.submit-button {
+    display: block; /* Block display for centering */
+    margin: 20px auto; /* Center with margin */
+    padding: 10px 20px; /* Padding for the button */
+    background-color: #ff4d4d; /* Submit button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Initial opacity */
+    }
+    to {
+        opacity: 1; /* Final opacity */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px); /* Initial position */
+        opacity: 0; /* Initial opacity */
+    }
+    to {
+        transform: translateY(0); /* Final position */
+        opacity: 1; /* Final opacity */
+    }
+}
+
+
+/* MAIN */
+
+p{
+    font-size: large;
 }
 
 * {
@@ -71,7 +261,7 @@ body {
     text-align: left;
 }
 
-.container-center{
+.container-center {
     max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
@@ -79,7 +269,7 @@ body {
     text-align: center;
 }
 
-.container-right{
+.container-right {
     max-width: 90%;
     margin: 0 auto;
     padding: 0 20px;
@@ -205,32 +395,40 @@ nav {
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 600px; /* Default height on desktop */
+    height: 600px;
+    /* Default height on desktop */
 }
 
 .slider-container {
     display: flex;
-    transition: transform 0.5s ease; /* Transition for slide movement */
-    width: 100%; /* Ensure the container takes full width */
+    transition: transform 0.5s ease;
+    /* Transition for slide movement */
+    width: 100%;
+    /* Ensure the container takes full width */
 }
 
 .slide {
-    min-width: 100%; /* Set minimum width to 100% */
-    height: 600px; /* Can adjust this value */
+    min-width: 100%;
+    /* Set minimum width to 100% */
+    height: 600px;
+    /* Can adjust this value */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.5s ease; /* Transition for opacity */
-    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+    /* Transition for opacity */
+    opacity: 0;
+    /* Initially hidden */
 }
 
 .slide.active {
-    opacity: 1; /* Show active slide */
+    opacity: 1;
+    /* Show active slide */
 }
 
-.slide.active:hover{
+.slide.active:hover {
     opacity: 0.5;
 }
 
@@ -262,17 +460,21 @@ nav {
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Add transform transition */
-    border: 1px solid rgb(0, 0, 0); /* Updated border style */
+    transition: background-color 0.3s, transform 0.3s;
+    /* Add transform transition */
+    border: 1px solid rgb(0, 0, 0);
+    /* Updated border style */
 }
 
 .dot.active {
     background-color: #ffffff;
-    transform: scale(1.3); /* Scale up active dot */
+    transform: scale(1.3);
+    /* Scale up active dot */
 }
 
 /* Navigation buttons */
-.prev, .next {
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -284,31 +486,38 @@ nav {
     z-index: 2;
     font-size: 18px;
     border-radius: 5px;
-    transition: background-color 0.3s; /* Add transition for hover effect */
+    transition: background-color 0.3s;
+    /* Add transition for hover effect */
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker on hover */
 }
 
 .prev {
-    left: 10px; /* Positioning for left button */
+    left: 10px;
+    /* Positioning for left button */
 }
 
 .next {
-    right: 10px; /* Positioning for right button */
+    right: 10px;
+    /* Positioning for right button */
 }
 
 /* Responsive Slider Adjustments */
 @media (max-width: 1200px) {
     .slider {
-        height: 500px; /* Dostosowanie wysokości na średnie ekrany */
+        height: 500px;
+        /* Dostosowanie wysokości na średnie ekrany */
     }
 }
 
 @media (max-width: 768px) {
     .slider {
-        height: 400px; /* Dostosowanie wysokości dla tabletów */
+        height: 400px;
+        /* Dostosowanie wysokości dla tabletów */
     }
 
     .slide h2 {
@@ -319,7 +528,8 @@ nav {
 
 @media (max-width: 600px) {
     .slider {
-        height: 500px; /* Dostosowanie wysokości dla telefonów komórkowych */
+        height: 500px;
+        /* Dostosowanie wysokości dla telefonów komórkowych */
     }
 
     .slide h2 {
@@ -337,11 +547,11 @@ nav {
     }
 }
 
-.prev:hover{
+.prev:hover {
     color: #50fa7b;
 }
 
-.next:hover{
+.next:hover {
     color: #50fa7b;
 }
 
@@ -354,7 +564,7 @@ section {
 h2 {
     text-align: center;
     font-size: 2.5rem;
-    color: #50fa7b;
+    color: #506ffa;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
@@ -363,9 +573,12 @@ h2 {
 .about-content,
 .community-content {
     display: flex;
-    flex-direction: column; /* Change this to column if it's in a row */
-    align-items: center;    /* Center items horizontally */
-    text-align: center;     /* Center text inside the items */
+    flex-direction: column;
+    /* Change this to column if it's in a row */
+    align-items: center;
+    /* Center items horizontally */
+    text-align: center;
+    /* Center text inside the items */
 }
 
 
@@ -415,6 +628,14 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 1em;
 }
+
+/* Efekt hover dla przycisku */
+.btn-apply:hover {
+    background: linear-gradient(135deg, #00c8ff, #50fa7b); /* Zmiana gradientu */
+    transform: translateY(-3px); /* Lekki ruch w górę */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Zwiększenie cienia */
+}
+
 
 .btn:hover {
     background-color: #66ff91;
@@ -515,6 +736,7 @@ footer {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
