@@ -287,7 +287,6 @@ body {
 /* Header Styles */
 header {
     background-color: #121212;
-    padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -298,6 +297,11 @@ header {
 
 header.scrolled {
     background-color: rgba(18, 18, 18, 0.9);
+}
+
+.logo-img{
+    width: 5em;
+    height: 5em;
 }
 
 .logo {
@@ -437,7 +441,6 @@ nav {
     align-items: center; /* Wyśrodkowanie elementów w pionie */
     padding: 10px; /* Padding dla lepszego wyglądu */
     text-align: center;
-    padding-bottom: 30px;
 }
 
 .ham-menu{
@@ -474,6 +477,11 @@ nav {
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 2px;
+    }
+
+    .logo-img{
+        width: 5em;
+        height: 5em;
     }
 }
 
