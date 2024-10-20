@@ -463,6 +463,20 @@ nav {
     }
 }
 
+/* Logo na Telefonie */
+@media (max-width: 768px) {
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #50fa7b;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
 /* Pokaż Napis Menu Na Telefonach */
 @media (max-width: 768px) {
     .ham-menu {
