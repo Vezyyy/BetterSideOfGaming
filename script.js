@@ -78,7 +78,7 @@
         { text: 'About Us', icon: 'fas fa-info-circle' },
         { text: 'Events', icon: 'fas fa-calendar-alt' },
         { text: 'Community', icon: 'fas fa-users' },
-        { text: 'Join Us', icon: 'fas fa-user-plus' },
+        { text: 'Discord Stats', icon: 'fas fa-chart-line' },
         { text: 'FAQ', icon: 'fas fa-question-circle' },
         { text: 'Join Discord', icon: 'fab fa-discord' },
         { text: 'Apply to Administrator', icon: 'fas fa-user-shield' }
@@ -192,4 +192,5 @@
     document.getElementById('close-btn').addEventListener('click', function() {
         document.getElementById('popup').style.display = 'none';
     });
+
 })();

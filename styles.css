@@ -89,6 +89,77 @@ html {
     }
 }
 
+/* PEOPLE */
+/* PEOPLE */
+.user-count {
+    background-color: #282828; /* Kolor tła sekcji */
+    padding: 40px; /* Odstępy wewnętrzne */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    margin: 40px auto; /* Marginesy z góry i dołu oraz automatyczne wyśrodkowanie */
+    width: 100%; /* 100% szerokości */
+    max-width: 800px; /* Maksymalna szerokość sekcji */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Cień dla głębi */
+    text-align: center; /* Wyśrodkowanie tekstu */
+}
+
+.user-count h2 {
+    color: #50fa7b; /* Kolor tytułu */
+    margin: 20px 0; /* Marginesy nad i pod tytułem */
+    font-weight: bold; /* Pogrubienie nagłówka */
+    font-size: 2em; /* Zwiększenie rozmiaru czcionki nagłówka */
+}
+
+.user-number {
+    display: flex; /* Umożliwia wyrównanie ikon i tekstu w linii */
+    justify-content: space-around; /* Równomierne rozłożenie zawartości */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    width: 100%; /* 100% szerokości */
+    margin: 20px 0; /* Margines górny i dolny */
+}
+
+.user-type {
+    display: flex; /* Umożliwia wyrównanie ikony i tekstu */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    font-size: 1.5em; /* Zwiększenie rozmiaru czcionki dla liczby użytkowników */
+}
+
+.user-type i {
+    margin-right: 10px; /* Odstęp między ikoną a tekstem */
+    color: #50fa7b; /* Kolor ikony */
+    font-size: 1.5em; /* Zwiększenie rozmiaru ikony */
+}
+
+.join-us-message {
+    color: #ffffff; /* Kolor tekstu zapraszającego */
+    margin-top: 20px; /* Margines górny dla tekstu zapraszającego */
+    font-size: 1.2em; /* Zwiększenie rozmiaru czcionki tekstu zapraszającego */
+}
+
+/* Zmniejszenie rozmiarów na urządzeniach mobilnych */
+@media (max-width: 768px) {
+    .user-count h2 {
+        font-size: 1.5em; /* Zmniejszenie rozmiaru nagłówka */
+    }
+
+    .user-number {
+        flex-direction: column; /* Ułożenie ikon i tekstu w kolumnie */
+        align-items: center; /* Wyśrodkowanie w pionie */
+    }
+
+    .user-type {
+        font-size: 1.2em; /* Zmniejszenie rozmiaru czcionki dla liczby użytkowników */
+    }
+
+    .user-type i {
+        font-size: 1.2em; /* Zmniejszenie rozmiaru ikon */
+    }
+
+    .join-us-message {
+        font-size: 1em; /* Zmniejszenie rozmiaru czcionki tekstu zapraszającego */
+    }
+}
+
+
 /* Google Forms - Apply Admin */
 
 /* Modal Styles */
