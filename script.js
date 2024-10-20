@@ -188,4 +188,8 @@
             modal.style.display = "none";
         }
     }
+    // Close Popup
+    document.getElementById('close-btn').addEventListener('click', function() {
+        document.getElementById('popup').style.display = 'none';
+    });
 })();
