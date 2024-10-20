@@ -75,10 +75,10 @@
 
     // Add icons to menu items
     const menuItems = [
+        { text: 'Discord Stats', icon: 'fas fa-chart-line' },
         { text: 'About Us', icon: 'fas fa-info-circle' },
         { text: 'Events', icon: 'fas fa-calendar-alt' },
         { text: 'Community', icon: 'fas fa-users' },
-        { text: 'Discord Stats', icon: 'fas fa-chart-line' },
         { text: 'FAQ', icon: 'fas fa-question-circle' },
         { text: 'Join Discord', icon: 'fab fa-discord' },
         { text: 'Apply to Administrator', icon: 'fas fa-user-shield' }
