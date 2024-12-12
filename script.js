@@ -132,6 +132,28 @@
         });
     });
 
+    // Zapobiega domyślnemu zachowaniu linków i przesuwa stronę do celu z przesunięciem
+    document.addEventListener('DOMContentLoaded', () => {
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const topPosition = targetElement.offsetTop - 100;  // Przesunięcie o 100px
+
+                    window.scrollTo({
+                        top: topPosition,
+                        behavior: 'smooth'  // Płynne przewijanie
+                    });
+                }
+            });
+        });
+    });
 
     // Sticky header effect
     window.addEventListener('scroll', () => {
