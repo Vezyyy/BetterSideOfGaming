@@ -119,6 +119,19 @@
         });
     });
 
+    // Select the container element
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('container');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('hide');
+            } else {
+                header.classList.remove('hide');
+            }
+        });
+    });
+
 
     // Sticky header effect
     window.addEventListener('scroll', () => {
@@ -189,7 +202,7 @@
         }
     }
     // Close Popup
-    document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('close-btn').addEventListener('click', function () {
         document.getElementById('popup').style.display = 'none';
     });
 
