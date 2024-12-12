@@ -1112,6 +1112,13 @@ footer {
 
 .loader {
     animation: fadeIn 0.5s ease-out;
+    opacity: 1;
+    background-color: #47d2f8;
+    z-index: 99999;
+}
+
+.loader.img{
+    border: 2px solid black;
 }
 
 .section-animate {
