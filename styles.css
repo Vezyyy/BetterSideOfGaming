@@ -983,23 +983,19 @@ header.scrolled {
 /* Sekcja współpracy */
 .partnership-section {
     background-color: #333;
-    /* Ciemne tło sekcji */
     color: #fff;
-    /* Biały tekst */
     padding: 80px 0;
     text-align: center;
     border-top: 4px solid #444;
-    /* Subtelna linia oddzielająca sekcję */
     font-family: 'Roboto', sans-serif;
-    /* Nowoczesna czcionka */
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px; /* Dodanie paddingu, aby zachować przestrzeń na ekranach mobilnych */
-    text-align: center; /* Wyśrodkowanie zawartości */
+    padding: 0 15px;
+    text-align: center; /* Wyśrodkowanie tekstu */
 }
 
 .section-title {
@@ -1015,9 +1011,10 @@ header.scrolled {
     display: flex;
     justify-content: center;
     gap: 40px; /* Zmniejszenie odstępu między logo na mniejszych ekranach */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Dodanie tej opcji, aby logo przechodziły do nowego wiersza */
     margin-top: 40px;
-    overflow: hidden; /* Zapobiega przesuwaniu w poziomie */
+    overflow: hidden;
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
 }
 
 .logo {
@@ -1026,34 +1023,28 @@ header.scrolled {
     align-items: center;
     transition: transform 0.3s ease-in-out;
     text-decoration: none;
-    /* Usunięcie podkreślenia z linku */
     color: #fff;
-    min-width: 220px; /* Zapewnienie minimalnej szerokości dla każdego logo */
+    width: 220px; /* Określenie stałej szerokości dla logo */
     flex-grow: 1; /* Elastyczność elementów */
-    box-sizing: border-box; /* Zapobiega przekraczaniu szerokości */
+    box-sizing: border-box;
 }
 
 .logo img {
-    max-width: 250px;
-    /* Większy rozmiar logo */
-    max-height: 150px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 20px;
     object-fit: contain;
     filter: grayscale(100%);
-    /* Użycie szarości na logo */
     transition: filter 0.3s ease;
-    width: 100%; /* Zapewnia responsywność */
 }
 
 .logo img:hover {
     filter: grayscale(0%);
-    /* Kolorowe logo po najechaniu */
 }
 
 .logo p {
     font-size: 1.4rem;
     color: #bbb;
-    /* Jaśniejszy szary tekst */
     margin-top: 15px;
     text-transform: uppercase;
     font-weight: 600;
@@ -1063,24 +1054,23 @@ header.scrolled {
 
 .logo:hover p {
     color: #fff;
-    /* Kolor tekstu po najechaniu */
 }
 
 @media (max-width: 768px) {
     .logos {
-        gap: 20px; /* Zmniejszenie gap na mniejszych ekranach */
+        gap: 20px;
     }
 
     .logo img {
-        max-width: 180px; /* Dostosowanie rozmiaru logo */
+        max-width: 180px;
     }
 
     .section-title {
-        font-size: 2.5rem; /* Zmniejszenie rozmiaru tytułu na mobilnych ekranach */
+        font-size: 2.5rem;
     }
 
     .logo p {
-        font-size: 1.2rem; /* Dostosowanie rozmiaru tekstu */
+        font-size: 1.2rem;
     }
 }
 
