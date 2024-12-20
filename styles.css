@@ -996,6 +996,7 @@ header.scrolled {
     margin: 0 auto;
     padding: 0 15px;
     text-align: center; /* Wyśrodkowanie tekstu */
+    justify-content: center;
 }
 
 .section-title {
@@ -1015,6 +1016,7 @@ header.scrolled {
     margin-top: 40px;
     overflow: hidden;
     align-items: center; /* Wyśrodkowanie elementów w pionie */
+    width: 100%;
 }
 
 .logo {
