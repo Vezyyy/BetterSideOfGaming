@@ -15,6 +15,7 @@
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
 
+    // Ensure the first slide is shown initially
     function showSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.remove('active'); // Remove active class from all slides
@@ -24,6 +25,9 @@
         dots.forEach(dot => dot.classList.remove('active')); // Remove active class from all dots
         dots[index].classList.add('active'); // Add active class to the current dot
     }
+
+    // Initialize the slider by showing the first slide
+    showSlide(currentSlideIndex);
 
     // Automatically change slides every 5 seconds
     function nextSlide() {
@@ -52,74 +56,54 @@
     });
 
     // Back to top functionality
-    const backToTopBtn = document.getElementById('back-to-top');
+    const backToTopButton = document.getElementById('back-to-top');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            backToTopBtn.classList.add('show');
+    // Show the button when the user scrolls down
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block"; // Button visible
         } else {
-            backToTopBtn.classList.remove('show');
+            backToTopButton.style.display = "none"; // Button hidden
         }
+    };
+
+    // Scroll to the top when the button is clicked
+    backToTopButton.onclick = function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scrolling
+    };
+
+    // Navigation
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
     });
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    document.addEventListener("DOMContentLoaded", function () {
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', function () {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Jeśli przewijasz w dół, chowa navbar
+            if (currentScroll > lastScrollTop && currentScroll > navbar.offsetHeight) {
+                navbar.classList.add('hide'); // Ukrywa nawigację
+            } else {
+                navbar.classList.remove('hide'); // Pokazuje nawigację
+            }
+
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Zapobiega negatywnym wartościom
         });
     });
 
-    // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
 
-    // Add icons to menu items
-    const menuItems = [
-        { text: 'Discord Stats', icon: 'fas fa-chart-line' },
-        { text: 'About Us', icon: 'fas fa-info-circle' },
-        { text: 'Events', icon: 'fas fa-calendar-alt' },
-        { text: 'Community', icon: 'fas fa-users' },
-        { text: 'FAQ', icon: 'fas fa-question-circle' },
-        { text: 'Join Discord', icon: 'fab fa-discord' },
-        { text: 'Apply to Administrator', icon: 'fas fa-user-shield' }
-    ];
-
-    // Create menu items dynamically
-    menuItems.forEach(item => {
-        const li = document.createElement('li');
-        li.innerHTML = `<i class="${item.icon}"></i> <a href="#${item.text.replace(/\s+/g, '').toLowerCase()}">${item.text}</a>`;
-        navMenu.appendChild(li);
-    });
-
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('open');
-        // Change hamburger color on click
-        hamburger.style.color = navMenu.classList.contains('active') ? '#66ff91' : '#f4f4f4';
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (event) => {
-        const isClickInside = navMenu.contains(event.target) || hamburger.contains(event.target);
-        if (!isClickInside) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('open');
-            hamburger.style.color = '#f4f4f4'; // Reset color
-        }
-    });
-
-    // Close mobile menu when clicking on any menu item
-    const menuLinks = document.querySelectorAll('#nav-menu a');
-
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active'); // Zamknięcie menu
-            hamburger.classList.remove('open'); // Zmiana ikony hamburgera
-            hamburger.style.color = '#f4f4f4'; // Resetowanie koloru hamburgera
-        });
-    });
-
-    // Select the container element
+    // Header hide on scroll
     document.addEventListener('DOMContentLoaded', () => {
         const header = document.getElementById('container');
 
@@ -132,7 +116,7 @@
         });
     });
 
-    // Zapobiega domyślnemu zachowaniu linków i przesuwa stronę do celu z przesunięciem
+    // Smooth scroll on anchor link click
     document.addEventListener('DOMContentLoaded', () => {
         const links = document.querySelectorAll('a[href^="#"]');
 
@@ -144,17 +128,16 @@
                 const targetElement = document.getElementById(targetId);
 
                 if (targetElement) {
-                    const topPosition = targetElement.offsetTop - 100;  // Przesunięcie o 100px
+                    const topPosition = targetElement.offsetTop - 100;  // Offset by 100px
 
                     window.scrollTo({
                         top: topPosition,
-                        behavior: 'smooth'  // Płynne przewijanie
+                        behavior: 'smooth'  // Smooth scrolling
                     });
                 }
             });
         });
     });
-
 
     // Sticky header effect
     window.addEventListener('scroll', () => {
@@ -181,12 +164,10 @@
     // Keyboard Navigation for the slider
     window.addEventListener('keydown', (event) => {
         if (event.key === "ArrowLeft") {
-            // Show previous slide
             currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
             showSlide(currentSlideIndex);
             resetSlideInterval(); // Restart interval
         } else if (event.key === "ArrowRight") {
-            // Show next slide
             nextSlide();
             resetSlideInterval(); // Restart interval
         }
@@ -202,28 +183,25 @@
         slideInterval = setInterval(nextSlide, 5000); // Resume auto slide on mouse out
     });
 
-    // Apply To Admin - Google Forms
-
+    // Apply To Admin - Google Forms Modal
     var modal = document.getElementById("myModal");
     var btn = document.getElementById("openModal");
     var span = document.getElementsByClassName("close")[0];
 
-    // Otwórz modal przy kliknięciu przycisku
     btn.onclick = function () {
         modal.style.display = "block";
     }
 
-    // Zamknij modal przy kliknięciu na "x"
     span.onclick = function () {
         modal.style.display = "none";
     }
 
-    // Zamknij modal przy kliknięciu poza modalem
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
+
     // Close Popup
     document.getElementById('close-btn').addEventListener('click', function () {
         document.getElementById('popup').style.display = 'none';

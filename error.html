@@ -2,91 +2,158 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Construction</title>
-    <link href="styles.css" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #000;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
 
-        .container {
-            text-align: center;
-            max-width: 800px;
-            padding: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            background: rgba(20, 20, 20, 0.9);
-            box-shadow: 0px 0px 15px rgba(0, 150, 150, 0.4);
-            transition: 0.5s;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Better Side Of Gaming | ERROR</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <style>
+            /* Body Styling */
+            body {
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+                background-color: #111;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+                position: relative;
+            }
 
-        .container:hover {
-            text-align: center;
-            max-width: 800px;
-            padding: 20px;
-            border: 2px solid rgb(255, 255, 255);
-            border-radius: 15px;
-            background: rgba(20, 20, 20, 0.9);
-            box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
-            transition: ease-in-out;
-            transition: 0.5s;
-        }
+            /* Container Styling */
+            .container {
+                text-align: center;
+                max-width: 800px;
+                padding: 40px;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                border-radius: 15px;
+                background: rgba(20, 20, 20, 0.8);
+                box-shadow: 0px 0px 15px rgba(0, 150, 150, 0.4);
+                transition: 0.5s ease-in-out;
+                animation: fadeIn 1s ease-out;
+            }
 
-        .logo {
-            margin-bottom: 20px;
-            justify-content: center;
-        }
+            .container:hover {
+                border-color: #fff;
+                box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+            }
 
-        .logo img {
-            max-width: 200px;
-        }
+            /* Logo Styling */
+            .logo {
+                margin-bottom: 30px;
+                justify-content: center;
+                display: flex;
+                justify-content: center;
+            }
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #0ff;
-            text-shadow: 0 0 5px #0ff, 0 0 10px #0cc;
-        }
+            .logo img {
+                max-width: 180px;
+                animation: pulse 2s infinite;
+            }
 
-        p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-            margin-bottom: 2rem;
-            color: #ccc;
-        }
+            /* Title Styling */
+            h1 {
+                font-size: 2.8rem;
+                margin-bottom: 1rem;
+                color: #0ff;
+                text-shadow: 0 0 8px #0ff, 0 0 15px #0cc;
+                letter-spacing: 2px;
+            }
 
-        .btn {
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 1px solid #0ff;
-            color: #0ff;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
-        }
+            /* Paragraph Styling */
+            p {
+                font-size: 1.2rem;
+                line-height: 1.5;
+                margin-bottom: 2rem;
+                color: #ccc;
+                letter-spacing: 0.5px;
+            }
 
-        .btn:hover {
-            background: #0ff;
-            color: #000;
-            box-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
-        }
-    </style>
-</head>
+            /* Button Styling */
+            .btn {
+                display: inline-block;
+                text-decoration: none;
+                padding: 15px 30px;
+                border: 2px solid #0ff;
+                color: #0ff;
+                border-radius: 30px;
+                font-size: 1.2rem;
+                transition: all 0.3s ease;
+                background: rgba(0, 0, 0, 0.4);
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background: #0ff;
+                color: #000;
+                box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+            }
+
+            /* Fade-in Animation for Container */
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-50px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Pulsing animation for Logo */
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+
+                50% {
+                    transform: scale(1.1);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            /* Loader Styling */
+            .loader {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 100;
+                animation: fadeOut 3s forwards;
+            }
+
+            /* Fade-Out Animation for Loader */
+            @keyframes fadeOut {
+                0% {
+                    opacity: 1;
+                }
+
+                100% {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        </style>
+    </head>
 
 <body>
+    <!-- Loader (appears before the page content loads) -->
     <div class="loader"><img src="images/BSOG Logo BG R.png" alt="Loading..."></div>
+
+    <!-- Main Content -->
     <div class="container">
         <div class="logo">
             <img src="images/BSOG Logo BG R.png" alt="Logo">
@@ -95,6 +162,7 @@
         <p>Dziękujemy za Twoją cierpliwość. Pracujemy nad tym, aby dostarczyć Ci najlepsze doświadczenie.</p>
         <a href="index.html" class="btn">Powrót na stronę główną</a>
     </div>
+
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>

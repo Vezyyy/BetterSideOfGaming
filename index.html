@@ -13,25 +13,30 @@
 </head>
 
 <body>
-    <div class="loader"><img src="images/BSOG Logo BG R.png" alt=""></div>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#" class="logo">BetterSideOfGaming</a>
 
-    <header id="container">
-        <div class="container">
-            <h1 class="logo">
-                <img class="logo-img" src="images/BSOG Logo BG R.png" alt="Logo" class="logo-img">
-                Better Side Of Gaming
-            </h1>
-            <nav>
-                <ul id="nav-menu">
-                    <!-- MENU ITEMS ADDED IN JavaScript! -->
-                </ul>
-            </nav>
-            <div class="ham-container">
-                <p class="ham-menu">Menu</p>
-                <div class="hamburger" id="hamburger"></div>
+            <!-- Ikona hamburgera (dla urządzeń mobilnych) -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
             </div>
+
+            <!-- Linki nawigacji -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#discordstats"><i class="fas fa-chart-line"></i> Discord Stats</a></li>
+                <li><a href="#aboutus"><i class="fas fa-users"></i> About Us</a></li>
+                <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="#joindiscord"><i class="fas fa-plug"></i> Join Discord</a></li>
+                <li><a href="#applytoadministrator"><i class="fas fa-user-shield"></i> Apply to Administrator</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
+
     <!-- Popup Modal -->
     <div id="popup" class="popup" data-aos="fade-up">
         <div class="popup-content">
@@ -40,23 +45,22 @@
             <h2>🚧 Server Under Development 🚧</h2>
             <p>Our server is currently being upgraded, but you're welcome to join and start having fun with others right
                 now! 🎮</p>
+            <p>We are continuously developing the server in collaboration with <strong>VPanda Studio</strong> to bring
+                you an even better gaming experience!</p>
             <p>Click the button below to join our community and stay updated on future developments!</p>
-            <a href="https://discord.gg/Tr3BQPER34" class="join-btn">Join Now</a>
+            <a href="https://discord.gg/Tr3BQPER34" target="_blank" class="join-btn">Join Now</a>
         </div>
     </div>
 
     <div class="slider">
         <div class="slider-container">
-            <a href="error.html" class="slide"
-                style="background-image: url('images/Gaming BSOG.png');">
+            <a href="index.html" class="slide" style="background-image: url('images/Gaming BSOG.png');">
                 <h2>👋 Welcome to the Best Gaming Community 👋</h2>
             </a>
-            <a href="error.html" class="slide"
-                style="background-image: url('images/Community\ BSOG.png');">
+            <a href="index.html" class="slide" style="background-image: url('images/Community\ BSOG.png');">
                 <h2>🏆 Join Us for Exciting Tournaments 🏆</h2>
             </a>
-            <a href="error.html" class="slide"
-                style="background-image: url('images/Connect With Friends BSOG.png');">
+            <a href="index.html" class="slide" style="background-image: url('images/Connect With Friends BSOG.png');">
                 <h2>🎮 Connect with Fellow Gamers 🎮</h2>
             </a>
         </div>
@@ -77,8 +81,8 @@
         <div class="user-number">
             <div class="user-type">
                 <i class="fas fa-user-friends"></i> <!-- Ikona użytkowników -->
-                
-                <span id="user-count-value">41 Users</span> <!-- Liczbę użytkowników możesz zmieniać ręcznie -->
+
+                <span id="user-count-value">42 Users</span> <!-- Liczbę użytkowników możesz zmieniać ręcznie -->
 
             </div>
             <div class="user-type">
@@ -96,20 +100,19 @@
     <div class="line" data-aos="fade-up"></div>
 
     <section id="aboutus" class="about" data-aos="fade-up">
-        <div class="container-center">
-            <h2>About Us</h2>
-            <div style="display: flex; justify-content: center;" class="about-content">
-                <img class="main-images" src="images/Gaming BSOG.png" alt="Connect With Friends Image">
+        <div class="about-container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
                 <div class="about-text">
-                    <p>🌟 We are a passionate community of gamers dedicated to providing a fun, inclusive, and
-                        supportive environment. Whether you're new to gaming or a seasoned player, our community is here
-                        to welcome you!</p>
-                    <p>🎯 Our mission is to foster connections among gamers from all walks of life, ensuring that
-                        everyone feels valued and included. We believe in the power of gaming to bring people together,
-                        allowing for shared experiences and lifelong friendships.</p>
-                    <p>🕹️ We organize a variety of events, ranging from casual game nights to competitive tournaments.
-                        Our team works tirelessly to ensure that each event is tailored to meet the interests of our
-                        members, providing a space where everyone can thrive.</p>
+                    <p><i class="fas fa-users"></i> We are a passionate community of gamers dedicated to providing a
+                        fun, inclusive, and supportive environment. Whether you're new to gaming or a seasoned player,
+                        our community is here to welcome you!</p>
+                    <p><i class="fas fa-bullseye"></i> Our mission is to foster connections among gamers from all walks
+                        of life, ensuring that everyone feels valued and included. We believe in the power of gaming to
+                        bring people together, allowing for shared experiences and lifelong friendships.</p>
+                    <p><i class="fas fa-gamepad"></i> We organize a variety of events, ranging from casual game nights
+                        to competitive tournaments. Our team works tirelessly to ensure that each event is tailored to
+                        meet the interests of our members, providing a space where everyone can thrive.</p>
                     <ul class="about-list">
                         <li><i class="fas fa-gamepad"></i> Weekly game nights featuring different genres to keep the
                             excitement alive.</li>
@@ -122,19 +125,22 @@
                             environment for all.</li>
                     </ul>
                 </div>
+                <div class="about-image-container">
+                    <img class="about-image" src="images/Gaming BSOG.png" alt="Community Image">
+                </div>
             </div>
         </div>
     </section>
 
     <div class="line" data-aos="fade-up"></div>
 
-    <section style="background-color: #70707017;" id="events" class="events" data-aos="fade-up">
+    <section id="events" class="events" data-aos="fade-up">
         <div class="container-center">
-            <h2>Upcoming Events</h2>
+            <h2 class="section-title">Upcoming Events</h2>
             <img class="main-images" src="images/Tournament .png" alt="Community Image">
             <div class="event-list">
                 <div class="event" data-aos="fade-up">
-                    <h3>🎮 Game Night</h3>
+                    <h3 class="event-title">🎮 Game Night</h3>
                     <p>Date: Every Friday</p>
                     <p>Join us for weekly game nights filled with fun challenges and prizes! Each week features a
                         different game, so there's always something new to try. Whether you enjoy RPGs, FPS, or board
@@ -144,7 +150,7 @@
                     <a href="#" class="btn">Join Event</a>
                 </div>
                 <div class="event" data-aos="fade-up" data-aos-delay="100">
-                    <h3>🏆 Tournament</h3>
+                    <h3 class="event-title">🏆 Tournament</h3>
                     <p>Date: Monthly</p>
                     <p>Compete in our monthly tournaments for glory and rewards! From competitive shooters to strategic
                         games, there’s something for everyone.</p>
@@ -153,7 +159,7 @@
                     <a href="#" class="btn">Sign Up</a>
                 </div>
                 <div class="event" data-aos="fade-up" data-aos-delay="200">
-                    <h3>🤝 Community Meet-Up</h3>
+                    <h3 class="event-title">🤝 Community Meet-Up</h3>
                     <p>Date: Quarterly</p>
                     <p>Join us for a community meet-up where you can meet other members, share gaming experiences, and
                         discuss your favorite games!</p>
@@ -165,57 +171,67 @@
         </div>
     </section>
 
+
     <div class="line" data-aos="fade-up"></div>
 
     <section id="community" class="community" data-aos="fade-up">
         <div class="container-center">
-            <h2>Our Community</h2>
-            <img class="main-images" src="images/Play With Friends.png" alt="Connect With Friends Image">
+            <h2 class="section-title">Our Community</h2>
             <div class="community-content">
                 <div class="community-text">
-                    <p>💖 We pride ourselves on having a friendly and supportive community. Our members come from
-                        diverse backgrounds, united by their love for gaming. We aim to create an environment where
-                        everyone feels welcome.</p>
-                    <p>🌈 Our community is built on the principles of respect, inclusion, and collaboration. We
-                        encourage open discussions and sharing of ideas, ensuring that every voice is heard. Whether
-                        you’re looking for game tips, advice, or simply want to chat, you’ll find a welcoming space
-                        here.</p>
-                    <p>📱 Join our Discord to connect with others, participate in discussions, and stay updated on
-                        upcoming events!</p>
+                    <p><i class="fas fa-heart"></i> We pride ourselves on having a friendly and supportive community.
+                        Our members come from diverse backgrounds, united by their love for gaming. We aim to create an
+                        environment where everyone feels welcome.</p>
+                    <p><i class="fas fa-pride"></i> Our community is built on the principles of respect, inclusion, and
+                        collaboration. We encourage open discussions and sharing of ideas, ensuring that every voice is
+                        heard. Whether you’re looking for game tips, advice, or simply want to chat, you’ll find a
+                        welcoming space here.</p>
+                    <p><i class="fab fa-discord"></i> Join our Discord to connect with others, participate in
+                        discussions, and stay updated on upcoming events!</p>
                     <a href="https://discord.gg/Tr3BQPER34" class="btn">Join Our Discord</a>
                 </div>
+                <img class="community-image" src="images/Play With Friends.png" alt="Connect With Friends Image">
             </div>
         </div>
     </section>
 
     <div class="line" data-aos="fade-up"></div>
 
-    <section style="background-color: #70707017;" id="faq" class="faq" data-aos="fade-up">
+    <section id="faq" class="faq" data-aos="fade-up">
         <div class="container-center">
-            <h2>Frequently Asked Questions</h2>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="faq-list">
-                <div class="faq-item">
-                    <h3>❓ What games do you play?</h3>
-                    <p>We play a variety of games, including FPS, RPG, strategy, and indie titles. Our diverse lineup
-                        ensures there's something for every type of gamer!</p>
-                    <p>🎮 We often include community favorites and new releases to keep things fresh and exciting.</p>
+                <div class="faq-item" data-aos="fade-up">
+                    <h3><i class="fas fa-question-circle"></i> What games do you play?</h3>
+                    <div class="faq-description">
+                        <p>We play a variety of games, including FPS, RPG, strategy, and indie titles. Our diverse
+                            lineup ensures there's something for every type of gamer!</p>
+                        <p>🎮 We often include community favorites and new releases to keep things fresh and exciting.
+                        </p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>✉️ How can I participate in events?</h3>
-                    <p>You can sign up for events in the designated channels on our Discord server. Just follow the
-                        instructions posted there to join the fun!</p>
-                    <p>🔔 Don’t forget to enable notifications to stay updated on the latest events!</p>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-envelope"></i> How can I participate in events?</h3>
+                    <div class="faq-description">
+                        <p>You can sign up for events in the designated channels on our Discord server. Just follow the
+                            instructions posted there to join the fun!</p>
+                        <p>🔔 Don’t forget to enable notifications to stay updated on the latest events!</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>🧒 Is there an age limit?</h3>
-                    <p>While we encourage a mature environment, we welcome gamers of all ages! We do prefer members to
-                        be 18+, but good behavior and respect are what truly matters.</p>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fas fa-child"></i> Is there an age limit?</h3>
+                    <div class="faq-description">
+                        <p>While we encourage a mature environment, we welcome gamers of all ages! We do prefer members
+                            to be 18+, but good behavior and respect are what truly matters.</p>
+                    </div>
                 </div>
-                <div class="faq-item">
-                    <h3>🤗 How do I join the community?</h3>
-                    <p>Joining is easy! Just click the "Join Our Discord" button above, and you'll be welcomed into our
-                        community. We can't wait to meet you!</p>
-                    <p>👋 Once you’re in, introduce yourself and start making connections!</p>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fas fa-handshake"></i> How do I join the community?</h3>
+                    <div class="faq-description">
+                        <p>Joining is easy! Just click the "Join Our Discord" button above, and you'll be welcomed into
+                            our community. We can't wait to meet you!</p>
+                        <p>👋 Once you’re in, introduce yourself and start making connections!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,26 +241,29 @@
 
     <section id="joindiscord" class="join" data-aos="fade-up">
         <div class="container-center">
-            <h2 class="blinking-text">Join Us Today! </h2>
+            <h2 class="blinking-text">Join Us Today!</h2>
             <img style="width: 15em; height: 15em; margin-bottom: 3em;" src="images/BSOG Logo BG R.png" alt="Logo"
                 class="logo-img">
-            <p>Become part of our amazing gaming community. Whether you want to join casual game nights, competitive
-                tournaments, or just connect with other gamers, there's a place for you here.</p>
-            <p>By joining us, you gain access to a vibrant network of gamers who share your passion. Engage in
-                meaningful discussions, learn new strategies, and celebrate victories together!</p>
-            <p>🚀 Click the button below to join our Discord server and start your adventure with us!</p>
-            <a href="https://discord.gg/Tr3BQPER34" class="btn">Join Our Discord</a>
+            <p class="join-description">Become part of our amazing gaming community. Whether you want to join casual
+                game nights, competitive tournaments, or just connect with other gamers, there's a place for you here.
+            </p>
+            <p class="join-description">By joining us, you gain access to a vibrant network of gamers who share your
+                passion. Engage in meaningful discussions, learn new strategies, and celebrate victories together!</p>
+            <p class="join-description">🚀 Click the button below to join our Discord server and start your adventure
+                with us!</p>
+            <a href="https://discord.gg/Tr3BQPER34" class="btn join-btn">Join Our Discord</a>
         </div>
     </section>
+
 
     <div class="line"></div>
 
     <div class="container-center-staff">
         <section id="staff" class="staff" data-aos="fade-up">
-            <h2>Principal Owners</h2>
+            <h2 class="section-title">Principal Owners</h2>
             <div class="staff-grid">
                 <div class="staff-member">
-                    <img src="images/Vezyy.png" alt="Vezyy">
+                    <img src="images/Vezyy.png" alt="Vezyy" class="staff-photo">
                     <h3>Vezyy</h3>
                     <p><strong>Founder & Lead Developer</strong></p>
                     <p>Vezyy is the visionary behind Better Side Of Gaming, combining a passion for gaming with
@@ -253,7 +272,7 @@
                         conducts rigorous testing to maintain the highest standards of quality in every project.</p>
                 </div>
                 <div class="staff-member">
-                    <img src="images/Mastermalpa.png" alt="Mastermalpa">
+                    <img src="images/Mastermalpa.png" alt="Mastermalpa" class="staff-photo">
                     <h3>Mastermalpa</h3>
                     <p><strong>Co-Owner & Community Manager</strong></p>
                     <p>As a co-owner of Better Side Of Gaming, Mastermalpa plays a vital role in building and nurturing
@@ -266,14 +285,10 @@
         </section>
     </div>
 
+
     <div class="line"></div>
 
-    <h2 id="applytoadministrator">Do you want to become an admin?</h2>
-
-    <div class="container-center">
-        <!-- Przycisk otwierający modal -->
-        <button id="openModal" class="btn-apply"> Become one of us!</button>
-    </div>
+    <h2 id="applytoadministrator" class="section-title">Do you want to become an admin?</h2>
 
     <!-- Modal -->
     <div id="myModal" class="modal">
@@ -288,19 +303,69 @@
         </div>
     </div>
 
-    <footer>
+    <!-- Przycisk otwierający modal -->
+    <div class="container-center">
+        <button id="openModal" class="btn-apply">Become an Admin</button>
+    </div>
+
+
+    <section class="partnership-section">
+        <div class="container">
+            <h2 class="section-title">Partnership</h2>
+            <div class="logos">
+                <a href="https://vezyyy.github.io/VPanda/" class="logo" target="_blank">
+                    <img src="images/VPanda Logo Remove BG (1).png" alt="Logo Partnera" />
+                    <p>VPanda Studio</p>
+                </a>
+                <a href="https://vezyyy.github.io/BetterSideOfGaming/" class="logo" target="_blank">
+                    <img src="images/BSOG Logo BG R.png" alt="Twoje Logo" />
+                    <p>BetterSideOfGaming</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <div class="container-center">
             <p>&copy; 2024 Better Side Of Gaming. All Rights Reserved.</p>
         </div>
-        <a href="#" id="back-to-top"><i class="fas fa-arrow-up"></i></a>
     </footer>
+
+    <a href="#" id="back-to-top" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script>
         AOS.init(); // Initialize AOS (Animate On Scroll)
+        // Pobranie elementów
+        const modal = document.getElementById("popup");
+        const closeModalBtn = document.getElementById("close-btn");
+
+        // Funkcja zamykająca modal
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none"; // Ukrywa modal
+        }
+
+        // Funkcja zamykająca modal, gdy klikniesz poza jego obszar
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Ukrywa modal, jeśli klikniesz poza jego obszar
+            }
+        }
+
+        // Funkcja, aby modal pokazał się automatycznie po załadowaniu strony
+        window.onload = function () {
+            setTimeout(function () {
+                modal.style.display = "block"; // Pokazuje modal po załadowaniu strony
+            }, 1000); // Zwykle stosuje się opóźnienie (np. 1 sekunda)
+        }
+
     </script>
+
 </body>
 
 </html>
-

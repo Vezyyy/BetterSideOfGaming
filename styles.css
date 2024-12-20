@@ -1,4 +1,6 @@
-/* OTHER */
+/* ----------------------------- */
+/* OTHER
+/* ----------------------------- */
 
 /* General Styles */
 html {
@@ -89,76 +91,207 @@ html {
     }
 }
 
-/* PEOPLE */
+/* ----------------------------- */
+/* EVENT SECTION
+/* ----------------------------- */
+.events {
+    background: linear-gradient(135deg, rgba(112, 112, 112, 0.4), rgba(0, 0, 0, 0.6));
+    color: #f1f1f1;
+    padding: 60px 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.container-center {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3em;
+    font-weight: 700;
+    color: #50fa7b;
+    /* Zielony kolor */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #50fa7b;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
+.main-images {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    margin: 30px 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-images:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.event-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.event {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    flex-basis: 30%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-title {
+    font-size: 1.8em;
+    color: #50fa7b;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.event p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.event a.btn {
+    display: inline-block;
+    background-color: #50fa7b;
+    color: #282828;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.event a.btn:hover {
+    background-color: #39e15a;
+}
+
+.event:hover {
+    transform: translateY(-10px);
+    /* Efekt unoszenia przy hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .event-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-images {
+        max-width: 100%;
+    }
+}
+
+
+/* ----------------------------- */
+/* PEOPLE COUNTER
+/* ----------------------------- */
+
 /* PEOPLE */
 .user-count {
-    background-color: #282828;
-    /* Kolor tła sekcji */
+    background-color: #1c1c1c;
+    /* Ciemniejszy odcień tła dla elegancji */
     padding: 40px;
-    /* Odstępy wewnętrzne */
-    border-radius: 15px;
-    /* Zaokrąglone rogi */
+    border-radius: 20px;
+    /* Zwiększenie zaokrąglenia rogów */
     margin: 40px auto;
-    /* Marginesy z góry i dołu oraz automatyczne wyśrodkowanie */
     width: 100%;
-    /* 100% szerokości */
-    max-width: 800px;
-    /* Maksymalna szerokość sekcji */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
-    /* Cień dla głębi */
+    max-width: 900px;
+    /* Szerokość sekcji na większe ekrany */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+    /* Delikatniejszy cień dla subtelnej głębi */
     text-align: center;
-    /* Wyśrodkowanie tekstu */
+    transition: all 0.3s ease;
+    /* Płynne przejście przy zmianach */
+}
+
+.user-count:hover {
+    transform: translateY(-10px);
+    /* Podniesienie sekcji po najechaniu */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    /* Większy cień na hover */
 }
 
 .user-count h2 {
-    color: #50fa7b;
-    /* Kolor tytułu */
+    color: #1fda84;
+    /* Zmieniony kolor tytułu na bardziej wyrazisty */
     margin: 20px 0;
-    /* Marginesy nad i pod tytułem */
-    font-weight: bold;
-    /* Pogrubienie nagłówka */
-    font-size: 2em;
-    /* Zwiększenie rozmiaru czcionki nagłówka */
+    font-weight: 600;
+    /* Mniejsza grubość czcionki, bardziej nowoczesne */
+    font-size: 2.4em;
+    /* Zwiększenie rozmiaru czcionki dla tytułu */
+    text-transform: uppercase;
+    /* Użycie wielkich liter dla profesjonalizmu */
+    letter-spacing: 2px;
+    /* Delikatne rozstawienie liter */
 }
 
 .user-number {
     display: flex;
-    /* Umożliwia wyrównanie ikon i tekstu w linii */
-    justify-content: space-around;
-    /* Równomierne rozłożenie zawartości */
+    justify-content: space-evenly;
+    /* Użycie 'space-evenly' dla równego rozmieszczenia */
     align-items: center;
-    /* Wyśrodkowanie w pionie */
     width: 100%;
-    /* 100% szerokości */
     margin: 20px 0;
-    /* Margines górny i dolny */
+    flex-wrap: wrap;
+    /* Umożliwia zawijanie elementów w przypadku małych ekranów */
 }
 
 .user-type {
     display: flex;
-    /* Umożliwia wyrównanie ikony i tekstu */
     align-items: center;
-    /* Wyśrodkowanie w pionie */
-    font-size: 1.5em;
-    /* Zwiększenie rozmiaru czcionki dla liczby użytkowników */
+    font-size: 1.6em;
+    /* Zwiększenie czcionki liczby użytkowników */
+    margin: 10px 0;
+    color: #f1f1f1;
+    /* Jasnoszary kolor dla tekstu */
+    font-weight: 500;
+    /* Lekko pogrubiony tekst dla większej czytelności */
+    transition: color 0.3s ease;
+    /* Animacja zmiany koloru */
+}
+
+.user-type:hover {
+    color: #50fa7b;
+    /* Kolor zielony na hover */
 }
 
 .user-type i {
-    margin-right: 10px;
-    /* Odstęp między ikoną a tekstem */
+    margin-right: 12px;
     color: #50fa7b;
-    /* Kolor ikony */
-    font-size: 1.5em;
-    /* Zwiększenie rozmiaru ikony */
+    /* Kolor ikon */
+    font-size: 1.7em;
+    /* Zwiększenie rozmiaru ikon */
+    transition: transform 0.3s ease;
+    /* Animacja zmiany rozmiaru ikon */
 }
 
-.join-us-message {
-    color: #ffffff;
-    /* Kolor tekstu zapraszającego */
-    margin-top: 20px;
-    /* Margines górny dla tekstu zapraszającego */
-    font-size: 1.2em;
-    /* Zwiększenie rozmiaru czcionki tekstu zapraszającego */
+.user-type i:hover {
+    transform: scale(1.2);
+    /* Powiększenie ikony po najechaniu */
 }
 
 /* Zmniejszenie rozmiarów na urządzeniach mobilnych */
@@ -191,178 +324,155 @@ html {
     }
 }
 
+/* ----------------------------- */
+/* ABOUT SECTION
+/* ----------------------------- */
 
-/* Google Forms - Apply Admin */
-
-/* Modal Styles */
-.modal {
-    display: none;
-    /* Hide modal by default */
-    position: fixed;
-    /* Stay in the same position */
-    z-index: 1000;
-    /* Above other elements */
-    left: 0;
-    top: 0;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Dark semi-transparent */
-    backdrop-filter: blur(8px);
-    /* Background blur effect */
-    animation: fadeIn 0.4s;
-    /* Fade-in animation */
+/* ABOUT SECTION */
+.about {
+    background: linear-gradient(135deg, #0e0e0e, #222222);
+    /* Futurystyczne gradientowe tło */
+    padding: 60px 0;
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+    /* Nowoczesna czcionka */
 }
 
-/* Modal Content */
-.modal-content {
-    background-color: #1e1e2f;
-    /* Dark themed background */
-    margin: 10% auto;
-    /* 10% from top, centered horizontally */
-    padding: 30px;
-    /* Increased padding */
-    border: 1px solid #444;
-    /* Darker border */
-    width: 80%;
-    /* Width of modal */
-    max-width: 600px;
-    /* Max width */
-    border-radius: 12px;
-    /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    /* Depth shadow */
-    animation: slideIn 0.4s;
-    /* Slide-in animation */
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Close Button */
-.close {
-    color: #ff4d4d;
-    /* Red color */
-    float: right;
-    /* Align to the right */
-    font-size: 24px;
-    /* Font size */
-    font-weight: bold;
-    /* Bold text */
-    transition: color 0.3s;
-    /* Smooth color transition */
-}
-
-.close:hover,
-.close:focus {
-    color: #ff1a1a;
-    /* Darker red on hover */
-    text-decoration: none;
-    /* Remove underline */
-    cursor: pointer;
-    /* Pointer cursor */
-}
-
-/* Apply Button */
-.btn-apply {
-    display: inline-block;
-    width: 100%;
-    /* Full width */
-    max-width: 300px;
-    /* Max width */
-    height: 60px;
-    /* Button height */
-    background-color: #50fa7b;
-    /* Button color */
-    color: #121212;
-    /* Text color */
-    padding: 10px 20px;
+.section-title {
+    font-size: 3em;
+    font-weight: 700;
+    color: #50fa7b;
+    /* Jasno zielony kolor */
     text-transform: uppercase;
-    /* Uppercase text */
-    letter-spacing: 1px;
-    /* Letter spacing */
-    border-radius: 8px;
-    /* Rounded corners */
-    text-decoration: none;
-    /* No underline */
-    transition: background-color 0.3s, transform 0.3s;
-    /* Smooth transition */
-    box-shadow: 0 4px 15px rgba(0, 255, 119, 0.4);
-    /* Button shadow */
-    margin: 1em auto;
-    /* Center button */
-    font-size: 18px;
-    /* Font size */
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
 }
 
-.btn-apply:hover {
-    background-color: #41e074;
-    /* Lighter color on hover */
-    transform: scale(1.05);
-    /* Scale effect on hover */
-}
-
-/* Submit Button Inside Modal */
-.submit-button {
+.section-title::after {
+    content: "";
     display: block;
-    /* Block display for centering */
-    margin: 20px auto;
-    /* Center with margin */
-    padding: 10px 20px;
-    /* Padding for the button */
-    background-color: #ff4d4d;
-    /* Submit button color */
-    color: white;
-    /* Text color */
-    border: none;
-    /* No border */
-    border-radius: 8px;
-    /* Rounded corners */
-    font-size: 18px;
-    /* Font size */
-    cursor: pointer;
-    /* Pointer cursor */
-    transition: background-color 0.3s;
-    /* Smooth transition */
+    width: 60px;
+    height: 3px;
+    background-color: #50fa7b;
+    margin: 20px auto 0;
+    border-radius: 5px;
 }
 
-.submit-button:hover {
-    background-color: #ff1a1a;
-    /* Darker red on hover */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        /* Initial opacity */
+.about-text {
+    flex: 1;
+    padding: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.about-list li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.about-list li i {
+    color: #50fa7b;
+    margin-right: 12px;
+    font-size: 1.6em;
+}
+
+.about-list li:hover {
+    color: #50fa7b;
+    transform: translateX(5px);
+    /* Efekt przesunięcia przy hover */
+}
+
+.about-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 550px;
+    /* Powiększamy obrazek */
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    /* Cień wokół obrazka */
+    transform: scale(1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.1);
+    /* Efekt powiększenia na hover */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    /* Zwiększenie cienia przy hover */
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
     }
 
-    to {
-        opacity: 1;
-        /* Final opacity */
+    .about-text {
+        padding: 20px 10px;
+    }
+
+    .about-image-container {
+        margin-top: 30px;
+    }
+
+    .about-image {
+        max-width: 100%;
     }
 }
 
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        /* Initial position */
-        opacity: 0;
-        /* Initial opacity */
-    }
+/* ----------------------------- */
+/* JOIN US 
+/* ----------------------------- */
 
-    to {
-        transform: translateY(0);
-        /* Final position */
-        opacity: 1;
-        /* Final opacity */
-    }
+.join-us-message {
+    color: #ffffff;
+    /* Kolor tekstu zapraszającego */
+    margin-top: 20px;
+    /* Margines górny dla tekstu zapraszającego */
+    font-size: 1.2em;
+    /* Zwiększenie rozmiaru czcionki tekstu zapraszającego */
 }
 
-
-/* MAIN */
+/* ----------------------------- */
+/* MAIN
+/* ----------------------------- */
 
 p {
     font-size: large;
@@ -403,56 +513,6 @@ body {
     pointer-events: none;
 }
 
-/* Main Images */
-
-.main-images {
-    width: 100%;
-    max-width: 750px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    margin-bottom: 2em;
-    border-radius: 10%;
-    border: #f4f4f4 solid 2px;
-}
-
-/* Container Styles */
-.container {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left;
-}
-
-/* Styl dla zmniejszonego kontenera */
-.container.scrolled {
-    height: 8em;
-}
-
-
-.container-center {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left;
-    text-align: center;
-}
-
-.container-center-staff {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.container-right {
-    max-width: 90%;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left;
-    text-align: right;
-}
-
 /* Header Styles */
 header {
     background-color: #121212;
@@ -468,293 +528,45 @@ header.scrolled {
     background-color: rgba(18, 18, 18, 0.9);
 }
 
-.logo-img {
-    width: 5em;
-    height: 5em;
-}
-
-.logo {
+/* Styl dla nagłówka serwera */
+.server-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #50fa7b;
-    font-size: 1.8rem;
+    font-size: 2.5em;
+    /* Dostosowany rozmiar tekstu */
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* PopUp */
-/* Popup Modal Styles */
-.popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
+    color: #fff;
+    margin: 20px 0;
+    text-align: left;
+    /* Wyrównanie do lewej */
     justify-content: center;
-    align-items: center;
-    z-index: 9999;
 }
 
-.popup-content {
-    background-color: #1e1e1e;
-    padding: 2em;
-    border-radius: 10px;
-    max-width: 1000px;
-    text-align: center;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-    position: relative;
-    /* Add this to position the close button inside */
+/* Styl dla obrazka */
+.server-logo-img {
+    width: 50px;
+    /* Zmniejszone logo */
+    height: auto;
+    margin-right: 15px;
+    /* Mniejsza przerwa między logo a tekstem */
 }
 
-.popup-content h2 {
-    margin-bottom: 1em;
-    color: #ffcc00;
-}
-
-.popup-content p {
-    margin-bottom: 1.5em;
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5em;
-    color: #ffcc00;
-    cursor: pointer;
-}
-
-.join-btn {
-    display: inline-block;
-    background-color: #50fa7b;
-    color: #121212;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.join-btn:hover {
-    background-color: #45e369;
-}
-
-/* Media Query for smaller devices */
-@media (max-width: 480px) {
-    .popup-content {
-        width: 90%;
-    }
-}
-
-/* Navigation styles */
-nav {
-    padding: 10px 0;
-}
-
-#nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-}
-
-#nav-menu li {
-    margin: 0 20px;
-}
-
-#nav-menu a {
-    color: #50fa7b;
-    text-decoration: none;
-    font-weight: 700;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-#nav-menu a:hover {
-    color: #ffffff;
-    transform: scale(1.05);
-}
-
-#nav-menu a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #50fa7b;
-    transition: width 0.3s ease;
-}
-
-#nav-menu a:hover::after {
-    width: 100%;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-#nav-menu a.active {
-    color: #ffffff;
-    border-bottom: 2px solid #50fa7b;
-}
-
-/* Hamburger Menu */
-
-.ham-container {
-    display: flex;
-    /* Umożliwienie flexbox */
-    flex-direction: column;
-    /* Ułożenie elementów w kolumnie */
-    justify-content: center;
-    /* Wyśrodkowanie elementów */
-    align-items: center;
-    /* Wyśrodkowanie elementów w pionie */
-    padding: 10px;
-    /* Padding dla lepszego wyglądu */
-    text-align: center;
-}
-
-/* Kontener CSS */
-#container {
-    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
-}
-
-/* Klasa do ukrywania kontenera */
-.hide {
-    transform: translateY(-100%);
-    opacity: 0;
-    background-color: transparent;
-    /* Zmniejsza tło kontenera */
-    pointer-events: none;
-    /* Zapobiega interakcji z ukrytym elementem */
-}
-
-
-.ham-menu {
-    color: #50fa7b;
-    font-weight: bold;
-    display: none;
-}
-
-.hamburger {
-    display: block;
-    /* Widoczny na urządzeniach mobilnych */
-    width: 35px;
-    /* Szerokość hamburgera */
-    height: 35px;
-    /* Wysokość hamburgera */
-    color: #f4f4f4;
-    /* Kolor ikon */
-    cursor: pointer;
-    /* Wskazanie, że można klikać */
-    transition: transform 0.3s ease;
-    /* Płynne przejście */
-    position: relative;
-    /* Umożliwia pozycjonowanie wewnętrznych elementów */
-}
-
-/* Ukryj hamburgera na komputerach */
-@media (min-width: 768px) {
-    .hamburger {
-        display: none;
-        /* Hamburger ukryty na większych ekranach */
-    }
-}
-
-/* Logo na Telefonie */
-@media (max-width: 768px) {
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #50fa7b;
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .logo-img {
-        width: 5em;
-        height: 5em;
-    }
-}
-
-/* Pokaż Napis Menu Na Telefonach */
-@media (max-width: 768px) {
-    .ham-menu {
-        display: block;
-        /* Upewnij się, że element jest wyświetlany */
-        color: #50fa7b;
-        font-weight: bold;
-        font-size: 16px;
-        /* Dodaj rozmiar czcionki */
-        visibility: visible;
-        /* Na wypadek, gdyby było ukryte */
-    }
-}
-
-
-/* Pozostała część Twojego CSS dla hamburgera */
-.hamburger i {
-    font-size: 2rem;
-    /* Rozmiar ikony hamburgera */
-}
-
-.hamburger.open i {
-    display: none;
-    /* Ukryj ikonę, gdy hamburger jest otwarty */
-}
-
-.hamburger.open::before,
-.hamburger.open::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 2em;
-    height: 0.2em;
-    background: #f4f4f4;
+/* Opcjonalny efekt dla logo przy hover */
+.server-logo-img:hover {
+    transform: scale(1.1);
+    /* Powiększa logo przy hover */
     transition: transform 0.3s ease;
 }
 
-.hamburger.open::before {
-    transform: rotate(45deg);
-    top: 50%;
-    transform-origin: center;
-}
-
-.hamburger.open::after {
-    transform: rotate(-45deg);
-    top: 50%;
-    transform-origin: center;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 2em;
-    height: 0.2em;
-    background: #f4f4f4;
-    transition: transform 0.3s ease;
-}
-
-.hamburger::before {
-    top: 30%;
-}
-
-.hamburger::after {
-    top: 70%;
+.server-logo:hover {
+    color: #50fa7b;
+    /* Zmiana koloru tekstu na zielony przy hover */
 }
 
 
-/* Slider Styles */
-/* Slider Styles */
+/* ----------------------------- */
+/* SLIDER
+/* ----------------------------- */
 .slider {
     margin-top: 12em;
     overflow: hidden;
@@ -921,194 +733,139 @@ nav {
 }
 
 
-/* Section Styles */
-section {
-    padding: 60px 0;
-}
 
-h2 {
+/* ----------------------------- */
+/* FOOTER
+/* ----------------------------- */
+
+/* Footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.85);
+    /* Ciemne tło */
+    color: #fff;
+    padding: 30px 0;
     text-align: center;
-    font-size: 2.5rem;
-    color: #506ffa;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-
-/* About and Community Content */
-.about-content,
-.community-content {
-    display: flex;
-    flex-direction: column;
-    /* Change this to column if it's in a row */
-    align-items: center;
-    /* Center items horizontally */
-    text-align: center;
-    /* Center text inside the items */
-}
-
-
-.about-content img,
-.community-content img {
-    width: 100%;
-    max-width: 750px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
-    margin-bottom: 2em;
-    border-radius: 10%;
-    border: #f4f4f4 solid 2px;
-}
-
-.about-list,
-.faq-list {
-    margin-top: 20px;
-    list-style: none;
-}
-
-.about-list li {
-    margin-bottom: 10px;
-}
-
-.about-list li i {
-    color: #50fa7b;
-    margin-right: 10px;
-}
-
-/* Button Styles */
-.btn {
-    display: inline-block;
-    background-color: #50fa7b;
-    color: #121212;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 2em;
-}
-
-.btn-apply {
-    margin-bottom: 4em;
-}
-
-/* Efekt hover dla przycisku */
-.btn-apply:hover {
-    background: linear-gradient(135deg, #00c8ff, #50fa7b);
-    /* Zmiana gradientu */
-    transform: translateY(-3px);
-    /* Lekki ruch w górę */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    /* Zwiększenie cienia */
-}
-
-
-.btn:hover {
-    background-color: #66ff91;
-    transform: scale(1.05);
-}
-
-/* Footer Styles */
-footer {
-    background-color: #121212;
-    color: #f4f4f4;
-    text-align: center;
-    padding: 20px;
     position: relative;
-    border-top: 2px solid white;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 255, 0, 0.1);
+    border-top: 2px solid #50fa7b;
+    /* Zielona linia na górze */
 }
 
-/* Back to Top Button */
+.footer p {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0;
+    color: #aaa;
+    animation: fadeInText 1s ease-out;
+}
+
+/* Przycisk back-to-top */
 #back-to-top {
     position: fixed;
-    width: 3em;
-    height: 3em;
     bottom: 30px;
     right: 30px;
     background-color: #50fa7b;
-    color: #121212;
+    color: #fff;
+    width: 60px;
+    /* Szerokość przycisku */
+    height: 60px;
+    /* Wysokość przycisku */
     border-radius: 50%;
-    font-size: 20px;
+    /* Zaokrąglenie na 50%, co daje okrągły kształt */
+    font-size: 2.5em;
     display: none;
+    /* Ukryte, dopóki użytkownik przewija stronę */
     z-index: 1000;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
-}
-
-#back-to-top.show {
-    display: flex;
-    opacity: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    /* Wyrównanie tekstu do środka */
+    line-height: 60px;
+    /* Wyrównanie ikony wewnątrz przycisku (na środku) */
 }
 
 #back-to-top:hover {
-    background-color: #66ff91;
-    transform: scale(1.1);
+    transform: scale(1.2);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.5);
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    #back-to-top {
-        width: 2.5em;
-        height: 2.5em;
-        bottom: 20px;
-        right: 20px;
-    }
+#back-to-top:active {
+    transform: scale(1);
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-    }
 
-    .hamburger {
-        display: block;
-    }
-
-    .about-content,
-    .community-content {
-        flex-direction: column;
-    }
-
-    #nav-menu {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        background-color: #121212;
-        position: fixed;
-        top: 1px;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        text-align: center;
-        transition: transform 0.3s ease;
-        transform: translateX(100%);
-        opacity: 0.98;
-    }
-
-    #nav-menu.active {
-        display: flex;
-        transform: translateX(0);
-    }
-
-    #nav-menu.active li {
-        margin: 10px 0;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
+/* Animacja pojawiania się tekstu w stopce */
+@keyframes fadeInText {
+    0% {
         opacity: 0;
+        transform: translateY(20px);
     }
 
-    to {
+    100% {
         opacity: 1;
+        transform: translateY(0);
     }
+}
+
+/* Pokazywanie przycisku back-to-top */
+@keyframes fadeInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ----------------------------- */
+/* LOADER */
+/* ----------------------------- */
+
+/* Loader */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    visibility: hidden;
+    /* Initially hidden */
+}
+
+.loader img {
+    width: 100px;
+}
+
+/* Header Styles */
+#container {
+    padding: 20px 0;
+    background-color: #111;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.server-logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #0ff;
+}
+
+.server-logo-img {
+    max-width: 50px;
+    margin-right: 10px;
 }
 
 .loader {
@@ -1118,7 +875,7 @@ footer {
     z-index: 99999;
 }
 
-.loader.img{
+.loader.img {
     border: 2px solid black;
 }
 
@@ -1215,4 +972,1136 @@ footer {
     /* Slightly lighter text for descriptions */
     line-height: 1.5;
     /* Improved readability */
+}
+
+/* PARTNERSHIP */
+
+/* Sekcja współpracy */
+.partnership-section {
+    background-color: #333;
+    /* Ciemne tło sekcji */
+    color: #fff;
+    /* Biały tekst */
+    padding: 80px 0;
+    text-align: center;
+    border-top: 4px solid #444;
+    /* Subtelna linia oddzielająca sekcję */
+    font-family: 'Roboto', sans-serif;
+    /* Nowoczesna czcionka */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+    /* Usunięcie podkreślenia z linku */
+    color: #fff;
+}
+
+.logo img {
+    max-width: 250px;
+    /* Większy rozmiar logo */
+    max-height: 150px;
+    margin-bottom: 20px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    /* Użycie szarości na logo */
+    transition: filter 0.3s ease;
+}
+
+.logo img:hover {
+    filter: grayscale(0%);
+    /* Kolorowe logo po najechaniu */
+}
+
+.logo p {
+    font-size: 1.4rem;
+    color: #bbb;
+    /* Jaśniejszy szary tekst */
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.logo:hover p {
+    color: #fff;
+    /* Kolor tekstu po najechaniu */
+}
+
+@media (max-width: 768px) {
+    .logos {
+        gap: 40px;
+    }
+
+    .logo img {
+        max-width: 180px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .logo p {
+        font-size: 1.2rem;
+    }
+}
+
+/* ----------------------------- */
+/* COMMUNITY SECTION
+/* ----------------------------- */
+
+/* STYLE SECTION */
+.community {
+    background: linear-gradient(135deg, #000000 30%, #222222 100%);
+    padding: 80px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 3em;
+    color: #50fa7b;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+/* CONTAINER FOR TEXT AND IMAGE */
+.community-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* TEXT BLOCK */
+.community-text {
+    flex: 1;
+    max-width: 550px;
+    padding-right: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.community-text i {
+    color: #50fa7b;
+    font-size: 2em;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.community-text p {
+    margin-bottom: 20px;
+}
+
+/* TEXT HOVER EFFECT */
+.community-text i:hover {
+    transform: translateX(10px);
+}
+
+/* BUTTON STYLE */
+.community-text .btn {
+    padding: 15px 30px;
+    background-color: #50fa7b;
+    color: #282828;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(80, 250, 123, 0.5);
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.community-text .btn:hover {
+    background-color: #39e15a;
+    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8);
+    transform: scale(1.05);
+}
+
+/* IMAGE BLOCK */
+.community-image {
+    flex: 1;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    transform: scale(1.05);
+}
+
+.community-image:hover {
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .community-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .community-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .community-image {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* ----------------------------- */
+/* FAQ SECTION
+/* ----------------------------- */
+/* FAQ Section */
+.faq {
+    background: linear-gradient(135deg, #1a1a1a 20%, #333333 80%);
+    padding: 80px 20px;
+    color: #fff;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 3em;
+    color: #50fa7b;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+/* FAQ List */
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* FAQ Item */
+.faq-item {
+    background-color: #444;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 255, 0, 0.4);
+}
+
+/* FAQ Item Title */
+.faq-item h3 {
+    font-size: 1.8em;
+    color: #50fa7b;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.faq-item h3 i {
+    margin-right: 15px;
+    font-size: 1.8em;
+    color: #50fa7b;
+}
+
+/* FAQ Description */
+.faq-description {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.faq-description p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    color: #ccc;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.faq-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Hover Effect on Icons */
+.faq-item h3 i:hover {
+    transform: scale(1.2);
+    color: #39e15a;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* AOS Animation */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-list {
+        padding: 0;
+    }
+
+    .faq-item {
+        padding: 20px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.5em;
+    }
+
+    .faq-description p {
+        font-size: 1em;
+    }
+}
+
+/* ----------------------------- */
+/* JOIN US SECTION
+/* ----------------------------- */
+.join {
+    background: linear-gradient(135deg, #2a2a2a, #1b1b1b);
+    padding: 80px 20px;
+    color: #fff;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+/* Blinking Text */
+.blinking-text {
+    font-size: 3em;
+    color: #50fa7b;
+    font-weight: 600;
+    letter-spacing: 3px;
+    animation: blink 1.5s infinite ease-in-out;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.5), 0 0 20px rgba(80, 250, 123, 0.5);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Logo Image */
+.logo-img {
+    border-radius: 50%;
+    box-shadow: 0 10px 40px rgba(0, 255, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+}
+
+/* Description Text */
+.join-description {
+    font-size: 1.2em;
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Button */
+.join-btn {
+    background-color: #50fa7b;
+    color: #1a1a1a;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none
+}
+
+.join-btn:hover {
+    background-color: #39e15a;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 255, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .join-description {
+        font-size: 1em;
+    }
+
+    .logo-img {
+        width: 12em;
+        height: 12em;
+    }
+
+    .join-btn {
+        font-size: 1.2em;
+        padding: 12px 30px;
+    }
+}
+
+/* ----------------------------- */
+/* STAFF SECTION
+/* ----------------------------- */
+
+/* Principal Owners Section */
+.staff {
+    background: #1f1f1f;
+    padding: 60px 20px;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5em;
+    color: #50fa7b;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Grid for staff members */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* Staff Member */
+.staff-member {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for staff member */
+.staff-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 45px rgba(0, 255, 0, 0.4);
+}
+
+.staff-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.staff-photo:hover {
+    transform: scale(1.1);
+}
+
+/* Staff Name and Position */
+.staff-member h3 {
+    font-size: 1.6em;
+    color: #50fa7b;
+    margin: 10px 0;
+}
+
+.staff-member p {
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Add animation for fade in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .staff-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .staff-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+}
+
+
+/* ----------------------------- */
+/* APPLY SECTION
+/* ----------------------------- */
+
+/* Modal */
+.modal {
+    display: none;
+    /* Ukryte na początku */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 100px;
+    animation: fadeInModal 0.5s ease-in-out;
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%;
+    max-width: 900px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 255, 0, 0.5);
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 2.5em;
+    color: #50fa7b;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.modal-content iframe {
+    border-radius: 10px;
+    border: 2px solid #50fa7b;
+    margin-bottom: 20px;
+}
+
+.modal-content .close {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-content .close:hover {
+    color: #50fa7b;
+}
+
+/* Przycisk */
+.btn-apply {
+    background-color: #50fa7b;
+    color: #fff;
+    font-size: 1.2em;
+    /* Zmniejszenie rozmiaru czcionki */
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    margin-top: 30px;
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+    white-space: nowrap;
+    /* Zapobieganie złamaniu tekstu */
+    margin-bottom: 2em
+}
+
+.btn-apply:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.5);
+}
+
+.btn-apply:active {
+    transform: scale(1);
+}
+
+/* Animacja pojawiania się modalu */
+@keyframes fadeInModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styl dla kontenera przycisku i sekcji aplikacyjnej */
+.container-center {
+    display: flex;
+    justify-content: center;
+    /* Centruje przycisk w poziomie */
+    align-items: center;
+    /* Centruje przycisk w pionie */
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+}
+
+#applytoadministrator {
+    font-size: 2.5em;
+    color: #fff;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container-center .btn-apply {
+    font-size: 1.5em;
+    /* Zmniejszenie czcionki przycisku */
+    padding: 20px 50px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+}
+
+.container-center .btn-apply:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.5);
+}
+
+.container-center .btn-apply:active {
+    transform: scale(1);
+}
+
+/* Responsywność dla małych ekranów */
+@media (max-width: 768px) {
+    .container-center .btn-apply {
+        font-size: 1.2em;
+        /* Mniejszy rozmiar czcionki na mniejszych ekranach */
+        padding: 15px 30px;
+    }
+
+    #applytoadministrator {
+        font-size: 2em;
+        /* Mniejszy tytuł na mniejszych ekranach */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-center .btn-apply {
+        font-size: 1em;
+        /* Jeszcze mniejszy rozmiar czcionki na bardzo małych ekranach */
+        padding: 12px 25px;
+    }
+
+    #applytoadministrator {
+        font-size: 1.8em;
+        /* Jeszcze mniejszy tytuł na bardzo małych ekranach */
+    }
+}
+
+/* ----------------------------- */
+/* POPUP MODAL
+/* ----------------------------- */
+
+/* Popup Modal */
+.popup {
+    display: none;
+    /* Ukryte na początku */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 80px;
+    animation: fadeInPopup 0.5s ease-in-out;
+}
+
+.popup-content {
+    background-color: #1c1c1c;
+    color: #fff;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 30px rgba(0, 255, 0, 0.3);
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.popup-content h2 {
+    font-size: 2.5em;
+    color: #50fa7b;
+    margin-bottom: 20px;
+}
+
+.popup-content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.popup-content .join-btn {
+    background-color: #50fa7b;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+}
+
+.popup-content .join-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.5);
+}
+
+.popup-content .join-btn:active {
+    transform: scale(1);
+}
+
+.popup-content .close-btn {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.popup-content .close-btn:hover {
+    color: #50fa7b;
+}
+
+.popup-content img {
+    width: 7em;
+    height: 7em;
+    margin-bottom: 20px;
+}
+
+/* Animacja modalu */
+@keyframes fadeInPopup {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        padding: 30px;
+        max-width: 500px;
+    }
+
+    .popup-content h2 {
+        font-size: 2em;
+    }
+
+    .popup-content p {
+        font-size: 1em;
+    }
+
+    .popup-content .join-btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .popup-content .close-btn {
+        font-size: 2em;
+        top: 5px;
+        right: 10px;
+    }
+
+    .popup-content img {
+        width: 5em;
+        height: 5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        width: 95%;
+        padding: 20px;
+        max-width: 400px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.8em;
+    }
+
+    .popup-content p {
+        font-size: 0.9em;
+    }
+
+    .popup-content .join-btn {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .popup-content .close-btn {
+        font-size: 1.8em;
+        top: 5px;
+        right: 5px;
+    }
+
+    .popup-content img {
+        width: 4em;
+        height: 4em;
+    }
+}
+
+
+/* ----------------------------- */
+/* NAVIGATION
+/* ----------------------------- */
+
+/* Nawigacja */
+.navbar {
+    background: linear-gradient(135deg, #1E1E1E, #1E1E1E);
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.navbar-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo - po lewej */
+.navbar .logo {
+    color: #fff;
+    font-size: 28px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Nawigacja */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.nav-links li a i {
+    margin-right: 10px;
+    font-size: 22px;
+}
+
+.nav-links li a:hover {
+    background-color: #333;
+    color: #4CAF50;
+    transform: translateY(-5px);
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle i {
+    font-size: 30px;
+    transition: transform 0.3s ease;
+    justify-content: center;
+}
+
+/* Animacja na hamburgerze */
+.menu-toggle.active i {
+    transform: rotate(90deg);
+}
+
+/* Animacja rozwijania menu */
+.nav-links.active {
+    display: flex;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsywność - dla urządzeń mobilnych */
+@media (max-width: 1024px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start; /* Ustawienie nawigacji po lewej */
+    }
+
+    .nav-links {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        animation: fadeIn 0.5s ease-out;
+        align-items: flex-start; /* Ustawienie linków po lewej stronie */
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        text-align: left; /* Wyrównanie linków do lewej */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links li a {
+        padding: 15px 20px;
+        text-align: left; /* Wyrównanie tekstu w linkach do lewej */
+    }
+
+    .nav-links li a:hover {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+}
+
+/* Dla bardzo małych ekranów - do 480px */
+@media (max-width: 480px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center; /* Centrowanie nawigacji */
+    }
+
+    .nav-links {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        margin-top: 20px;
+        animation: fadeIn 0.5s ease-out;
+        align-items: center; /* Centrowanie linków */
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        text-align: center; /* Wyrównanie linków do środka */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links li a {
+        padding: 15px 20px;
+        text-align: center; /* Wyrównanie tekstu w linkach do środka */
+    }
+
+    .nav-links li a:hover {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+}
+
+/* Sekcje */
+section {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #fff;
+    margin-top: 80px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+/* Animacja ukrywania nawigacji przy przewijaniu */
+.navbar.hide {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
