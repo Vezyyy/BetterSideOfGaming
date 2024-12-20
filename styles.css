@@ -978,6 +978,8 @@ header.scrolled {
 /* PARTNERSHIP */
 /* ----------------------------- */
 
+/* PARTNERSHIP */
+
 /* Sekcja współpracy */
 .partnership-section {
     background-color: #333;
@@ -1014,6 +1016,7 @@ header.scrolled {
     gap: 40px; /* Zmniejszenie odstępu między logo na mniejszych ekranach */
     flex-wrap: wrap;
     margin-top: 40px;
+    overflow: hidden; /* Zapobiega przesuwaniu w poziomie */
 }
 
 .logo {
@@ -1026,6 +1029,7 @@ header.scrolled {
     color: #fff;
     min-width: 220px; /* Zapewnienie minimalnej szerokości dla każdego logo */
     flex-grow: 1; /* Elastyczność elementów */
+    box-sizing: border-box; /* Zapobiega przekraczaniu szerokości */
 }
 
 .logo img {
@@ -1037,6 +1041,7 @@ header.scrolled {
     filter: grayscale(100%);
     /* Użycie szarości na logo */
     transition: filter 0.3s ease;
+    width: 100%; /* Zapewnia responsywność */
 }
 
 .logo img:hover {
@@ -1077,6 +1082,7 @@ header.scrolled {
         font-size: 1.2rem; /* Dostosowanie rozmiaru tekstu */
     }
 }
+
 /* ----------------------------- */
 /* COMMUNITY SECTION
 /* ----------------------------- */
