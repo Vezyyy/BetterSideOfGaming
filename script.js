@@ -103,19 +103,6 @@
     });
 
 
-    // Header hide on scroll
-    document.addEventListener('DOMContentLoaded', () => {
-        const header = document.getElementById('container');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('hide');
-            } else {
-                header.classList.remove('hide');
-            }
-        });
-    });
-
     // Smooth scroll on anchor link click
     document.addEventListener('DOMContentLoaded', () => {
         const links = document.querySelectorAll('a[href^="#"]');
