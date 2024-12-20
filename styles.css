@@ -974,7 +974,9 @@ header.scrolled {
     /* Improved readability */
 }
 
+/* ----------------------------- */
 /* PARTNERSHIP */
+/* ----------------------------- */
 
 /* Sekcja współpracy */
 .partnership-section {
@@ -991,9 +993,10 @@ header.scrolled {
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; /* Dodanie paddingu, aby zachować przestrzeń na ekranach mobilnych */
 }
 
 .section-title {
@@ -1008,7 +1011,7 @@ header.scrolled {
 .logos {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 40px; /* Zmniejszenie odstępu między logo na mniejszych ekranach */
     flex-wrap: wrap;
     margin-top: 40px;
 }
@@ -1021,6 +1024,8 @@ header.scrolled {
     text-decoration: none;
     /* Usunięcie podkreślenia z linku */
     color: #fff;
+    min-width: 220px; /* Zapewnienie minimalnej szerokości dla każdego logo */
+    flex-grow: 1; /* Elastyczność elementów */
 }
 
 .logo img {
@@ -1057,22 +1062,21 @@ header.scrolled {
 
 @media (max-width: 768px) {
     .logos {
-        gap: 40px;
+        gap: 20px; /* Zmniejszenie gap na mniejszych ekranach */
     }
 
     .logo img {
-        max-width: 180px;
+        max-width: 180px; /* Dostosowanie rozmiaru logo */
     }
 
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Zmniejszenie rozmiaru tytułu na mobilnych ekranach */
     }
 
     .logo p {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Dostosowanie rozmiaru tekstu */
     }
 }
-
 /* ----------------------------- */
 /* COMMUNITY SECTION
 /* ----------------------------- */
