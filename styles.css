@@ -999,6 +999,7 @@ header.scrolled {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px; /* Dodanie paddingu, aby zachować przestrzeń na ekranach mobilnych */
+    text-align: center; /* Wyśrodkowanie zawartości */
 }
 
 .section-title {
