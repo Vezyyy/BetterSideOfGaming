@@ -1064,9 +1064,12 @@ header.scrolled {
     color: #fff;
 }
 
+/* Dostosowanie układu dla urządzeń mobilnych */
 @media (max-width: 768px) {
     .logos {
         gap: 20px;
+        flex-direction: column; /* Układ pionowy na urządzeniach mobilnych */
+        align-items: center; /* Wyśrodkowanie logotypów */
     }
 
     .logo img {
@@ -1092,6 +1095,7 @@ header.scrolled {
         font-size: 3rem; /* Utrzymanie większej wielkości tytułu na komputerach */
     }
 }
+
 
 
 /* ----------------------------- */
