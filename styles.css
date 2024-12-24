@@ -94,30 +94,34 @@ html {
 /* ----------------------------- */
 /* EVENT SECTION
 /* ----------------------------- */
+
+/* EVENTS SECTION */
 .events {
-    background: linear-gradient(135deg, rgba(112, 112, 112, 0.4), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
     color: #f1f1f1;
     padding: 60px 0;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
+/* CONTAINER FOR EVENTS */
 .container-center {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* SECTION TITLE */
 .section-title {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 700;
-    color: #50fa7b;
-    /* Zielony kolor */
+    color: #39e15a; /* Neonowy zielony */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 40px;
     position: relative;
     margin-top: 1em;
+    text-shadow: 0 0 15px rgba(57, 225, 90, 0.9), 0 0 30px rgba(57, 225, 90, 0.7); /* Neonowy cień */
 }
 
 .section-title::after {
@@ -125,11 +129,12 @@ html {
     display: block;
     width: 60px;
     height: 3px;
-    background-color: #50fa7b;
+    background-color: #39e15a;
     margin: 20px auto 0;
     border-radius: 5px;
 }
 
+/* MAIN IMAGE */
 .main-images {
     width: 100%;
     max-width: 1000px;
@@ -144,6 +149,7 @@ html {
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
 }
 
+/* Event List */
 .event-list {
     display: flex;
     justify-content: space-between;
@@ -151,47 +157,61 @@ html {
     gap: 40px;
 }
 
+/* Event Card */
 .event {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło z lekko przezroczystym efektem */
     border-radius: 15px;
     padding: 30px;
     flex-basis: 30%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Neonowy efekt na hover */
+.event:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Event Title */
 .event-title {
     font-size: 1.8em;
-    color: #50fa7b;
+    color: #50fa7b; /* Neonowy zielony */
     margin-bottom: 20px;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.8), 0 0 15px rgba(80, 250, 123, 0.6); /* Neonowy cień */
 }
 
+/* Event Text */
 .event p {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 15px;
+    color: #d0d0d0;
 }
 
+/* Button */
 .event a.btn {
     display: inline-block;
     background-color: #50fa7b;
-    color: #282828;
+    color: #222;
     padding: 12px 25px;
     border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 0 0 5px rgba(80, 250, 123, 0.6);
 }
 
 .event a.btn:hover {
     background-color: #39e15a;
-}
-
-.event:hover {
-    transform: translateY(-10px);
-    /* Efekt unoszenia przy hover */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(57, 225, 90, 0.8);
+    text-shadow: 0 0 10px rgba(57, 225, 90, 0.8); /* Neonowy efekt cienia */
 }
 
 /* Responsive design */
@@ -204,6 +224,15 @@ html {
     .main-images {
         max-width: 100%;
     }
+
+    .event {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 2.8em;
+    }
 }
 
 
@@ -213,117 +242,96 @@ html {
 
 /* PEOPLE */
 .user-count {
-    background-color: #1c1c1c;
-    /* Ciemniejszy odcień tła dla elegancji */
+    background-color: #121212;
+    /* Bardziej intensywne, głębokie tło */
     padding: 40px;
     border-radius: 20px;
-    /* Zwiększenie zaokrąglenia rogów */
     margin: 40px auto;
     width: 100%;
     max-width: 900px;
-    /* Szerokość sekcji na większe ekrany */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-    /* Delikatniejszy cień dla subtelnej głębi */
+    box-shadow: 0 8px 25px rgba(0, 255, 0, 0.4);
+    /* Neonowy zielony cień */
     text-align: center;
     transition: all 0.3s ease;
-    /* Płynne przejście przy zmianach */
 }
 
 .user-count:hover {
     transform: translateY(-10px);
-    /* Podniesienie sekcji po najechaniu */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    /* Większy cień na hover */
+    box-shadow: 0 15px 40px rgba(0, 255, 0, 0.6);
+    /* Większy neonowy cień na hover */
 }
 
 .user-count h2 {
-    color: #1fda84;
-    /* Zmieniony kolor tytułu na bardziej wyrazisty */
+    color: #50fa7b;
+    /* Neonowy zielony dla tytułu */
     margin: 20px 0;
     font-weight: 600;
-    /* Mniejsza grubość czcionki, bardziej nowoczesne */
     font-size: 2.4em;
-    /* Zwiększenie rozmiaru czcionki dla tytułu */
     text-transform: uppercase;
-    /* Użycie wielkich liter dla profesjonalizmu */
     letter-spacing: 2px;
-    /* Delikatne rozstawienie liter */
+    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b;
+    /* Efekt neonowego blasku */
 }
 
 .user-number {
     display: flex;
     justify-content: space-evenly;
-    /* Użycie 'space-evenly' dla równego rozmieszczenia */
     align-items: center;
     width: 100%;
     margin: 20px 0;
     flex-wrap: wrap;
-    /* Umożliwia zawijanie elementów w przypadku małych ekranów */
 }
 
 .user-type {
     display: flex;
     align-items: center;
     font-size: 1.6em;
-    /* Zwiększenie czcionki liczby użytkowników */
     margin: 10px 0;
     color: #f1f1f1;
-    /* Jasnoszary kolor dla tekstu */
     font-weight: 500;
-    /* Lekko pogrubiony tekst dla większej czytelności */
     transition: color 0.3s ease;
-    /* Animacja zmiany koloru */
 }
 
 .user-type:hover {
     color: #50fa7b;
-    /* Kolor zielony na hover */
+    text-shadow: 0 0 10px #50fa7b;
+    /* Neonowy blask na hover tylko dla tekstu */
 }
 
 .user-type i {
     margin-right: 12px;
     color: #50fa7b;
-    /* Kolor ikon */
     font-size: 1.7em;
-    /* Zwiększenie rozmiaru ikon */
     transition: transform 0.3s ease;
-    /* Animacja zmiany rozmiaru ikon */
+    /* Usunięto neonowy blask dla ikon */
 }
 
 .user-type i:hover {
     transform: scale(1.2);
-    /* Powiększenie ikony po najechaniu */
+    /* Powiększenie ikony po najechaniu, bez blasku */
 }
 
 /* Zmniejszenie rozmiarów na urządzeniach mobilnych */
 @media (max-width: 768px) {
     .user-count h2 {
-        font-size: 1.5em;
+        font-size: 1.8em;
         /* Zmniejszenie rozmiaru nagłówka */
     }
 
     .user-number {
         flex-direction: column;
-        /* Ułożenie ikon i tekstu w kolumnie */
         align-items: center;
-        /* Wyśrodkowanie w pionie */
     }
 
     .user-type {
         font-size: 1.2em;
-        /* Zmniejszenie rozmiaru czcionki dla liczby użytkowników */
     }
 
     .user-type i {
         font-size: 1.2em;
-        /* Zmniejszenie rozmiaru ikon */
-    }
-
-    .join-us-message {
-        font-size: 1em;
-        /* Zmniejszenie rozmiaru czcionki tekstu zapraszającego */
     }
 }
+
 
 /* ----------------------------- */
 /* ABOUT SECTION
@@ -331,32 +339,33 @@ html {
 
 /* ABOUT SECTION */
 .about {
-    background: linear-gradient(135deg, #0e0e0e, #222222);
-    /* Futurystyczne gradientowe tło */
-    padding: 60px 0;
-    color: #f1f1f1;
+    background: linear-gradient(135deg, #111, #222); /* Ciemniejszy, głębszy gradient */
+    padding: 60px 20px;
+    color: #eaeaea;
     font-family: 'Roboto', sans-serif;
-    /* Nowoczesna czcionka */
+    text-align: center;
 }
 
+/* Contener dla treści About */
 .about-container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: center;
 }
 
+/* Tytuł sekcji */
 .section-title {
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: 700;
     color: #50fa7b;
-    /* Jasno zielony kolor */
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
     position: relative;
+    text-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b, 0 0 50px #50fa7b; /* Intensywniejszy neonowy blask */
 }
 
+/* Dekoracyjna kreska pod tytułem */
 .section-title::after {
     content: "";
     display: block;
@@ -365,28 +374,35 @@ html {
     background-color: #50fa7b;
     margin: 20px auto 0;
     border-radius: 5px;
+    box-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b; /* Intensyfikacja efektu blasku */
 }
 
+/* Layout contentu */
 .about-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
+    margin-top: 20px;
 }
 
+/* Tekst w About */
 .about-text {
     flex: 1;
     padding: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.8;
     text-align: left;
+    color: #eaeaea;
 }
 
 .about-text p {
     margin-bottom: 20px;
+    text-shadow: 0 0 5px rgba(80, 250, 123, 0.7); /* Delikatny neonowy blask */
 }
 
+/* Lista w About */
 .about-list {
     list-style: none;
     padding-left: 0;
@@ -399,20 +415,24 @@ html {
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
+    color: #eaeaea;
 }
 
 .about-list li i {
     color: #50fa7b;
     margin-right: 12px;
     font-size: 1.6em;
+    text-shadow: 0 0 5px #50fa7b;
 }
 
+/* Efekt hover na liście */
 .about-list li:hover {
     color: #50fa7b;
+    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b; /* Mocniejszy neonowy blask na hover */
     transform: translateX(5px);
-    /* Efekt przesunięcia przy hover */
 }
 
+/* Obrazek w About */
 .about-image-container {
     flex: 1;
     display: flex;
@@ -424,31 +444,31 @@ html {
 .about-image {
     width: 100%;
     max-width: 550px;
-    /* Powiększamy obrazek */
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    /* Cień wokół obrazka */
     transform: scale(1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .about-image:hover {
     transform: scale(1.1);
-    /* Efekt powiększenia na hover */
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    /* Zwiększenie cienia przy hover */
+    box-shadow: 0 30px 60px rgba(0, 255, 0, 0.3); /* Zielony cień dla efektu hover */
 }
 
+/* Responsywność na małe ekrany */
 @media (max-width: 768px) {
     .about-content {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Dostosowanie tekstów */
     .about-text {
         padding: 20px 10px;
+        font-size: 1.1em;
     }
 
+    /* Dostosowanie obrazka */
     .about-image-container {
         margin-top: 30px;
     }
@@ -456,7 +476,13 @@ html {
     .about-image {
         max-width: 100%;
     }
+
+    /* Zmniejszenie tytułu na mniejszych ekranach */
+    .section-title {
+        font-size: 2.5em;
+    }
 }
+
 
 /* ----------------------------- */
 /* JOIN US 
@@ -487,11 +513,13 @@ p {
 }
 
 body {
-    line-height: 1.6;
-    overflow-x: hidden;
-    background-color: #1a1a1a;
-    color: #f4f4f4;
+    background-color: #111; /* Ustawienie ciemnego tła */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #f1f1f1; /* Kolor tekstu */
 }
+
 
 /* Loader Styles */
 .loader {
@@ -568,59 +596,55 @@ header.scrolled {
 /* ----------------------------- */
 /* SLIDER
 /* ----------------------------- */
+
 .slider {
     margin-top: 12em;
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 600px;
-    /* Default height on desktop */
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Neonowe ciemne tło */
 }
 
 .slider-container {
     display: flex;
     transition: transform 0.5s ease;
-    /* Transition for slide movement */
     width: 100%;
-    /* Ensure the container takes full width */
     text-align: center;
 }
 
 .slide {
     min-width: 100%;
-    /* Set minimum width to 100% */
     height: 600px;
-    /* Can adjust this value */
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity 0.5s ease;
-    /* Transition for opacity */
     opacity: 0;
-    /* Initially hidden */
 }
 
 .slide.active {
     opacity: 1;
-    /* Show active slide */
 }
 
 .slide.active:hover {
-    opacity: 0.5;
+    opacity: 0.8;
 }
 
 .slide h2 {
     position: absolute;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    color: #ffffff;
+    color: #50fa7b; /* Neonowa zieleń dla tekstu */
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: bold;
+    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b; /* Neonowy efekt blasku */
+    width: 85%;
 }
 
 .slider-dots {
@@ -635,20 +659,24 @@ header.scrolled {
 .dot {
     height: 15px;
     width: 15px;
-    background-color: #50fa7b;
+    background: linear-gradient(135deg, #50fa7b, #00ff00); /* Gradient neonowy */
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    /* Add transform transition */
-    border: 1px solid rgb(0, 0, 0);
-    /* Updated border style */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px #50fa7b, 0 0 15px #00ff00; /* Neonowy cień */
 }
 
 .dot.active {
-    background-color: #ffffff;
+    background: #ffffff;
     transform: scale(1.3);
-    /* Scale up active dot */
+    box-shadow: 0 0 20px #50fa7b, 0 0 30px #00ff00; /* Intensywniejszy neonowy blask */
+}
+
+.dot:hover {
+    background: #50fa7b;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #50fa7b, 0 0 25px #00ff00;
 }
 
 /* Navigation buttons */
@@ -657,46 +685,43 @@ header.scrolled {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    border: none;
+    background: rgba(0, 0, 0, 0.7);
+    color: #50fa7b; /* Neonowy kolor strzałek */
+    border: 2px solid #50fa7b;
     padding: 10px;
     cursor: pointer;
     z-index: 2;
     font-size: 18px;
     border-radius: 5px;
-    transition: background-color 0.3s;
-    /* Add transition for hover effect */
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #50fa7b;
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Darker on hover */
+    background: rgba(0, 0, 0, 0.9);
+    color: #00ff00; /* Jaśniejszy neonowy efekt na hover */
+    box-shadow: 0 0 15px #50fa7b, 0 0 20px #00ff00;
 }
 
 .prev {
     left: 10px;
-    /* Positioning for left button */
 }
 
 .next {
     right: 10px;
-    /* Positioning for right button */
 }
 
 /* Responsive Slider Adjustments */
 @media (max-width: 1200px) {
     .slider {
         height: 500px;
-        /* Dostosowanie wysokości na średnie ekrany */
     }
 }
 
 @media (max-width: 768px) {
     .slider {
         height: 400px;
-        /* Dostosowanie wysokości dla tabletów */
     }
 
     .slide h2 {
@@ -707,8 +732,7 @@ header.scrolled {
 
 @media (max-width: 600px) {
     .slider {
-        height: 500px;
-        /* Dostosowanie wysokości dla telefonów komórkowych */
+        height: 550px;
     }
 
     .slide h2 {
@@ -727,13 +751,12 @@ header.scrolled {
 }
 
 .prev:hover {
-    color: #50fa7b;
+    color: #00ff00;
 }
 
 .next:hover {
-    color: #50fa7b;
+    color: #00ff00;
 }
-
 
 
 /* ----------------------------- */
@@ -891,7 +914,9 @@ header.scrolled {
     transform: translateY(0);
 }
 
-/* Main Staff */
+/* ----------------------------- */
+/* Staff Section
+/* ----------------------------- */
 .staff {
     background-color: #252525;
     /* Dark background for the staff section */
@@ -1103,20 +1128,14 @@ header.scrolled {
 /* COMMUNITY SECTION
 /* ----------------------------- */
 
-/* STYLE SECTION */
-.community {
-    background: linear-gradient(135deg, #000000 30%, #222222 100%);
-    padding: 80px 20px;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
+.community{
+    background-color: black;
 }
 
 /* SECTION TITLE */
 .section-title {
     font-size: 3em;
-    color: #50fa7b;
+    color: #50fa7b; /* Neonowy zielony */
     text-align: center;
     font-weight: 600;
     letter-spacing: 2px;
@@ -1124,44 +1143,11 @@ header.scrolled {
     position: relative;
     z-index: 2;
     margin-bottom: 40px;
-}
-
-/* CONTAINER FOR TEXT AND IMAGE */
-.community-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-}
-
-/* TEXT BLOCK */
-.community-text {
-    flex: 1;
-    max-width: 550px;
-    padding-right: 20px;
-    font-size: 1.1em;
-    line-height: 1.6;
-}
-
-.community-text i {
-    color: #50fa7b;
-    font-size: 2em;
-    margin-right: 15px;
-    transition: all 0.3s ease;
-}
-
-.community-text p {
-    margin-bottom: 20px;
-}
-
-/* TEXT HOVER EFFECT */
-.community-text i:hover {
-    transform: translateX(10px);
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.7), 0 0 20px rgba(80, 250, 123, 0.5); /* Neonowy efekt dla tytułów */
 }
 
 /* BUTTON STYLE */
-.community-text .btn {
+.btn {
     padding: 15px 30px;
     background-color: #50fa7b;
     color: #282828;
@@ -1170,19 +1156,19 @@ header.scrolled {
     border-radius: 5px;
     letter-spacing: 2px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(80, 250, 123, 0.5);
+    box-shadow: 0 0 15px rgba(80, 250, 123, 0.6); /* Subtelny neonowy cień */
     text-align: center;
     display: inline-block;
     text-decoration: none;
 }
 
-.community-text .btn:hover {
+.btn:hover {
     background-color: #39e15a;
-    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8);
+    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8); /* Mocniejszy neonowy cień na hover */
     transform: scale(1.05);
 }
 
-/* IMAGE BLOCK */
+/* Image Hover Effects */
 .community-image {
     flex: 1;
     max-width: 600px;
@@ -1194,24 +1180,69 @@ header.scrolled {
 
 .community-image:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8); /* Neonowy cień przy powiększeniu */
 }
 
-/* RESPONSIVE DESIGN */
+/* Text Hover Effects */
+.community-text i {
+    color: #50fa7b;
+    font-size: 2em;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(80, 250, 123, 0.7), 0 0 15px rgba(80, 250, 123, 0.5); /* Neonowy efekt dla ikon */
+}
+
+/* Responsive design dla małych ekranów */
 @media (max-width: 768px) {
-    .community-content {
-        flex-direction: column;
-        align-items: center;
+    .community-text i {
+        font-size: 1.5em; /* Zmniejszenie rozmiaru ikon na mniejszych ekranach */
+        margin-right: 10px; /* Zmniejszenie marginesu między ikonami */
     }
 
+    /* Zapewnienie zawijania tekstu i lepszego dopasowania */
     .community-text {
-        max-width: 100%;
-        text-align: center;
+        font-size: 1em; /* Możesz dostosować rozmiar tekstu, aby był czytelniejszy */
+        line-height: 1.6; /* Ustalenie odpowiedniej wysokości linii, by tekst się nie sklejał */
+        word-wrap: break-word; /* Zawijanie tekstu, jeśli jest zbyt długi */
+        max-width: 100%; /* Zapewnienie, że kontener nie przekroczy szerokości */
+        text-align: center; /* Opcjonalnie, wyśrodkowanie tekstu na małych ekranach */
+        box-sizing: border-box; /* Zapewnia, że padding nie wpływa na szerokość elementu */
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    .community-image {
-        max-width: 80%;
-        margin-top: 20px;
+    /* Zmiana marginesu dla elementów tekstowych */
+    .community-text p {
+        margin-bottom: 15px; /* Zmniejszenie marginesów, by tekst był bardziej zwarty */
+        word-wrap: break-word; /* Zawijanie tekstu wewnątrz paragrafów */
     }
+
+    /* Zmniejszenie szerokości obrazu na mniejszych ekranach */
+    .community-image {
+        max-width: 90%; /* Zmniejszenie szerokości obrazu */
+        margin-top: 20px; /* Dodatkowy margines od góry */
+    }
+
+    /* Zmniejszenie rozmiaru tła */
+    .community {
+        padding: 40px 10px; /* Zmniejszenie paddingu, aby sekcja była mniejsza na małych ekranach */
+    }
+}
+
+
+.community-text p, a{
+    margin-bottom: 1.5em
+}
+
+.community-text i:hover {
+    transform: translateX(10px);
+    color: #39e15a;
+}
+
+/* Neon Glow Effect on Hover for Text */
+.community-text p:hover {
+    color: #50fa7b;
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.7), 0 0 20px rgba(80, 250, 123, 0.5); /* Subtelny neonowy efekt na tekście */
 }
 
 /* ----------------------------- */
@@ -1906,17 +1937,18 @@ header.scrolled {
 
 /* Nawigacja */
 .navbar {
-    background: linear-gradient(135deg, #1E1E1E, #1E1E1E);
-    padding: 20px 0;
+    background: linear-gradient(135deg, #1E1E1E, #1E1E1E); /* Głęboki gradient */
+    padding-top: 2em;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2); /* Dodatkowy neonowy cień */
     border-bottom: 2px solid #4CAF50;
     transition: all 0.3s ease;
 }
+
 
 .navbar-container {
     width: 90%;
@@ -1934,6 +1966,13 @@ header.scrolled {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #50fa7b;
+    text-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b;
+    /* Neonowy efekt logo na hover */
 }
 
 /* Nawigacja */
@@ -1941,6 +1980,7 @@ header.scrolled {
     list-style-type: none;
     display: flex;
     align-items: center;
+    transition: all 0.3s ease;
 }
 
 .nav-links li {
@@ -1956,7 +1996,7 @@ header.scrolled {
     display: flex;
     align-items: center;
     position: relative;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .nav-links li a i {
@@ -1967,7 +2007,8 @@ header.scrolled {
 .nav-links li a:hover {
     background-color: #333;
     color: #4CAF50;
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Subtelne uniesienie linków */
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3); /* Neonowy cień przy hover */
 }
 
 .nav-links li a::after {
@@ -1990,7 +2031,8 @@ header.scrolled {
     display: none;
     cursor: pointer;
     color: #fff;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 1em;
 }
 
 .menu-toggle i {
@@ -1999,17 +2041,21 @@ header.scrolled {
     justify-content: center;
 }
 
-/* Animacja na hamburgerze */
 .menu-toggle.active i {
     transform: rotate(90deg);
 }
 
-/* Animacja rozwijania menu */
+.menu-toggle.active {
+    color: #50fa7b;
+}
+
+/* Animacja na rozwijane menu */
 .nav-links.active {
     display: flex;
     animation: slideIn 0.3s ease-out;
 }
 
+/* Animacja przesuwania menu */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -2022,100 +2068,62 @@ header.scrolled {
     }
 }
 
-/* Responsywność dla urządzeń o szerokości od 1024px do 1200px (laptop) */
+/* Responsywność - dla urządzeń o szerokości od 1024px do 1200px (laptop) */
 @media (max-width: 1200px) and (min-width: 1024px) {
     .nav-links {
-        font-size: 12px;
-        /* Zmniejszenie czcionki na 12px */
+        font-size: 14px; /* Zmniejszenie czcionki */
     }
 
     .nav-links a {
-        font-size: 12px;
-        /* Zmniejszenie czcionki na 12px */
+        font-size: 14px;
         text-align: center;
-        /* Wyrównanie tekstu w linkach */
     }
 
     .nav-links li a {
         padding: 8px 16px;
-        /* Zmniejszenie paddingu */
-        font-size: 12px;
-        /* Zmniejszenie rozmiaru czcionki na 12px */
+        font-size: 14px;
         text-align: center;
-        /* Wyrównanie tekstu w linkach */
     }
 
     .nav-links li {
         margin: 0;
-        /* Usunięcie marginesu wokół linków */
     }
 
     .navbar-container .logo {
-        font-size: 18px;
-        /* Mniejsze logo */
+        font-size: 22px;
     }
 
     .menu-toggle {
-        display: block;
-        /* Pokazuje hamburgera na mniejszych ekranach */
+        display: block; /* Pokazuje hamburgera */
     }
 }
 
-/* Responsywność dla urządzeń o szerokości od 1200px do 1600px */
+/* Responsywność - dla urządzeń o szerokości od 1200px do 1600px */
 @media (min-width: 1200px) and (max-width: 1600px) {
     .nav-links {
-        font-size: 14px;
-        /* Normalna czcionka */
+        font-size: 16px;
     }
 
     .nav-links a {
-        font-size: 14px;
-        /* Czcionka 14px */
+        font-size: 16px;
         text-align: center;
     }
 
     .nav-links li a {
         padding: 10px 20px;
-        /* Większy padding na dużych ekranach */
-        font-size: 14px;
-        /* Czcionka 14px */
-        text-align: center;
+        font-size: 16px;
     }
 
     .nav-links li {
         margin: 0;
-        /* Usunięcie marginesu wokół linków */
-    }
-
-    .navbar-container .logo {
-        font-size: 22px;
-        /* Mniejsze logo */
-    }
-
-    .menu-toggle {
-        display: none;
-        /* Ukrywa hamburgera na większych ekranach */
-    }
-}
-
-/* Opcjonalnie, dla większych ekranów (powyżej 1600px) */
-@media (min-width: 1600px) {
-    .nav-links {
-        font-size: 16px;
-        /* Większa czcionka */
-    }
-
-    .nav-links li a {
-        padding: 12px 24px;
-        /* Większy padding na dużych ekranach */
-        font-size: 16px;
-        /* Większa czcionka */
-        text-align: center;
     }
 
     .navbar-container .logo {
         font-size: 24px;
-        /* Większe logo */
+    }
+
+    .menu-toggle {
+        display: none; /* Ukrywa hamburgera */
     }
 }
 
@@ -2124,9 +2132,7 @@ header.scrolled {
     .navbar-container {
         flex-direction: column;
         align-items: center;
-        /* Centrowanie nawigacji */
         justify-content: center;
-        /* Wyśrodkowanie kontenera */
     }
 
     .nav-links {
@@ -2136,7 +2142,6 @@ header.scrolled {
         margin-top: 20px;
         animation: fadeIn 0.5s ease-out;
         align-items: center;
-        /* Centrowanie linków */
     }
 
     .nav-links li {
@@ -2144,7 +2149,6 @@ header.scrolled {
         margin-top: 10px;
         width: 100%;
         text-align: center;
-        /* Wyrównanie linków do środka */
     }
 
     .nav-links.active {
@@ -2158,7 +2162,6 @@ header.scrolled {
     .nav-links li a {
         padding: 15px 20px;
         text-align: center;
-        /* Wyrównanie tekstu w linkach do środka */
     }
 
     .nav-links li a:hover {
@@ -2168,11 +2171,8 @@ header.scrolled {
 
     .navbar .logo {
         font-size: 24px;
-        /* Zmniejszenie rozmiaru logo na urządzeniach mobilnych */
         text-align: center;
-        /* Wyśrodkowanie logo */
         margin: 0 auto;
-        /* Automatyczne marginesy */
     }
 }
 
@@ -2181,7 +2181,6 @@ header.scrolled {
     .navbar-container {
         flex-direction: column;
         align-items: center;
-        /* Centrowanie nawigacji */
     }
 
     .nav-links {
@@ -2191,7 +2190,6 @@ header.scrolled {
         margin-top: 20px;
         animation: fadeIn 0.5s ease-out;
         align-items: center;
-        /* Centrowanie linków */
     }
 
     .nav-links li {
@@ -2199,7 +2197,6 @@ header.scrolled {
         margin-top: 10px;
         width: 100%;
         text-align: center;
-        /* Wyrównanie linków do środka */
     }
 
     .nav-links.active {
@@ -2213,7 +2210,6 @@ header.scrolled {
     .nav-links li a {
         padding: 15px 20px;
         text-align: center;
-        /* Wyrównanie tekstu w linkach do środka */
     }
 
     .nav-links li a:hover {
@@ -2221,6 +2217,9 @@ header.scrolled {
         color: #fff;
     }
 }
+
+
+/* SECTION SECTION */
 
 /* Sekcje */
 section {
