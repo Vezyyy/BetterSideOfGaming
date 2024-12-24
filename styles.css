@@ -2480,6 +2480,7 @@ section:hover {
     font-family: 'Roboto', sans-serif;
     border-radius: 8px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+    margin-top: 1em;
 }
 
 .materials-info h2 {
