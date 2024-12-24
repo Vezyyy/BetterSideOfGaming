@@ -849,69 +849,7 @@ header.scrolled {
 /* LOADER */
 /* ----------------------------- */
 
-/* Loader */
-.loader {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100;
-    visibility: hidden;
-    /* Initially hidden */
-}
-
-.loader img {
-    width: 100px;
-}
-
-/* Header Styles */
-#container {
-    padding: 20px 0;
-    background-color: #111;
-    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.server-logo {
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    color: #0ff;
-}
-
-.server-logo-img {
-    max-width: 50px;
-    margin-right: 10px;
-}
-
-.loader {
-    animation: fadeIn 0.5s ease-out;
-    opacity: 1;
-    background-color: #47d2f8;
-    z-index: 99999;
-}
-
-.loader.img {
-    border: 2px solid black;
-}
-
-.section-animate {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.section-animate.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* NOW NOTHING */
 
 /* ----------------------------- */
 /* Staff Section
@@ -2605,10 +2543,10 @@ section:hover {
     flex-direction: column; /* Układ w kolumnie */
     align-items: center; /* Wyrównanie na środku */
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 
-.container {
+.container-license {
     display: flex; /* Flexbox w kontenerze, aby kontrolować układ */
     flex-direction: column; /* Układ w kolumnie */
     align-items: center; /* Wyśrodkowanie */
@@ -2679,7 +2617,26 @@ section:hover {
     font-size: 1.3rem;
     color: #e0e0e0;
     text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+    text-align: center;
+    word-wrap: break-word; /* Zapewnia, że tekst się zawija */
+    overflow-wrap: break-word; /* Dodatkowa gwarancja zawijania tekstu */
+    line-height: 1.6; /* Ułatwia czytanie przez zwiększenie odstępu między wierszami */
 }
+
+/* Responsywność na mniejszych ekranach */
+@media (max-width: 768px) {
+    .patronage-text {
+        font-size: 1.1rem; /* Zmniejsza rozmiar czcionki na mniejszych ekranach */
+        margin-top: 15px; /* Dodatkowa przestrzeń w górnej części sekcji */
+    }
+
+    .vpanda-logo {
+        width: 150px; /* Zmniejsza rozmiar logo na mniejszych ekranach */
+        height: auto;
+        margin-top: 10px; /* Daje trochę przestrzeni pomiędzy logo a tekstem */
+    }
+}
+
 
 .patronage-text strong {
     color: #00FF00; /* Neonowy zielony dla nazwy VPanda Studio */
@@ -2692,6 +2649,8 @@ section:hover {
     width: 200px; /* Możesz dostosować rozmiar logo */
     height: auto;
     transition: transform 0.3s ease-in-out;
+    max-width: 100%; /* Zapewnienie, że logo nie wyjdzie poza ekran */
+    margin-bottom: 20px; /* Odstęp od dołu */
 }
 
 .vpanda-logo:hover {
@@ -2711,5 +2670,7 @@ section:hover {
     }
     .vpanda-logo {
         width: 150px; /* Mniejszy rozmiar logo na mniejszych ekranach */
+        max-width: 90%; /* Zmniejszenie maksymalnej szerokości logo */
     }
 }
+
