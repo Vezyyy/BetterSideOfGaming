@@ -583,6 +583,7 @@ header.scrolled {
     /* Transition for slide movement */
     width: 100%;
     /* Ensure the container takes full width */
+    text-align: center;
 }
 
 .slide {
@@ -1564,16 +1565,20 @@ header.scrolled {
 
 .modal-content {
     background-color: #2a2a2a;
-    margin: 5% auto;
+    margin: 0 auto; /* Zmienione na 0, aby usunąć domyślny margines od góry */
     padding: 40px;
     border-radius: 15px;
-    width: 60%;
+    width: 100%;
     max-width: 900px;
     color: #fff;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 255, 0, 0.5);
-    position: relative;
+    position: fixed; /* Ustawiono na fixed */
+    top: 0; /* Pozycjonowanie od góry */
+    left: 50%; /* Wycentrowanie poziome */
+    transform: translateX(-50%); /* Wyśrodkowanie względem osi X */
 }
+
 
 .modal-content h2 {
     font-size: 2.5em;
@@ -2413,4 +2418,61 @@ section:hover {
     .logo-section .logo-content {
         max-width: 250px; /* Zmniejszenie rozmiaru logo na mniejszych ekranach */
     }
+}
+
+/* ----------------------------- */
+/* Terms Section
+/* ----------------------------- */
+
+.terms-section {
+    background: linear-gradient(135deg, #1b1b1b, #2a2a2a); /* Gradient tła */
+    padding: 50px 20px;
+    border: 2px solid #00ff00; /* Zielona ramka */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.4); /* Zielony cień */
+    text-align: center;
+    color: #e5e5e5; /* Jasnoszary tekst */
+    font-family: 'Orbitron', sans-serif; /* Futurystyczna czcionka */
+}
+
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terms-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ff00; /* Jaskrawozielony tytuł */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    letter-spacing: 2px;
+}
+
+.terms-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #cccccc; /* Szary kolor dla opisu */
+    margin-bottom: 30px;
+}
+
+.btn-view-rules {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #2a2a2a; /* Czarny tekst na zielonym tle */
+    background-color: #00ff00; /* Jaskrawozielone tło */
+    border: 2px solid #00ff00;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4); /* Zielony cień */
+}
+
+.btn-view-rules:hover {
+    background-color: #2a2a2a; /* Czarny kolor po najechaniu */
+    color: #00ff00; /* Zielony tekst po najechaniu */
+    border-color: #00ff00;
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6); /* Intensywniejszy cień */
+    transform: scale(1.1); /* Powiększenie po najechaniu */
 }
