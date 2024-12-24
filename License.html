@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Side Of Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">BetterSideOfGaming</a>
+
+            <!-- Ikona hamburgera (dla urządzeń mobilnych) -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Linki nawigacji -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#discordstats"><i class="fas fa-chart-line"></i> Discord Stats</a></li>
+                <li><a href="index.html#aboutus"><i class="fas fa-users"></i> About Us</a></li>
+                <li><a href="index.html#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="index.html#community"><i class="fas fa-users"></i> Community</a></li>
+                <li><a href="index.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="index.html#joindiscord"><i class="fas fa-plug"></i> Join Discord</a></li>
+                <li><a href="index.html#applytoadministrator"><i class="fas fa-user-shield"></i> Apply to
+                        Administrator</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <section class="license">
+        <div class="container">
+            <h2 class="license-title">License and Image Credits</h2>
+            <p class="license-description">
+                All images featured on this website have been sourced from Google Images. We would like to express our sincere appreciation to the talented creators behind these stunning visuals. The use of these images is strictly non-commercial, intended solely to enhance the visual design of our website and related project. These images serve to complement the overall aesthetic and user experience, without any financial gain or profit. If you are the copyright holder of any image displayed on our site and wish for it to be removed or require proper attribution, we kindly ask that you reach out to us directly. We are more than happy to honor your request and provide the necessary credits where applicable.
+            </p>
+            <p class="license-note">
+                We fully respect and acknowledge the intellectual property rights of all content creators. If you have any concerns or questions regarding the use of these images, please do not hesitate to contact us.
+            </p>
+            
+            <!-- Informacja o patronacie -->
+            <div class="patronage">
+                <p class="patronage-text">This website is proudly supported under the patronage of <strong>VPanda Studio</strong></p>
+                <a href="https://vezyyy.github.io/VPanda/" target="_blank">
+                    <img src="images/VPanda Logo Remove BG (1).png" alt="VPanda Studio Logo" class="vpanda-logo">
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="logo-section">
+        <div class="logo-container">
+            <div class="logo-wrapper">
+                <img src="images/BSOG Logo BG R.png" alt="Logo" class="logo-img">
+                <p class="logo-caption">Join us and have fun with us!</p> <!-- Dodany podpis -->
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="container-center">
+            <p>&copy; 2024 Better Side Of Gaming. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+        // Pobranie elementów
+        const modal = document.getElementById("popup");
+        const closeModalBtn = document.getElementById("close-btn");
+
+        // Funkcja zamykająca modal
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none"; // Ukrywa modal
+        }
+
+        // Funkcja zamykająca modal, gdy klikniesz poza jego obszar
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Ukrywa modal, jeśli klikniesz poza jego obszar
+            }
+        }
+
+        // Funkcja, aby modal pokazał się automatycznie po załadowaniu strony
+        window.onload = function () {
+            setTimeout(function () {
+                modal.style.display = "block"; // Pokazuje modal po załadowaniu strony
+            }, 1000); // Zwykle stosuje się opóźnienie (np. 1 sekunda)
+        }
+
+    </script>
+
+</body>
+
+</html>

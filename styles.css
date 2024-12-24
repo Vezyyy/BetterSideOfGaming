@@ -598,11 +598,10 @@ header.scrolled {
 /* ----------------------------- */
 
 .slider {
-    margin-top: 12em;
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 800px;
     background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Neonowe ciemne tło */
 }
 
@@ -615,7 +614,7 @@ header.scrolled {
 
 .slide {
     min-width: 100%;
-    height: 600px;
+    height: 800px;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1947,6 +1946,11 @@ header.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2); /* Dodatkowy neonowy cień */
     border-bottom: 2px solid #4CAF50;
     transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.navbar:hover{
+    opacity: 1;
 }
 
 
@@ -2259,7 +2263,7 @@ section:hover {
 /* Sekcja Regulaminu */
 .rules-section {
     padding: 50px 20px;
-    background-color: #1c1c1c;
+    background-color: #000000;
     /* Ciemnoszare tło */
     color: #ddd;
     /* Jasnoszary tekst */
@@ -2388,36 +2392,86 @@ section:hover {
 /* Logo Section
 /* ----------------------------- */
 
-/* Sekcja Logo */
+/* Sekcja z logo */
 .logo-section {
-    padding: 30px 20px;
-    /* Usunięto tło, aby nie było koloru tła */
-    text-align: center; /* Wyśrodkowanie zawartości */
-    margin-top: 50px; /* Odstęp od regulaminu */
-    background-color: #2c2c2c;
+    background-color: #0a0a0a; /* Ciemne tło dla kontrastu */
+    padding: 40px 20px; /* Mniejsze odstępy dookoła */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Zmniejszona wysokość sekcji */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Mniejszy cień */
 }
 
-/* Zawartość logo */
-.logo-section .logo-content {
-    max-width: 300px; /* Maksymalna szerokość logo */
-    margin: 0 auto; /* Wyśrodkowanie elementu */
+/* Kontener dla logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ustalamy, że zawartość będzie w kolumnie */
+    max-width: 800px; /* Ograniczenie szerokości kontenera */
+    width: 100%;
+    padding: 0 20px;
 }
 
-/* Styl logo - okrągłe bez tła i animacji */
-.logo-section .logo-img {
-    width: 100%; /* Sprawia, że logo będzie responsywne */
-    height: auto; /* Proporcjonalne dopasowanie wysokości */
-    border-radius: 50%; /* Ustawia logo na okrągłe */
-    border: none; /* Usunięcie obramowania */
-    box-shadow: none; /* Usunięcie cienia */
+/* Opakowanie dla samego logo */
+.logo-wrapper {
+    position: relative;
 }
 
-/* Responsywność dla mniejszych ekranów */
-@media (max-width: 768px) {
-    .logo-section .logo-content {
-        max-width: 250px; /* Zmniejszenie rozmiaru logo na mniejszych ekranach */
+/* Stylizacja samego logo */
+.logo-img {
+    max-width: 50%; /* Zmniejszony rozmiar logo */
+    height: auto;
+    border-radius: 8px; /* Zaokrąglone rogi */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3); /* Mniejszy efekt neonowego cienia */
+    transition: all 0.3s ease-in-out; /* Animacja dla efektów hover */
+}
+
+/* Efekty dla logo przy najechaniu */
+.logo-img:hover {
+    transform: scale(1.05); /* Powiększenie przy najechaniu */
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6); /* Wzmocnienie efektu neonowego cienia */
+}
+
+/* Stylizacja podpisu pod logo */
+.logo-caption {
+    margin-top: 15px; /* Odstęp między logo a podpisem */
+    font-size: 1.2rem; /* Większa czcionka dla podpisu */
+    color: #00FF00; /* Neonowy zielony kolor */
+    font-family: 'Roboto', sans-serif; /* Czysta czcionka */
+    text-transform: uppercase; /* Wszystkie litery dużymi */
+    font-weight: bold; /* Pogrubiona czcionka */
+    letter-spacing: 2px; /* Odstępy między literami */
+    animation: fadeIn 1.5s ease-in-out; /* Animacja dla subtelnego pojawiania się */
+}
+
+/* Animacja pojawiania się podpisu */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
+/* Stylizacja na mniejszych ekranach */
+@media (max-width: 768px) {
+    .logo-section {
+        padding: 30px 15px; /* Mniejsze odstępy na mniejszych ekranach */
+    }
+    .logo-img {
+        max-width: 70%; /* Zmniejszenie logo na urządzeniach mobilnych */
+    }
+    .logo-caption {
+        font-size: 1rem; /* Mniejsza czcionka na urządzeniach mobilnych */
+    }
+}
+
 
 /* ----------------------------- */
 /* Terms Section
@@ -2474,4 +2528,188 @@ section:hover {
     border-color: #00ff00;
     box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6); /* Intensywniejszy cień */
     transform: scale(1.1); /* Powiększenie po najechaniu */
+}
+
+/* ----------------------------- */
+/* Materials Section
+/* ----------------------------- */
+
+.materials-info {
+    background-color: #1a1a1a; /* Ciemniejsze tło */
+    color: #00FF00; /* Neonowy zielony tekst */
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+.materials-info h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #00FF00; /* Neonowy zielony */
+    font-weight: 700;
+    text-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7); /* Efekt neonowego cienia */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.materials-info i {
+    font-size: 1.6rem;
+    color: #00FF00;
+}
+
+.materials-info p {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.5);
+    line-height: 1.6;
+}
+
+.materials-info .btn {
+    display: inline-block;
+    background-color: #00FF00;
+    color: #0a0a0a;
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 6px 15px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.materials-info .btn:hover {
+    background-color: #00cc00;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 255, 0, 0.6);
+}
+
+
+/* ----------------------------- */
+/* License Section
+/* ----------------------------- */
+
+/* Stylizacja sekcji License */
+.license {
+    background-color: #0a0a0a; /* Ciemniejsze tło dla lepszego kontrastu */
+    color: #00FF00; /* Neonowy zielony kolor tekstu */
+    padding: 50px 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: center; /* Wyrównanie na środku */
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex; /* Flexbox w kontenerze, aby kontrolować układ */
+    flex-direction: column; /* Układ w kolumnie */
+    align-items: center; /* Wyśrodkowanie */
+    justify-content: center;
+    width: 100%;
+}
+
+.license-title, .license-description, .license-note {
+    display: block;
+    width: 80%; /* Elementy zajmują 80% szerokości kontenera */
+    margin: 20px 0;
+    font-weight: 400; /* Lżejsza czcionka */
+    letter-spacing: 1px; /* Delikatne rozszerzenie liter */
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.6), 0 0 10px rgba(0, 255, 0, 0.6);
+    line-height: 1.6;
+    transition: all 0.3s ease-in-out;
+}
+
+.license-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00FF00; /* Neonowy zielony */
+    text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8); /* Intensywniejszy efekt neonowego cienia */
+}
+
+.license-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #e0e0e0; /* Jaśniejszy kolor tekstu, by ułatwić czytanie */
+    max-width: 900px;
+    margin: 0 auto;
+    text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.3);
+}
+
+.license-note {
+    font-size: 1rem;
+    font-style: italic;
+    color: #00FF00; /* Neonowy zielony */
+    text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.3);
+}
+
+.license a {
+    color: #00FF00;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.license a:hover {
+    color: #00cc00;
+    text-decoration: underline;
+}
+
+/* Stylizacja sekcji patronatu VPanda Studio */
+.patronage {
+    margin-top: 40px;
+    color: #00FF00;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.4);
+}
+
+.patronage-text {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
+}
+
+.patronage-text strong {
+    color: #00FF00; /* Neonowy zielony dla nazwy VPanda Studio */
+    text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
+}
+
+/* Stylizacja logo VPanda Studio */
+.vpanda-logo {
+    margin-top: 15px;
+    width: 200px; /* Możesz dostosować rozmiar logo */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.vpanda-logo:hover {
+    transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+}
+
+/* Stylizacja na mniejszych ekranach */
+@media (max-width: 768px) {
+    .license-title {
+        font-size: 2.2rem;
+    }
+    .license-description {
+        font-size: 1rem;
+    }
+    .patronage-text {
+        font-size: 1rem;
+    }
+    .vpanda-logo {
+        width: 150px; /* Mniejszy rozmiar logo na mniejszych ekranach */
+    }
 }
