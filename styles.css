@@ -1884,13 +1884,8 @@ header.scrolled {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2); /* Dodatkowy neonowy cień */
     border-bottom: 2px solid #4CAF50;
     transition: all 0.3s ease;
-    opacity: 0.8;
+    opacity: 0.9;
 }
-
-.navbar:hover{
-    opacity: 1;
-}
-
 
 .navbar-container {
     width: 90%;
