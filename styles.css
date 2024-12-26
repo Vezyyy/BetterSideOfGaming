@@ -720,7 +720,7 @@ header.scrolled {
 
 @media (max-width: 768px) {
     .slider {
-        height: 600px;
+        height: 750px;
     }
 
     .slide h2 {
