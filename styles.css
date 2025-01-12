@@ -610,6 +610,7 @@ header.scrolled {
     transition: transform 0.5s ease;
     width: 100%;
     text-align: center;
+    margin-top: 7.2em;
 }
 
 .slide {
@@ -644,6 +645,7 @@ header.scrolled {
     font-weight: bold;
     text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b; /* Neonowy efekt blasku */
     width: 85%;
+    margin-bottom: 5em;
 }
 
 .slider-dots {
