@@ -714,9 +714,23 @@ header.scrolled {
 }
 
 /* Responsive Slider Adjustments */
+@media (max-width: 1920px) {
+    .slider {
+        height: 900px;
+    }
+}
+
+/* Responsive Slider Adjustments */
+@media (max-width: 1600px) {
+    .slider {
+        height: 700px;
+    }
+}
+
+/* Responsive Slider Adjustments */
 @media (max-width: 1200px) {
     .slider {
-        height: 500px;
+        height: 700px;
     }
 }
 
