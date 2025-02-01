@@ -2,6 +2,33 @@
 /* OTHER
 /* ----------------------------- */
 
+/* Pulsating effect */
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+/* Pulsating effect */
+.pulse {
+    animation: pulse-animation 2s infinite;
+    display: inline-block; /* Zapewnia, że element będzie odpowiednio skalowany */
+}
+
+/* Keyframes for the pulse animation */
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);  /* Zwiększamy rozmiar */
+        opacity: 0.5;           /* Mniejsza przezroczystość */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* General Styles */
 html {
     scroll-behavior: smooth;
