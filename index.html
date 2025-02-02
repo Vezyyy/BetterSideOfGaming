@@ -12,6 +12,13 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
+<!-- Loader (appears before the page content loads) -->
+<div class="loader">
+    <div class="spinner">
+        <img src="images/BSOG Logo BG R.png" alt="Loading...">
+    </div>
+</div>
+
 <body>
     <!-- Nawigacja -->
     <nav class="navbar">
@@ -43,7 +50,8 @@
             <span class="close-btn" id="close-btn">&times;</span>
             <img style="width: 7em; height: 7em;" src="images/BSOG Logo BG R.png" alt="Logo" class="logo-img">
             <h2>📜 Read This Window Before Closing It 📜</h2>
-            <p>Before joining our community, please make sure to read the rules. After joining, remember to verify yourself with our bot, PandOS, to gain full access to the server!</p>
+            <p>Before joining our community, please make sure to read the rules. After joining, remember to verify
+                yourself with our bot, PandOS, to gain full access to the server!</p>
             <p>If you encounter any issues, please reach out to the administration.</p>
             <p>Click the button below to join and start your journey!</p>
             <a href="https://discord.gg/Tr3BQPER34" target="_blank" class="join-btn pulse">Join Now</a>
@@ -125,7 +133,7 @@
             <div class="user-type">
                 <i class="fas fa-user-friends"></i> <!-- Ikona użytkowników -->
 
-                <span id="user-count-value">73 Users</span> <!-- Liczbę użytkowników możesz zmieniać ręcznie -->
+                <span id="user-count-value">75 Users</span> <!-- Liczbę użytkowników możesz zmieniać ręcznie -->
 
             </div>
             <div class="user-type">
@@ -368,6 +376,48 @@
         </div>
     </section>
 
+    <!-- Futuristic Bot Information Section -->
+    <section class="bot-info">
+        <div class="bot-info-container">
+            <!-- Left Side: Bot Image and Read More Button -->
+            <div class="bot-image-container">
+                <div class="bot-image">
+                    <img src="images/PandOS1.jpg" alt="Bot Logo">
+                </div>
+                <!-- Read More Button -->
+                <div class="bot-read-more">
+                    <button onclick="window.location.href='link-to-page.html'">Read More</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Bot Details -->
+            <div class="bot-details-container">
+                <h2 class="bot-title">PandOS Our Bot System!</h2>
+                <div class="bot-info-item">
+                    <strong>Last Update:</strong>
+                    <span>02.02.2025</span>
+                </div>
+                <div class="bot-info-item">
+                    <strong>Update Name:</strong>
+                    <span>Steam Sales System</span>
+                </div>
+                <div class="bot-info-item">
+                    <strong>Version:</strong>
+                    <span>5.1.0</span>
+                </div>
+                <div class="bot-info-item">
+                    <strong>Creators:</strong>
+                    <span>PandOS & BSOG Team</span>
+                </div>
+                <div class="bot-info-item">
+                    <strong>Lines of Code:</strong>
+                    <span>3,239</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <div class="materials-info">
         <h2><i class="fas fa-book-open"></i> Information about the Materials Used <i class="fas fa-info-circle"></i>
         </h2>
@@ -394,8 +444,6 @@
     <a href="#" id="back-to-top" class="back-to-top-btn">
         <i class="fas fa-arrow-up"></i>
     </a>
-
-
 
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>

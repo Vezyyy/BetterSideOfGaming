@@ -548,26 +548,106 @@ body {
 }
 
 
-/* Loader Styles */
+/* Loader Container */
 .loader {
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(51, 51, 51, 0.9);
-    z-index: 1000;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.9)); /* Gradient tła */
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.9;
-    transition: opacity 0.5s ease-out;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
 }
 
+/* Futurystyczny Spinner */
+.spinner {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.1); /* Transparentny obrys */
+    border-top: 8px solid #00ffcc; /* Neonowy kolor na górze */
+    position: relative;
+    animation: spin 1.5s linear infinite, pulse 2s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pulsujący efekt neonowego obracania */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulsujący efekt dla spinnera */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6), 0 0 60px rgba(0, 255, 204, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 255, 204, 1), 0 0 50px rgba(0, 255, 204, 0.8), 0 0 75px rgba(0, 255, 204, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6), 0 0 60px rgba(0, 255, 204, 0.4);
+    }
+}
+
+/* Efekt animacji logo */
+.spinner img {
+    max-width: 60%;
+    max-height: 60%;
+    animation: fadeInLogo 1s ease-in-out, scaleIn 1s ease-out;
+}
+
+/* Efekt pojawiania się logo */
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Efekt powiększania logo */
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade-Out Animation dla loadera */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Ukrycie loadera po zakończeniu animacji */
 .loader.hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out, visibility 0s 0.5s;
 }
+
+
 
 /* Header Styles */
 header {
@@ -2713,3 +2793,165 @@ section:hover {
     }
 }
 
+/* ----------------------------- */
+/* PadnOS Section
+/* ----------------------------- */
+/* Futuristic Bot Information Section */
+.bot-info {
+    background: linear-gradient(45deg, #1a1a1a, #333); /* Dark gradient background */
+    width: 95%; /* Set width to 95% */
+    color: #ddd; /* Light gray text */
+    padding: 50px 40px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Deep shadow for floating effect */
+    border-radius: 20px;
+    margin: 50px auto; /* Center horizontally by using auto for left and right margins */
+    overflow: hidden;
+    border: 2px solid #00b0ff; /* Blue neon border */
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 768px) {
+    .bot-info {
+        width: 100%; /* Set width to 100% on small screens */
+        padding: 20px 15px; /* Reduce padding further */
+        margin: 15px auto; /* Adjust margin for small screens */
+    }
+
+    /* Reduce font size for text */
+    .bot-title {
+        font-size: 1.5em; /* Smaller title font */
+    }
+
+    .bot-info-item {
+        font-size: 0.9em; /* Even smaller text for details */
+    }
+
+    /* Adjust image size */
+    .bot-image img {
+        width: 120px; /* Much smaller image size */
+        height: auto;
+    }
+
+    /* Adjust Read More button */
+    .bot-read-more button {
+        font-size: 0.9em; /* Smaller button text */
+        padding: 10px 15px; /* Even smaller button size */
+    }
+}
+
+/* Container for both left and right sections */
+.bot-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 60px;
+}
+
+/* Left side: Bot Image and Read More Button */
+.bot-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    position: relative;
+}
+
+/* Bot Image */
+.bot-image img {
+    width: 220px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 176, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect on image */
+.bot-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(0, 176, 255, 1);
+}
+
+/* Read More Button */
+.bot-read-more {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.bot-read-more button {
+    background: transparent;
+    border: 2px solid #00b0ff;
+    color: #00b0ff;
+    font-size: 1.2em;
+    padding: 18px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 176, 255, 0.8);
+}
+
+/* Button hover effect */
+.bot-read-more button:hover {
+    background-color: #00b0ff;
+    color: #1a1a1a;
+    box-shadow: 0 0 30px rgba(0, 176, 255, 1);
+}
+
+/* Right side: Bot details */
+.bot-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+/* Title */
+.bot-title {
+    font-size: 2.5em;
+    color: #00b0ff; /* Neon blue */
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff;
+}
+
+/* Bot Details */
+.bot-info-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Neon text with glow */
+.bot-info-item strong {
+    color: #00b0ff; /* Neon blue */
+    text-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff;
+}
+
+/* Neon glow effect for values */
+.bot-info-item span {
+    position: relative;
+    color: #fff;
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Neon glowing animation */
+@keyframes neon-glow {
+    0% {
+        color: #fff;
+        text-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff, 0 0 30px #00b0ff;
+    }
+    100% {
+        color: #00b0ff;
+        text-shadow: 0 0 20px #00b0ff, 0 0 40px #00b0ff, 0 0 60px #00b0ff;
+    }
+}
