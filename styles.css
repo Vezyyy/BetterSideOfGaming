@@ -2794,8 +2794,9 @@ section:hover {
 }
 
 /* ----------------------------- */
-/* PadnOS Section
+/* PadnOS Section */
 /* ----------------------------- */
+
 /* Futuristic Bot Information Section */
 .bot-info {
     background: linear-gradient(45deg, #1a1a1a, #333); /* Dark gradient background */
@@ -2804,12 +2805,12 @@ section:hover {
     padding: 50px 40px;
     font-family: 'Roboto', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Spread elements apart on larger screens */
     align-items: center;
     position: relative;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Deep shadow for floating effect */
     border-radius: 20px;
-    margin: 50px auto; /* Center horizontally by using auto for left and right margins */
+    margin: 50px auto; /* Center horizontally */
     overflow: hidden;
     border: 2px solid #00b0ff; /* Blue neon border */
 }
@@ -2817,41 +2818,75 @@ section:hover {
 /* Media Query for mobile devices */
 @media (max-width: 768px) {
     .bot-info {
-        width: 100%; /* Set width to 100% on small screens */
-        padding: 20px 15px; /* Reduce padding further */
-        margin: 15px auto; /* Adjust margin for small screens */
+        width: 100%; /* Full width on small screens */
+        padding: 20px 15px; /* Reduce padding */
+        margin: 15px auto;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Wyśrodkowanie elementów */
+        justify-content: center; /* Wyrównanie do środka */
     }
 
-    /* Reduce font size for text */
+    /* Adjust the Pandosa logo */
+    .bot-image img.pandosa-logo {
+        width: 100px; /* Adjust size of Pandosa logo */
+        height: auto;
+        margin-bottom: 15px; /* Space below logo */
+    }
+
+    /* Adjust the Read More button */
+    .bot-read-more button {
+        font-size: 1em; /* Slightly smaller font for Read More */
+        padding: 12px 20px; /* Adjust padding */
+        margin-bottom: 15px; /* Space between button and information */
+    }
+
+    /* Adjust the Bot title */
     .bot-title {
-        font-size: 1.5em; /* Smaller title font */
+        font-size: 1.6em; /* Smaller title font for mobile */
+        margin-bottom: 10px;
     }
 
+    /* Adjust the bot information items */
     .bot-info-item {
-        font-size: 0.9em; /* Even smaller text for details */
+        font-size: 1em; /* Smaller text for details */
+        margin-bottom: 5px; /* Space between info items */
     }
 
-    /* Adjust image size */
-    .bot-image img {
-        width: 120px; /* Much smaller image size */
+    /* Server logo at the bottom */
+    .server-logo img {
+        width: 100px; /* Adjust size of server logo */
+        height: auto;
+        margin-top: 15px; /* Space at the top to separate from info */
+    }
+}
+
+/* Media Query for larger screens (adjust if needed) */
+@media (min-width: 769px) {
+    .bot-info {
+        flex-direction: row; /* Align horizontally on larger screens */
+    }
+
+    /* Adjust the Pandosa logo */
+    .bot-image img.pandosa-logo {
+        width: 120px;
         height: auto;
     }
 
-    /* Adjust Read More button */
-    .bot-read-more button {
-        font-size: 0.9em; /* Smaller button text */
-        padding: 10px 15px; /* Even smaller button size */
+    /* Adjust the Server logo */
+    .server-logo img {
+        width: 120px;
+        height: auto;
     }
 }
 
 /* Container for both left and right sections */
 .bot-info-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Wyśrodkowanie w kontenerze */
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    gap: 60px;
+    gap: 30px; /* Mniejszy gap dla mobilnych urządzeń */
 }
 
 /* Left side: Bot Image and Read More Button */
@@ -2861,7 +2896,7 @@ section:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 40%;
+    width: 100%;
     position: relative;
 }
 
@@ -2910,7 +2945,7 @@ section:hover {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 50%;
+    width: 100%;
 }
 
 /* Title */
