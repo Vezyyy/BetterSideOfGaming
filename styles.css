@@ -2797,196 +2797,159 @@ section:hover {
 /* PadnOS Section */
 /* ----------------------------- */
 
-/* Futuristic Bot Information Section */
+/* Bot Info Section */
 .bot-info {
-    background: linear-gradient(45deg, #1a1a1a, #333); /* Dark gradient background */
-    width: 95%; /* Set width to 95% */
-    color: #ddd; /* Light gray text */
-    padding: 50px 40px;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: space-between; /* Spread elements apart on larger screens */
-    align-items: center;
-    position: relative;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); /* Deep shadow for floating effect */
-    border-radius: 20px;
-    margin: 50px auto; /* Center horizontally */
-    overflow: hidden;
-    border: 2px solid #00b0ff; /* Blue neon border */
-}
-
-/* Media Query for mobile devices */
-@media (max-width: 768px) {
-    .bot-info {
-        width: 100%; /* Full width on small screens */
-        padding: 20px 15px; /* Reduce padding */
-        margin: 15px auto;
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Wyśrodkowanie elementów */
-        justify-content: center; /* Wyrównanie do środka */
-    }
-
-    /* Adjust the Pandosa logo */
-    .bot-image img.pandosa-logo {
-        width: 100px; /* Adjust size of Pandosa logo */
-        height: auto;
-        margin-bottom: 15px; /* Space below logo */
-    }
-
-    /* Adjust the Read More button */
-    .bot-read-more button {
-        font-size: 1em; /* Slightly smaller font for Read More */
-        padding: 12px 20px; /* Adjust padding */
-        margin-bottom: 15px; /* Space between button and information */
-    }
-
-    /* Adjust the Bot title */
-    .bot-title {
-        font-size: 1.6em; /* Smaller title font for mobile */
-        margin-bottom: 10px;
-    }
-
-    /* Adjust the bot information items */
-    .bot-info-item {
-        font-size: 1em; /* Smaller text for details */
-        margin-bottom: 5px; /* Space between info items */
-    }
-
-    /* Server logo at the bottom */
-    .server-logo img {
-        width: 100px; /* Adjust size of server logo */
-        height: auto;
-        margin-top: 15px; /* Space at the top to separate from info */
-    }
-}
-
-/* Media Query for larger screens (adjust if needed) */
-@media (min-width: 769px) {
-    .bot-info {
-        flex-direction: row; /* Align horizontally on larger screens */
-    }
-
-    /* Adjust the Pandosa logo */
-    .bot-image img.pandosa-logo {
-        width: 120px;
-        height: auto;
-    }
-
-    /* Adjust the Server logo */
-    .server-logo img {
-        width: 120px;
-        height: auto;
-    }
-}
-
-/* Container for both left and right sections */
-.bot-info-container {
-    display: flex;
-    justify-content: center; /* Wyśrodkowanie w kontenerze */
-    align-items: center;
-    max-width: 1200px;
-    width: 100%;
-    gap: 30px; /* Mniejszy gap dla mobilnych urządzeń */
-}
-
-/* Left side: Bot Image and Read More Button */
-.bot-image-container {
+    background: linear-gradient(145deg, rgba(10, 20, 40, 0.9), rgba(0, 50, 100, 0.7));
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 200, 255, 0.6);
+    width: 90%; /* Zmniejszamy szerokość, aby dać przestrzeń */
+    margin: 40px auto;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 200, 255, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Bot Info Container */
+.bot-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
-    position: relative;
+    margin-bottom: 30px;
+    gap: 40px; /* Równomierne rozmieszczenie między elementami */
 }
 
-/* Bot Image */
+/* Left Section: Image and Read More Button */
+.bot-image-container {
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .bot-image img {
-    width: 220px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 0 30px rgba(0, 176, 255, 0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 180px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect on image */
 .bot-image img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 50px rgba(0, 176, 255, 1);
 }
 
-/* Read More Button */
 .bot-read-more {
     margin-top: 20px;
-    text-align: center;
 }
 
 .bot-read-more button {
-    background: transparent;
-    border: 2px solid #00b0ff;
-    color: #00b0ff;
-    font-size: 1.2em;
-    padding: 18px 35px;
-    border-radius: 30px;
+    background: linear-gradient(90deg, #00ccff, #0044ff);
+    border: none;
+    padding: 14px 30px;
+    color: #ffffff;
+    font-size: 18px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 20px rgba(0, 176, 255, 0.8);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Button hover effect */
 .bot-read-more button:hover {
-    background-color: #00b0ff;
-    color: #1a1a1a;
-    box-shadow: 0 0 30px rgba(0, 176, 255, 1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.8);
 }
 
-/* Right side: Bot details */
+/* Right Section: Bot Details */
 .bot-details-container {
+    flex: 2;
+    padding: 0 20px;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    width: 100%;
+    gap: 15px; /* Większe odstępy między elementami */
 }
 
-/* Title */
 .bot-title {
-    font-size: 2.5em;
-    color: #00b0ff; /* Neon blue */
-    letter-spacing: 2px;
+    font-size: 28px;
+    color: #00eaff;
+    text-shadow: 0 0 15px rgba(0, 200, 255, 0.9);
+    text-transform: uppercase;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff;
 }
 
-/* Bot Details */
 .bot-info-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2em;
-    color: #bbb;
-    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
-/* Neon text with glow */
 .bot-info-item strong {
-    color: #00b0ff; /* Neon blue */
-    text-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff;
+    color: #00eaff;
 }
 
-/* Neon glow effect for values */
-.bot-info-item span {
-    position: relative;
-    color: #fff;
-    animation: neon-glow 1.5s ease-in-out infinite alternate;
+/* Server Logo */
+.server-logo-container {
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* Neon glowing animation */
-@keyframes neon-glow {
-    0% {
-        color: #fff;
-        text-shadow: 0 0 10px #00b0ff, 0 0 20px #00b0ff, 0 0 30px #00b0ff;
+.server-logo-container img {
+    width: 180px; /* Zwiększamy rozmiar logo */
+    filter: drop-shadow(0 0 20px rgba(0, 200, 255, 0.9));
+    transition: transform 0.3s ease-in-out;
+}
+
+.server-logo-container img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* VPanda Studio Button */
+.vpanda-read-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.vpanda-read-more button {
+    background: linear-gradient(90deg, #00ccff, #0044ff);
+    border: none;
+    padding: 14px 30px;
+    color: #ffffff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vpanda-read-more button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.8);
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .bot-info-container {
+        flex-direction: column;
+        text-align: center;
     }
-    100% {
-        color: #00b0ff;
-        text-shadow: 0 0 20px #00b0ff, 0 0 40px #00b0ff, 0 0 60px #00b0ff;
+
+    .bot-image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .bot-details-container {
+        padding: 10px 0;
+    }
+
+    .server-logo-container img {
+        width: 140px; /* Dopasowanie logo do mniejszych ekranów */
     }
 }
