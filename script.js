@@ -178,4 +178,73 @@
         document.getElementById('popup').style.display = 'none';
     });
 
+    // Scroll FAQ List
+    function scrollFAQ(direction) {
+        const faqList = document.querySelector(".faq-list");
+        const scrollAmount = 400;
+        faqList.scrollBy({
+            left: direction * scrollAmount,
+            behavior: "smooth"
+        });
+    }
+
+    // Expand FAQ
+    document.querySelectorAll(".faq-item").forEach(item => {
+        item.addEventListener("click", function () {
+            const text = this.querySelector(".faq-description").innerHTML;
+            openPopup(text);
+        });
+    });
+
+    // Open Popup
+    function openPopup(content) {
+        const popup = document.createElement("div");
+        popup.classList.add("faq-popup");
+        popup.innerHTML = `
+            <span class="faq-popup-close">&times;</span>
+            <p>${content}</p>
+        `;
+        document.body.appendChild(popup);
+        popup.classList.add("active");
+
+        // Close Popup
+        popup.querySelector(".faq-popup-close").addEventListener("click", () => {
+            popup.classList.remove("active");
+            setTimeout(() => popup.remove(), 300);
+        });
+    }
+
+    function toggleDescription(event) {
+        const faqItem = event.currentTarget;
+        faqItem.classList.toggle('active');
+    }
+
+
+    // FAQ SECTION
+    function toggleDescription(event) {
+        const faqItem = event.currentTarget;
+        faqItem.classList.toggle('active');
+    }
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', toggleDescription);
+    });
+
+    function scrollFAQ(direction) {
+        const container = document.querySelector('.faq-list');
+        container.scrollBy({
+            left: direction * 300, // Adjust this value for more/less scrolling
+            behavior: 'smooth'
+        });
+    }
+
+    // Dodajemy nasłuchiwanie na kliknięcia przycisków strzałek
+    document.querySelector('.scroll-btn.left').addEventListener('click', () => {
+        scrollFAQ(-1);  // Przewijanie w lewo
+    });
+
+    document.querySelector('.scroll-btn.right').addEventListener('click', () => {
+        scrollFAQ(1);  // Przewijanie w prawo
+    });
+
 })();

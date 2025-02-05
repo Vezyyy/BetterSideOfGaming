@@ -5,45 +5,46 @@
 /* Cały pasek przewijania */
 ::-webkit-scrollbar {
     width: 12px;
-  }
-  
-  /* Tło paska przewijania */
-  ::-webkit-scrollbar-track {
+}
+
+/* Tło paska przewijania */
+::-webkit-scrollbar-track {
     background: #080808;
     border-radius: 10px;
     box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.7);
     border: 1px solid #0f0;
-  }
-  
-  /* Uchwyt przewijania */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Uchwyt przewijania */
+::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, #0f0, #0a0, #0f0);
     border-radius: 10px;
     box-shadow: 0 0 15px #0f0, 0 0 5px #0a0 inset;
     animation: pulse 1.5s infinite alternate;
-  }
-  
-  /* Efekt hover na uchwycie */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Efekt hover na uchwycie */
+::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(90deg, #0a0, #0f0, #0a0);
     box-shadow: 0 0 20px #0f0, 0 0 7px #0a0 inset;
-  }
-  
-  /* Dla Firefox */
-  * {
+}
+
+/* Dla Firefox */
+* {
     scrollbar-color: #0f0 #080808;
     scrollbar-width: thin;
-  }
-  
-  /* Animacja pulsowania */
-  @keyframes pulse {
+}
+
+/* Animacja pulsowania */
+@keyframes pulse {
     0% {
-      box-shadow: 0 0 10px #0f0, 0 0 3px #0a0 inset;
+        box-shadow: 0 0 10px #0f0, 0 0 3px #0a0 inset;
     }
+
     100% {
-      box-shadow: 0 0 20px #0f0, 0 0 7px #0a0 inset;
+        box-shadow: 0 0 20px #0f0, 0 0 7px #0a0 inset;
     }
-  }
+}
 
 /* Pulsating effect */
 .pulse {
@@ -53,7 +54,8 @@
 /* Pulsating effect */
 .pulse {
     animation: pulse-animation 2s infinite;
-    display: inline-block; /* Zapewnia, że element będzie odpowiednio skalowany */
+    display: inline-block;
+    /* Zapewnia, że element będzie odpowiednio skalowany */
 }
 
 /* Keyframes for the pulse animation */
@@ -62,10 +64,14 @@
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
-        transform: scale(1.1);  /* Zwiększamy rozmiar */
-        opacity: 0.5;           /* Mniejsza przezroczystość */
+        transform: scale(1.1);
+        /* Zwiększamy rozmiar */
+        opacity: 0.5;
+        /* Mniejsza przezroczystość */
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
@@ -185,13 +191,15 @@ html {
 .section-title {
     font-size: 3.5em;
     font-weight: 700;
-    color: #39e15a; /* Neonowy zielony */
+    color: #39e15a;
+    /* Neonowy zielony */
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 40px;
     position: relative;
     margin-top: 1em;
-    text-shadow: 0 0 15px rgba(57, 225, 90, 0.9), 0 0 30px rgba(57, 225, 90, 0.7); /* Neonowy cień */
+    text-shadow: 0 0 15px rgba(57, 225, 90, 0.9), 0 0 30px rgba(57, 225, 90, 0.7);
+    /* Neonowy cień */
 }
 
 .section-title::after {
@@ -229,7 +237,8 @@ html {
 
 /* Event Card */
 .event {
-    background: rgba(0, 0, 0, 0.8); /* Ciemniejsze tło z lekko przezroczystym efektem */
+    background: rgba(0, 0, 0, 0.8);
+    /* Ciemniejsze tło z lekko przezroczystym efektem */
     border-radius: 15px;
     padding: 30px;
     flex-basis: 30%;
@@ -248,12 +257,14 @@ html {
 /* Event Title */
 .event-title {
     font-size: 1.8em;
-    color: #50fa7b; /* Neonowy zielony */
+    color: #50fa7b;
+    /* Neonowy zielony */
     margin-bottom: 20px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(80, 250, 123, 0.8), 0 0 15px rgba(80, 250, 123, 0.6); /* Neonowy cień */
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.8), 0 0 15px rgba(80, 250, 123, 0.6);
+    /* Neonowy cień */
 }
 
 /* Event Text */
@@ -281,7 +292,8 @@ html {
     background-color: #39e15a;
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(57, 225, 90, 0.8);
-    text-shadow: 0 0 10px rgba(57, 225, 90, 0.8); /* Neonowy efekt cienia */
+    text-shadow: 0 0 10px rgba(57, 225, 90, 0.8);
+    /* Neonowy efekt cienia */
 }
 
 /* Responsive design */
@@ -409,7 +421,8 @@ html {
 
 /* ABOUT SECTION */
 .about {
-    background: linear-gradient(135deg, #111, #222); /* Ciemniejszy, głębszy gradient */
+    background: linear-gradient(135deg, #111, #222);
+    /* Ciemniejszy, głębszy gradient */
     padding: 60px 20px;
     color: #eaeaea;
     font-family: 'Roboto', sans-serif;
@@ -432,7 +445,8 @@ html {
     letter-spacing: 2px;
     margin-bottom: 40px;
     position: relative;
-    text-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b, 0 0 50px #50fa7b; /* Intensywniejszy neonowy blask */
+    text-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b, 0 0 50px #50fa7b;
+    /* Intensywniejszy neonowy blask */
 }
 
 /* Dekoracyjna kreska pod tytułem */
@@ -444,7 +458,8 @@ html {
     background-color: #50fa7b;
     margin: 20px auto 0;
     border-radius: 5px;
-    box-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b; /* Intensyfikacja efektu blasku */
+    box-shadow: 0 0 10px #50fa7b, 0 0 30px #50fa7b;
+    /* Intensyfikacja efektu blasku */
 }
 
 /* Layout contentu */
@@ -469,7 +484,8 @@ html {
 
 .about-text p {
     margin-bottom: 20px;
-    text-shadow: 0 0 5px rgba(80, 250, 123, 0.7); /* Delikatny neonowy blask */
+    text-shadow: 0 0 5px rgba(80, 250, 123, 0.7);
+    /* Delikatny neonowy blask */
 }
 
 /* Lista w About */
@@ -498,7 +514,8 @@ html {
 /* Efekt hover na liście */
 .about-list li:hover {
     color: #50fa7b;
-    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b; /* Mocniejszy neonowy blask na hover */
+    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b;
+    /* Mocniejszy neonowy blask na hover */
     transform: translateX(5px);
 }
 
@@ -522,7 +539,8 @@ html {
 
 .about-image:hover {
     transform: scale(1.1);
-    box-shadow: 0 30px 60px rgba(0, 255, 0, 0.3); /* Zielony cień dla efektu hover */
+    box-shadow: 0 30px 60px rgba(0, 255, 0, 0.3);
+    /* Zielony cień dla efektu hover */
 }
 
 /* Responsywność na małe ekrany */
@@ -583,11 +601,13 @@ p {
 }
 
 body {
-    background-color: #111; /* Ustawienie ciemnego tła */
+    background-color: #111;
+    /* Ustawienie ciemnego tła */
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color: #f1f1f1; /* Kolor tekstu */
+    color: #f1f1f1;
+    /* Kolor tekstu */
 }
 
 
@@ -598,7 +618,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.9)); /* Gradient tła */
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.9));
+    /* Gradient tła */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -612,8 +633,10 @@ body {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 8px solid rgba(255, 255, 255, 0.1); /* Transparentny obrys */
-    border-top: 8px solid #00ffcc; /* Neonowy kolor na górze */
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    /* Transparentny obrys */
+    border-top: 8px solid #00ffcc;
+    /* Neonowy kolor na górze */
     position: relative;
     animation: spin 1.5s linear infinite, pulse 2s ease-in-out infinite;
     display: flex;
@@ -626,6 +649,7 @@ body {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -636,9 +660,11 @@ body {
     0% {
         box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6), 0 0 60px rgba(0, 255, 204, 0.4);
     }
+
     50% {
         box-shadow: 0 0 25px rgba(0, 255, 204, 1), 0 0 50px rgba(0, 255, 204, 0.8), 0 0 75px rgba(0, 255, 204, 0.6);
     }
+
     100% {
         box-shadow: 0 0 20px rgba(0, 255, 204, 0.8), 0 0 40px rgba(0, 255, 204, 0.6), 0 0 60px rgba(0, 255, 204, 0.4);
     }
@@ -656,6 +682,7 @@ body {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -666,6 +693,7 @@ body {
     0% {
         transform: scale(0.8);
     }
+
     100% {
         transform: scale(1);
     }
@@ -676,6 +704,7 @@ body {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         visibility: hidden;
@@ -752,7 +781,8 @@ header.scrolled {
     position: relative;
     width: 100%;
     height: 800px;
-    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Neonowe ciemne tło */
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+    /* Neonowe ciemne tło */
 }
 
 .slider-container {
@@ -789,11 +819,13 @@ header.scrolled {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
     border-radius: 10px;
-    color: #50fa7b; /* Neonowa zieleń dla tekstu */
+    color: #50fa7b;
+    /* Neonowa zieleń dla tekstu */
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b; /* Neonowy efekt blasku */
+    text-shadow: 0 0 10px #50fa7b, 0 0 20px #50fa7b;
+    /* Neonowy efekt blasku */
     width: 85%;
     margin-bottom: 5em;
 }
@@ -810,18 +842,21 @@ header.scrolled {
 .dot {
     height: 15px;
     width: 15px;
-    background: linear-gradient(135deg, #50fa7b, #00ff00); /* Gradient neonowy */
+    background: linear-gradient(135deg, #50fa7b, #00ff00);
+    /* Gradient neonowy */
     border-radius: 50%;
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px #50fa7b, 0 0 15px #00ff00; /* Neonowy cień */
+    box-shadow: 0 0 10px #50fa7b, 0 0 15px #00ff00;
+    /* Neonowy cień */
 }
 
 .dot.active {
     background: #ffffff;
     transform: scale(1.3);
-    box-shadow: 0 0 20px #50fa7b, 0 0 30px #00ff00; /* Intensywniejszy neonowy blask */
+    box-shadow: 0 0 20px #50fa7b, 0 0 30px #00ff00;
+    /* Intensywniejszy neonowy blask */
 }
 
 .dot:hover {
@@ -837,7 +872,8 @@ header.scrolled {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.7);
-    color: #50fa7b; /* Neonowy kolor strzałek */
+    color: #50fa7b;
+    /* Neonowy kolor strzałek */
     border: 2px solid #50fa7b;
     padding: 10px;
     cursor: pointer;
@@ -851,7 +887,8 @@ header.scrolled {
 .prev:hover,
 .next:hover {
     background: rgba(0, 0, 0, 0.9);
-    color: #00ff00; /* Jaśniejszy neonowy efekt na hover */
+    color: #00ff00;
+    /* Jaśniejszy neonowy efekt na hover */
     box-shadow: 0 0 15px #50fa7b, 0 0 20px #00ff00;
 }
 
@@ -1160,14 +1197,16 @@ header.scrolled {
     transition: transform 0.3s ease-in-out;
     text-decoration: none;
     color: #fff;
-    width: 180px; /* Zmniejszono szerokość logotypu na komputerach */
+    width: 180px;
+    /* Zmniejszono szerokość logotypu na komputerach */
     flex-grow: 1;
     /* Elastyczność elementów */
     box-sizing: border-box;
 }
 
 .logo img {
-    max-width: 150px; /* Zmniejszono maksymalną szerokość obrazów logotypów na komputerach */
+    max-width: 150px;
+    /* Zmniejszono maksymalną szerokość obrazów logotypów na komputerach */
     height: auto;
     margin-bottom: 20px;
     object-fit: contain;
@@ -1197,8 +1236,10 @@ header.scrolled {
 @media (max-width: 768px) {
     .logos {
         gap: 20px;
-        flex-direction: column; /* Układ pionowy na urządzeniach mobilnych */
-        align-items: center; /* Wyśrodkowanie logotypów */
+        flex-direction: column;
+        /* Układ pionowy na urządzeniach mobilnych */
+        align-items: center;
+        /* Wyśrodkowanie logotypów */
     }
 
     .logo img {
@@ -1215,13 +1256,16 @@ header.scrolled {
 }
 
 @media (min-width: 1024px) {
+
     /* Na większych ekranach (komputery) zachowujemy mniejsze logo */
     .logo img {
-        max-width: 150px; /* Ustawienie mniejszej szerokości dla logotypów */
+        max-width: 150px;
+        /* Ustawienie mniejszej szerokości dla logotypów */
     }
 
     .section-title {
-        font-size: 3rem; /* Utrzymanie większej wielkości tytułu na komputerach */
+        font-size: 3rem;
+        /* Utrzymanie większej wielkości tytułu na komputerach */
     }
 }
 
@@ -1231,14 +1275,15 @@ header.scrolled {
 /* COMMUNITY SECTION
 /* ----------------------------- */
 
-.community{
+.community {
     background-color: black;
 }
 
 /* SECTION TITLE */
 .section-title {
     font-size: 3em;
-    color: #50fa7b; /* Neonowy zielony */
+    color: #50fa7b;
+    /* Neonowy zielony */
     text-align: center;
     font-weight: 600;
     letter-spacing: 2px;
@@ -1246,7 +1291,8 @@ header.scrolled {
     position: relative;
     z-index: 2;
     margin-bottom: 40px;
-    text-shadow: 0 0 10px rgba(80, 250, 123, 0.7), 0 0 20px rgba(80, 250, 123, 0.5); /* Neonowy efekt dla tytułów */
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.7), 0 0 20px rgba(80, 250, 123, 0.5);
+    /* Neonowy efekt dla tytułów */
 }
 
 /* BUTTON STYLE */
@@ -1259,7 +1305,8 @@ header.scrolled {
     border-radius: 5px;
     letter-spacing: 2px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 15px rgba(80, 250, 123, 0.6); /* Subtelny neonowy cień */
+    box-shadow: 0 0 15px rgba(80, 250, 123, 0.6);
+    /* Subtelny neonowy cień */
     text-align: center;
     display: inline-block;
     text-decoration: none;
@@ -1267,7 +1314,8 @@ header.scrolled {
 
 .btn:hover {
     background-color: #39e15a;
-    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8); /* Mocniejszy neonowy cień na hover */
+    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8);
+    /* Mocniejszy neonowy cień na hover */
     transform: scale(1.05);
 }
 
@@ -1283,7 +1331,8 @@ header.scrolled {
 
 .community-image:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8); /* Neonowy cień przy powiększeniu */
+    box-shadow: 0 0 30px rgba(80, 250, 123, 0.8);
+    /* Neonowy cień przy powiększeniu */
 }
 
 /* Text Hover Effects */
@@ -1292,48 +1341,63 @@ header.scrolled {
     font-size: 2em;
     margin-right: 15px;
     transition: all 0.3s ease;
-    text-shadow: 0 0 5px rgba(80, 250, 123, 0.7), 0 0 15px rgba(80, 250, 123, 0.5); /* Neonowy efekt dla ikon */
+    text-shadow: 0 0 5px rgba(80, 250, 123, 0.7), 0 0 15px rgba(80, 250, 123, 0.5);
+    /* Neonowy efekt dla ikon */
 }
 
 /* Responsive design dla małych ekranów */
 @media (max-width: 768px) {
     .community-text i {
-        font-size: 1.5em; /* Zmniejszenie rozmiaru ikon na mniejszych ekranach */
-        margin-right: 10px; /* Zmniejszenie marginesu między ikonami */
+        font-size: 1.5em;
+        /* Zmniejszenie rozmiaru ikon na mniejszych ekranach */
+        margin-right: 10px;
+        /* Zmniejszenie marginesu między ikonami */
     }
 
     /* Zapewnienie zawijania tekstu i lepszego dopasowania */
     .community-text {
-        font-size: 1em; /* Możesz dostosować rozmiar tekstu, aby był czytelniejszy */
-        line-height: 1.6; /* Ustalenie odpowiedniej wysokości linii, by tekst się nie sklejał */
-        word-wrap: break-word; /* Zawijanie tekstu, jeśli jest zbyt długi */
-        max-width: 100%; /* Zapewnienie, że kontener nie przekroczy szerokości */
-        text-align: center; /* Opcjonalnie, wyśrodkowanie tekstu na małych ekranach */
-        box-sizing: border-box; /* Zapewnia, że padding nie wpływa na szerokość elementu */
+        font-size: 1em;
+        /* Możesz dostosować rozmiar tekstu, aby był czytelniejszy */
+        line-height: 1.6;
+        /* Ustalenie odpowiedniej wysokości linii, by tekst się nie sklejał */
+        word-wrap: break-word;
+        /* Zawijanie tekstu, jeśli jest zbyt długi */
+        max-width: 100%;
+        /* Zapewnienie, że kontener nie przekroczy szerokości */
+        text-align: center;
+        /* Opcjonalnie, wyśrodkowanie tekstu na małych ekranach */
+        box-sizing: border-box;
+        /* Zapewnia, że padding nie wpływa na szerokość elementu */
         padding-left: 10px;
         padding-right: 10px;
     }
 
     /* Zmiana marginesu dla elementów tekstowych */
     .community-text p {
-        margin-bottom: 15px; /* Zmniejszenie marginesów, by tekst był bardziej zwarty */
-        word-wrap: break-word; /* Zawijanie tekstu wewnątrz paragrafów */
+        margin-bottom: 15px;
+        /* Zmniejszenie marginesów, by tekst był bardziej zwarty */
+        word-wrap: break-word;
+        /* Zawijanie tekstu wewnątrz paragrafów */
     }
 
     /* Zmniejszenie szerokości obrazu na mniejszych ekranach */
     .community-image {
-        max-width: 90%; /* Zmniejszenie szerokości obrazu */
-        margin-top: 20px; /* Dodatkowy margines od góry */
+        max-width: 90%;
+        /* Zmniejszenie szerokości obrazu */
+        margin-top: 20px;
+        /* Dodatkowy margines od góry */
     }
 
     /* Zmniejszenie rozmiaru tła */
     .community {
-        padding: 40px 10px; /* Zmniejszenie paddingu, aby sekcja była mniejsza na małych ekranach */
+        padding: 40px 10px;
+        /* Zmniejszenie paddingu, aby sekcja była mniejsza na małych ekranach */
     }
 }
 
 
-.community-text p, a{
+.community-text p,
+a {
     margin-bottom: 1.5em
 }
 
@@ -1345,138 +1409,200 @@ header.scrolled {
 /* Neon Glow Effect on Hover for Text */
 .community-text p:hover {
     color: #50fa7b;
-    text-shadow: 0 0 10px rgba(80, 250, 123, 0.7), 0 0 20px rgba(80, 250, 123, 0.5); /* Subtelny neonowy efekt na tekście */
+    text-shadow: 0 0 10px rgba(80, 250, 123, 0.7), 0 0 20px rgba(80, 250, 123, 0.5);
+    /* Subtelny neonowy efekt na tekście */
 }
 
 /* ----------------------------- */
-/* FAQ SECTION
+/* FAQ SECTION */
 /* ----------------------------- */
-/* FAQ Section */
-.faq {
-    background: linear-gradient(135deg, #1a1a1a 20%, #333333 80%);
-    padding: 80px 20px;
-    color: #fff;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
-}
-
-/* Section Title */
-.section-title {
-    font-size: 3em;
-    color: #50fa7b;
+#faq {
+    background-color: #121212;
+    color: #f1f1f1;
+    padding: 60px 0;
     text-align: center;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.faq-wrapper {
+    display: flex;
+    align-items: center;
     position: relative;
+    width: 100%;
+    /* Upewniamy się, że wrapper ma pełną szerokość */
+}
+
+.scroll-btn {
+    background-color: transparent;
+    border: none;
+    color: #4CAF50;
+    font-size: 30px;
+    cursor: pointer;
     z-index: 2;
-    margin-bottom: 40px;
+    transition: all 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Wyśrodkowanie pionowe */
+    visibility: visible;
+    /* Zapewnia, że przyciski są widoczne */
 }
 
-/* FAQ List */
+.scroll-btn.left {
+    left: 10px;
+    /* Przesunięcie strzałki w lewo */
+}
+
+.scroll-btn.right {
+    right: 10px;
+    /* Przesunięcie strzałki w prawo */
+}
+
+.scroll-btn:hover {
+    color: #A8FF00;
+}
+
+/* Dostosowanie na urządzenia mobilne */
+@media (max-width: 768px) {
+    .scroll-btn {
+        font-size: 36px;
+        /* Zwiększamy rozmiar czcionki strzałek */
+        left: 50%;
+        /* Wyśrodkowanie poziome */
+        transform: translateX(-50%);
+        visibility: visible;
+        /* Zapewniamy, że przyciski są widoczne */
+    }
+
+    .scroll-btn.left {
+        top: 20px;
+        /* Przesunięcie strzałki w górę */
+        left: 10px;
+        /* Strzałka po lewej */
+    }
+
+    .scroll-btn.right {
+        top: 20px;
+        /* Przesunięcie strzałki w górę */
+        right: 10px;
+        /* Strzałka po prawej */
+    }
+
+    /* Zwiększenie rozmiaru przycisków na małych ekranach */
+    .scroll-btn.left,
+    .scroll-btn.right {
+        width: 50px;
+        /* Szerokość przycisku */
+        height: 50px;
+        /* Wysokość przycisku */
+        padding: 10px;
+        /* Dodatkowa przestrzeń w przyciskach */
+    }
+
+    /* Zwiększamy przestrzeń po bokach */
+    .faq-wrapper {
+        position: relative;
+        padding: 0 20px;
+        /* Mniejsza przestrzeń po bokach niż wcześniej */
+    }
+}
+
+
 .faq-list {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 10px;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    overflow-x: auto;
+    /* Tylko poziome przewijanie */
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #121212;
+    /* Kolory paska przewijania */
+    width: 100%;
+    /* Pełna szerokość */
+    max-width: 100%;
+    /* Możliwość przewijania w poziomie */
 }
 
-/* FAQ Item */
-.faq-item {
-    background-color: #444;
-    padding: 30px;
-    margin-bottom: 20px;
+.faq-list::-webkit-scrollbar {
+    height: 8px;
+    /* wysokość paska przewijania */
+}
+
+.faq-list::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
     border-radius: 10px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+}
+
+.faq-list::-webkit-scrollbar-track {
+    background-color: #121212;
+}
+
+.faq-item {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .faq-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 45px rgba(0, 255, 0, 0.4);
+    background-color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 255, 0, 0.6);
 }
 
-/* FAQ Item Title */
 .faq-item h3 {
-    font-size: 1.8em;
-    color: #50fa7b;
-    display: flex;
-    align-items: center;
-    text-transform: capitalize;
+    color: #4CAF50;
+    font-size: 20px;
+    margin: 0;
 }
 
-.faq-item h3 i {
-    margin-right: 15px;
-    font-size: 1.8em;
-    color: #50fa7b;
-}
-
-/* FAQ Description */
 .faq-description {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    display: none;
+    color: #bbb;
+    font-size: 16px;
+    padding-top: 15px;
 }
 
-.faq-description p {
-    font-size: 1.2em;
-    line-height: 1.7;
-    color: #ccc;
-    text-align: justify;
-    margin-bottom: 15px;
+.faq-item.active .faq-description {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-.faq-description p:last-child {
-    margin-bottom: 0;
-}
-
-/* Hover Effect on Icons */
-.faq-item h3 i:hover {
-    transform: scale(1.2);
-    color: #39e15a;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-/* AOS Animation */
-[data-aos="fade-up"] {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.3s ease;
-}
-
-[data-aos="fade-up"].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .faq-list {
-        padding: 0;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
 
-    .faq-item {
-        padding: 20px;
-    }
-
-    .faq-item h3 {
-        font-size: 1.5em;
-    }
-
-    .faq-description p {
-        font-size: 1em;
+    100% {
+        opacity: 1;
     }
 }
+
+.faq-item i {
+    margin-right: 10px;
+    color: #4CAF50;
+}
+
+.faq-item.active i {
+    color: #A8FF00;
+}
+
 
 /* ----------------------------- */
 /* JOIN US SECTION
 /* ----------------------------- */
 
-.joinsection{
+.joinsection {
     background-color: black;
 }
 
@@ -1484,7 +1610,8 @@ header.scrolled {
 .joinsection-blinking-text {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #00FF00; /* Neon green */
+    color: #00FF00;
+    /* Neon green */
     text-transform: uppercase;
     letter-spacing: 4px;
     animation: neon-blink 1.5s infinite alternate;
@@ -1495,9 +1622,11 @@ header.scrolled {
     0% {
         text-shadow: 0 0 8px #00FF00, 0 0 15px #00FF00, 0 0 30px #00FF00;
     }
+
     50% {
         text-shadow: 0 0 15px #00FF00, 0 0 20px #00FF00, 0 0 35px #00FF00;
     }
+
     100% {
         text-shadow: 0 0 25px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00;
     }
@@ -1509,27 +1638,33 @@ header.scrolled {
     height: 14em;
     margin-bottom: 2rem;
     border-radius: 50%;
-    border: 3px solid #00FF00; /* Subtle neon green border */
-    box-shadow: 0 4px 30px rgba(0, 255, 0, 0.4); /* Soft neon green shadow */
+    border: 3px solid #00FF00;
+    /* Subtle neon green border */
+    box-shadow: 0 4px 30px rgba(0, 255, 0, 0.4);
+    /* Soft neon green shadow */
     transition: transform 0.3s ease;
 }
 
 .joinsection-logo-img:hover {
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
+    /* Slight zoom effect */
 }
 
 /* Text description */
 .joinsection-description {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: #d0d0d0; /* Light grey text */
+    color: #d0d0d0;
+    /* Light grey text */
     line-height: 1.7;
-    text-shadow: 0 0 8px rgba(0, 255, 0, 0.3); /* Subtle neon green text shadow */
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+    /* Subtle neon green text shadow */
     transition: color 0.3s ease;
 }
 
 .joinsection-description:hover {
-    color: #00FF00; /* Neon green on hover */
+    color: #00FF00;
+    /* Neon green on hover */
     text-shadow: 0 0 15px #00FF00, 0 0 25px #00FF00;
 }
 
@@ -1544,7 +1679,8 @@ header.scrolled {
     border-radius: 30px;
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.6); /* Subtle green shadow */
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.6);
+    /* Subtle green shadow */
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -1709,7 +1845,8 @@ header.scrolled {
 
 .modal-content {
     background-color: #2a2a2a;
-    margin: 0 auto; /* Zmienione na 0, aby usunąć domyślny margines od góry */
+    margin: 0 auto;
+    /* Zmienione na 0, aby usunąć domyślny margines od góry */
     padding: 40px;
     border-radius: 15px;
     width: 100%;
@@ -1717,10 +1854,14 @@ header.scrolled {
     color: #fff;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 255, 0, 0.5);
-    position: fixed; /* Ustawiono na fixed */
-    top: 0; /* Pozycjonowanie od góry */
-    left: 50%; /* Wycentrowanie poziome */
-    transform: translateX(-50%); /* Wyśrodkowanie względem osi X */
+    position: fixed;
+    /* Ustawiono na fixed */
+    top: 0;
+    /* Pozycjonowanie od góry */
+    left: 50%;
+    /* Wycentrowanie poziome */
+    transform: translateX(-50%);
+    /* Wyśrodkowanie względem osi X */
 }
 
 
@@ -2050,14 +2191,16 @@ header.scrolled {
 
 /* Nawigacja */
 .navbar {
-    background: linear-gradient(135deg, #1E1E1E, #1E1E1E); /* Głęboki gradient */
+    background: linear-gradient(135deg, #1E1E1E, #1E1E1E);
+    /* Głęboki gradient */
     padding-top: 2em;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2); /* Dodatkowy neonowy cień */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+    /* Dodatkowy neonowy cień */
     border-bottom: 2px solid #4CAF50;
     transition: all 0.3s ease;
     opacity: 0.9;
@@ -2120,8 +2263,10 @@ header.scrolled {
 .nav-links li a:hover {
     background-color: #333;
     color: #4CAF50;
-    transform: translateY(-5px); /* Subtelne uniesienie linków */
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3); /* Neonowy cień przy hover */
+    transform: translateY(-5px);
+    /* Subtelne uniesienie linków */
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+    /* Neonowy cień przy hover */
 }
 
 .nav-links li a::after {
@@ -2184,7 +2329,8 @@ header.scrolled {
 /* Responsywność - dla urządzeń o szerokości od 1024px do 1200px (laptop) */
 @media (max-width: 1200px) and (min-width: 1024px) {
     .nav-links {
-        font-size: 14px; /* Zmniejszenie czcionki */
+        font-size: 14px;
+        /* Zmniejszenie czcionki */
     }
 
     .nav-links a {
@@ -2207,7 +2353,8 @@ header.scrolled {
     }
 
     .menu-toggle {
-        display: block; /* Pokazuje hamburgera */
+        display: block;
+        /* Pokazuje hamburgera */
     }
 }
 
@@ -2236,7 +2383,8 @@ header.scrolled {
     }
 
     .menu-toggle {
-        display: none; /* Ukrywa hamburgera */
+        display: none;
+        /* Ukrywa hamburgera */
     }
 }
 
@@ -2503,14 +2651,18 @@ section:hover {
 
 /* Sekcja z logo */
 .logo-section {
-    background-color: #0a0a0a; /* Ciemne tło dla kontrastu */
-    padding: 40px 20px; /* Mniejsze odstępy dookoła */
+    background-color: #0a0a0a;
+    /* Ciemne tło dla kontrastu */
+    padding: 40px 20px;
+    /* Mniejsze odstępy dookoła */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* Zmniejszona wysokość sekcji */
+    height: 50vh;
+    /* Zmniejszona wysokość sekcji */
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Mniejszy cień */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    /* Mniejszy cień */
 }
 
 /* Kontener dla logo */
@@ -2518,8 +2670,10 @@ section:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* Ustalamy, że zawartość będzie w kolumnie */
-    max-width: 800px; /* Ograniczenie szerokości kontenera */
+    flex-direction: column;
+    /* Ustalamy, że zawartość będzie w kolumnie */
+    max-width: 800px;
+    /* Ograniczenie szerokości kontenera */
     width: 100%;
     padding: 0 20px;
 }
@@ -2531,29 +2685,43 @@ section:hover {
 
 /* Stylizacja samego logo */
 .logo-img {
-    max-width: 50%; /* Zmniejszony rozmiar logo */
+    max-width: 50%;
+    /* Zmniejszony rozmiar logo */
     height: auto;
-    border-radius: 8px; /* Zaokrąglone rogi */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3); /* Mniejszy efekt neonowego cienia */
-    transition: all 0.3s ease-in-out; /* Animacja dla efektów hover */
+    border-radius: 8px;
+    /* Zaokrąglone rogi */
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    /* Mniejszy efekt neonowego cienia */
+    transition: all 0.3s ease-in-out;
+    /* Animacja dla efektów hover */
 }
 
 /* Efekty dla logo przy najechaniu */
 .logo-img:hover {
-    transform: scale(1.05); /* Powiększenie przy najechaniu */
-    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6); /* Wzmocnienie efektu neonowego cienia */
+    transform: scale(1.05);
+    /* Powiększenie przy najechaniu */
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+    /* Wzmocnienie efektu neonowego cienia */
 }
 
 /* Stylizacja podpisu pod logo */
 .logo-caption {
-    margin-top: 15px; /* Odstęp między logo a podpisem */
-    font-size: 1.2rem; /* Większa czcionka dla podpisu */
-    color: #00FF00; /* Neonowy zielony kolor */
-    font-family: 'Roboto', sans-serif; /* Czysta czcionka */
-    text-transform: uppercase; /* Wszystkie litery dużymi */
-    font-weight: bold; /* Pogrubiona czcionka */
-    letter-spacing: 2px; /* Odstępy między literami */
-    animation: fadeIn 1.5s ease-in-out; /* Animacja dla subtelnego pojawiania się */
+    margin-top: 15px;
+    /* Odstęp między logo a podpisem */
+    font-size: 1.2rem;
+    /* Większa czcionka dla podpisu */
+    color: #00FF00;
+    /* Neonowy zielony kolor */
+    font-family: 'Roboto', sans-serif;
+    /* Czysta czcionka */
+    text-transform: uppercase;
+    /* Wszystkie litery dużymi */
+    font-weight: bold;
+    /* Pogrubiona czcionka */
+    letter-spacing: 2px;
+    /* Odstępy między literami */
+    animation: fadeIn 1.5s ease-in-out;
+    /* Animacja dla subtelnego pojawiania się */
 }
 
 /* Animacja pojawiania się podpisu */
@@ -2562,6 +2730,7 @@ section:hover {
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -2571,13 +2740,18 @@ section:hover {
 /* Stylizacja na mniejszych ekranach */
 @media (max-width: 768px) {
     .logo-section {
-        padding: 30px 15px; /* Mniejsze odstępy na mniejszych ekranach */
+        padding: 30px 15px;
+        /* Mniejsze odstępy na mniejszych ekranach */
     }
+
     .logo-img {
-        max-width: 70%; /* Zmniejszenie logo na urządzeniach mobilnych */
+        max-width: 70%;
+        /* Zmniejszenie logo na urządzeniach mobilnych */
     }
+
     .logo-caption {
-        font-size: 1rem; /* Mniejsza czcionka na urządzeniach mobilnych */
+        font-size: 1rem;
+        /* Mniejsza czcionka na urządzeniach mobilnych */
     }
 }
 
@@ -2587,14 +2761,19 @@ section:hover {
 /* ----------------------------- */
 
 .terms-section {
-    background: linear-gradient(135deg, #1b1b1b, #2a2a2a); /* Gradient tła */
+    background: linear-gradient(135deg, #1b1b1b, #2a2a2a);
+    /* Gradient tła */
     padding: 50px 20px;
-    border: 2px solid #00ff00; /* Zielona ramka */
+    border: 2px solid #00ff00;
+    /* Zielona ramka */
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.4); /* Zielony cień */
+    box-shadow: 0 10px 30px rgba(0, 255, 0, 0.4);
+    /* Zielony cień */
     text-align: center;
-    color: #e5e5e5; /* Jasnoszary tekst */
-    font-family: 'Orbitron', sans-serif; /* Futurystyczna czcionka */
+    color: #e5e5e5;
+    /* Jasnoszary tekst */
+    font-family: 'Orbitron', sans-serif;
+    /* Futurystyczna czcionka */
 }
 
 .terms-container {
@@ -2605,7 +2784,8 @@ section:hover {
 .terms-title {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #00ff00; /* Jaskrawozielony tytuł */
+    color: #00ff00;
+    /* Jaskrawozielony tytuł */
     text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
     letter-spacing: 2px;
 }
@@ -2613,7 +2793,8 @@ section:hover {
 .terms-description {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #cccccc; /* Szary kolor dla opisu */
+    color: #cccccc;
+    /* Szary kolor dla opisu */
     margin-bottom: 30px;
 }
 
@@ -2623,20 +2804,27 @@ section:hover {
     font-size: 1.1rem;
     font-weight: bold;
     text-decoration: none;
-    color: #2a2a2a; /* Czarny tekst na zielonym tle */
-    background-color: #00ff00; /* Jaskrawozielone tło */
+    color: #2a2a2a;
+    /* Czarny tekst na zielonym tle */
+    background-color: #00ff00;
+    /* Jaskrawozielone tło */
     border: 2px solid #00ff00;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4); /* Zielony cień */
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
+    /* Zielony cień */
 }
 
 .btn-view-rules:hover {
-    background-color: #2a2a2a; /* Czarny kolor po najechaniu */
-    color: #00ff00; /* Zielony tekst po najechaniu */
+    background-color: #2a2a2a;
+    /* Czarny kolor po najechaniu */
+    color: #00ff00;
+    /* Zielony tekst po najechaniu */
     border-color: #00ff00;
-    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6); /* Intensywniejszy cień */
-    transform: scale(1.1); /* Powiększenie po najechaniu */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6);
+    /* Intensywniejszy cień */
+    transform: scale(1.1);
+    /* Powiększenie po najechaniu */
 }
 
 /* ----------------------------- */
@@ -2644,8 +2832,10 @@ section:hover {
 /* ----------------------------- */
 
 .materials-info {
-    background-color: #1a1a1a; /* Ciemniejsze tło */
-    color: #00FF00; /* Neonowy zielony tekst */
+    background-color: #1a1a1a;
+    /* Ciemniejsze tło */
+    color: #00FF00;
+    /* Neonowy zielony tekst */
     padding: 30px 20px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -2657,9 +2847,11 @@ section:hover {
 .materials-info h2 {
     font-size: 2rem;
     margin-bottom: 15px;
-    color: #00FF00; /* Neonowy zielony */
+    color: #00FF00;
+    /* Neonowy zielony */
     font-weight: 700;
-    text-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7); /* Efekt neonowego cienia */
+    text-shadow: 0px 0px 15px rgba(0, 255, 0, 0.7);
+    /* Efekt neonowego cienia */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2705,33 +2897,45 @@ section:hover {
 
 /* Stylizacja sekcji License */
 .license {
-    background-color: #0a0a0a; /* Ciemniejsze tło dla lepszego kontrastu */
-    color: #00FF00; /* Neonowy zielony kolor tekstu */
+    background-color: #0a0a0a;
+    /* Ciemniejsze tło dla lepszego kontrastu */
+    color: #00FF00;
+    /* Neonowy zielony kolor tekstu */
     padding: 50px 20px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.8);
     display: flex;
-    flex-direction: column; /* Układ w kolumnie */
-    align-items: center; /* Wyrównanie na środku */
+    flex-direction: column;
+    /* Układ w kolumnie */
+    align-items: center;
+    /* Wyrównanie na środku */
     justify-content: center;
     height: auto;
 }
 
 .container-license {
-    display: flex; /* Flexbox w kontenerze, aby kontrolować układ */
-    flex-direction: column; /* Układ w kolumnie */
-    align-items: center; /* Wyśrodkowanie */
+    display: flex;
+    /* Flexbox w kontenerze, aby kontrolować układ */
+    flex-direction: column;
+    /* Układ w kolumnie */
+    align-items: center;
+    /* Wyśrodkowanie */
     justify-content: center;
     width: 100%;
 }
 
-.license-title, .license-description, .license-note {
+.license-title,
+.license-description,
+.license-note {
     display: block;
-    width: 80%; /* Elementy zajmują 80% szerokości kontenera */
+    width: 80%;
+    /* Elementy zajmują 80% szerokości kontenera */
     margin: 20px 0;
-    font-weight: 400; /* Lżejsza czcionka */
-    letter-spacing: 1px; /* Delikatne rozszerzenie liter */
+    font-weight: 400;
+    /* Lżejsza czcionka */
+    letter-spacing: 1px;
+    /* Delikatne rozszerzenie liter */
     text-shadow: 0 0 15px rgba(0, 255, 0, 0.6), 0 0 10px rgba(0, 255, 0, 0.6);
     line-height: 1.6;
     transition: all 0.3s ease-in-out;
@@ -2742,14 +2946,17 @@ section:hover {
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
-    color: #00FF00; /* Neonowy zielony */
-    text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8); /* Intensywniejszy efekt neonowego cienia */
+    color: #00FF00;
+    /* Neonowy zielony */
+    text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
+    /* Intensywniejszy efekt neonowego cienia */
 }
 
 .license-description {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #e0e0e0; /* Jaśniejszy kolor tekstu, by ułatwić czytanie */
+    color: #e0e0e0;
+    /* Jaśniejszy kolor tekstu, by ułatwić czytanie */
     max-width: 900px;
     margin: 0 auto;
     text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.3);
@@ -2758,7 +2965,8 @@ section:hover {
 .license-note {
     font-size: 1rem;
     font-style: italic;
-    color: #00FF00; /* Neonowy zielony */
+    color: #00FF00;
+    /* Neonowy zielony */
     text-shadow: 0px 0px 5px rgba(0, 255, 0, 0.3);
 }
 
@@ -2790,43 +2998,55 @@ section:hover {
     color: #e0e0e0;
     text-shadow: 0px 0px 10px rgba(0, 255, 0, 0.5);
     text-align: center;
-    word-wrap: break-word; /* Zapewnia, że tekst się zawija */
-    overflow-wrap: break-word; /* Dodatkowa gwarancja zawijania tekstu */
-    line-height: 1.6; /* Ułatwia czytanie przez zwiększenie odstępu między wierszami */
+    word-wrap: break-word;
+    /* Zapewnia, że tekst się zawija */
+    overflow-wrap: break-word;
+    /* Dodatkowa gwarancja zawijania tekstu */
+    line-height: 1.6;
+    /* Ułatwia czytanie przez zwiększenie odstępu między wierszami */
 }
 
 /* Responsywność na mniejszych ekranach */
 @media (max-width: 768px) {
     .patronage-text {
-        font-size: 1.1rem; /* Zmniejsza rozmiar czcionki na mniejszych ekranach */
-        margin-top: 15px; /* Dodatkowa przestrzeń w górnej części sekcji */
+        font-size: 1.1rem;
+        /* Zmniejsza rozmiar czcionki na mniejszych ekranach */
+        margin-top: 15px;
+        /* Dodatkowa przestrzeń w górnej części sekcji */
     }
 
     .vpanda-logo {
-        width: 150px; /* Zmniejsza rozmiar logo na mniejszych ekranach */
+        width: 150px;
+        /* Zmniejsza rozmiar logo na mniejszych ekranach */
         height: auto;
-        margin-top: 10px; /* Daje trochę przestrzeni pomiędzy logo a tekstem */
+        margin-top: 10px;
+        /* Daje trochę przestrzeni pomiędzy logo a tekstem */
     }
 }
 
 
 .patronage-text strong {
-    color: #00FF00; /* Neonowy zielony dla nazwy VPanda Studio */
+    color: #00FF00;
+    /* Neonowy zielony dla nazwy VPanda Studio */
     text-shadow: 0px 0px 20px rgba(0, 255, 0, 0.8);
 }
 
 /* Stylizacja logo VPanda Studio */
 .vpanda-logo {
     margin-top: 15px;
-    width: 200px; /* Możesz dostosować rozmiar logo */
+    width: 200px;
+    /* Możesz dostosować rozmiar logo */
     height: auto;
     transition: transform 0.3s ease-in-out;
-    max-width: 100%; /* Zapewnienie, że logo nie wyjdzie poza ekran */
-    margin-bottom: 20px; /* Odstęp od dołu */
+    max-width: 100%;
+    /* Zapewnienie, że logo nie wyjdzie poza ekran */
+    margin-bottom: 20px;
+    /* Odstęp od dołu */
 }
 
 .vpanda-logo:hover {
-    transform: scale(1.1); /* Powiększenie logo przy najechaniu */
+    transform: scale(1.1);
+    /* Powiększenie logo przy najechaniu */
 }
 
 /* Stylizacja na mniejszych ekranach */
@@ -2834,15 +3054,20 @@ section:hover {
     .license-title {
         font-size: 2.2rem;
     }
+
     .license-description {
         font-size: 1rem;
     }
+
     .patronage-text {
         font-size: 1rem;
     }
+
     .vpanda-logo {
-        width: 150px; /* Mniejszy rozmiar logo na mniejszych ekranach */
-        max-width: 90%; /* Zmniejszenie maksymalnej szerokości logo */
+        width: 150px;
+        /* Mniejszy rozmiar logo na mniejszych ekranach */
+        max-width: 90%;
+        /* Zmniejszenie maksymalnej szerokości logo */
     }
 }
 
@@ -2856,7 +3081,8 @@ section:hover {
     border-radius: 25px;
     padding: 40px;
     box-shadow: 0 15px 40px rgba(0, 200, 255, 0.6);
-    width: 90%; /* Zmniejszamy szerokość, aby dać przestrzeń */
+    width: 90%;
+    /* Zmniejszamy szerokość, aby dać przestrzeń */
     margin: 40px auto;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(0, 200, 255, 0.7);
@@ -2873,7 +3099,8 @@ section:hover {
     align-items: flex-start;
     width: 100%;
     margin-bottom: 30px;
-    gap: 40px; /* Równomierne rozmieszczenie między elementami */
+    gap: 40px;
+    /* Równomierne rozmieszczenie między elementami */
 }
 
 /* Left Section: Image and Read More Button */
@@ -2925,7 +3152,8 @@ section:hover {
     text-align: left;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Większe odstępy między elementami */
+    gap: 15px;
+    /* Większe odstępy między elementami */
 }
 
 .bot-title {
@@ -2953,7 +3181,8 @@ section:hover {
 }
 
 .server-logo-container img {
-    width: 180px; /* Zwiększamy rozmiar logo */
+    width: 180px;
+    /* Zwiększamy rozmiar logo */
     filter: drop-shadow(0 0 20px rgba(0, 200, 255, 0.9));
     transition: transform 0.3s ease-in-out;
 }
@@ -3003,6 +3232,7 @@ section:hover {
     }
 
     .server-logo-container img {
-        width: 140px; /* Dopasowanie logo do mniejszych ekranów */
+        width: 140px;
+        /* Dopasowanie logo do mniejszych ekranów */
     }
 }
