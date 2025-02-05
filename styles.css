@@ -1416,6 +1416,7 @@ a {
 /* ----------------------------- */
 /* FAQ SECTION */
 /* ----------------------------- */
+/* FAQ Sekcja */
 #faq {
     background-color: #121212;
     color: #f1f1f1;
@@ -1423,6 +1424,7 @@ a {
     text-align: center;
 }
 
+/* Tytuł sekcji */
 .section-title {
     font-size: 36px;
     color: #4CAF50;
@@ -1430,14 +1432,15 @@ a {
     font-weight: 700;
 }
 
+/* Wrapper FAQ */
 .faq-wrapper {
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
-    /* Upewniamy się, że wrapper ma pełną szerokość */
 }
 
+/* Przycisk do scrollowania (dla desktopu) */
 .scroll-btn {
     background-color: transparent;
     border: none;
@@ -1448,54 +1451,43 @@ a {
     transition: all 0.3s;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Wyśrodkowanie pionowe */
-    visibility: visible; /* Zapewnia, że przyciski są widoczne */
+    transform: translateY(-50%);
+    visibility: visible;
 }
 
+/* Strzałki lewa/prawa */
 .scroll-btn.left {
-    left: 10px; /* Przesunięcie strzałki w lewo */
+    left: 10px;
 }
 
 .scroll-btn.right {
-    right: 10px; /* Przesunięcie strzałki w prawo */
+    right: 10px;
 }
 
 .scroll-btn:hover {
     color: rgb(255, 255, 255);
 }
 
-/* Dostosowanie na urządzenia mobilne */
+/* Ukrycie strzałek na urządzeniach mobilnych */
 @media (max-width: 768px) {
     .scroll-btn {
-        display: none;  /* Ukrywamy strzałki na urządzeniach mobilnych */
+        display: none;
     }
 }
 
+/* Lista FAQ */
 .faq-list {
     display: flex;
     gap: 20px;
     padding: 0 20px;
-    overflow-x: auto; /* Tylko poziome przewijanie */
+    overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: #4CAF50 #121212; /* Kolory paska przewijania */
-    width: 100%; /* Pełna szerokość */
-    max-width: 100%; /* Możliwość przewijania w poziomie */
+    scrollbar-color: #4CAF50 #121212;
+    width: 100%;
 }
 
-.faq-list::-webkit-scrollbar {
-    height: 8px; /* wysokość paska przewijania */
-}
-
-.faq-list::-webkit-scrollbar-thumb {
-    background-color: #4CAF50;
-    border-radius: 10px;
-}
-
-.faq-list::-webkit-scrollbar-track {
-    background-color: #121212;
-}
-
+/* FAQ - elementy */
 .faq-item {
     background-color: #222;
     border-radius: 12px;
@@ -1504,11 +1496,12 @@ a {
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease-in-out;
-    opacity: 1; /* Upewniamy się, że kafelek jest widoczny na początku */
-    max-height: 80px; /* Początkowa wysokość (tylko tytuł) */
-    overflow: hidden; /* Ukrycie nadmiarowego tekstu */
+    max-height: 500px; /* Domyślnie rozwinięte */
+    opacity: 1;
+    overflow: hidden;
 }
 
+/* Styl przy najechaniu */
 .faq-item:hover {
     background-color: #333;
     transform: scale(1.05);
@@ -1521,29 +1514,16 @@ a {
     margin: 0;
 }
 
+/* Opis w FAQ */
 .faq-description {
     color: #bbb;
     font-size: 16px;
     padding-top: 15px;
-    opacity: 0; /* Początkowa przezroczystość */
-    transform: translateY(10px); /* Początkowe przesunięcie (z dołu) */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Płynna zmiana */
+    opacity: 1; /* Teraz widoczny domyślnie */
+    transform: translateY(0); /* Zniknęło przesunięcie */
 }
 
-/* Animacja dla całego kafelka */
-.faq-item.active {
-    max-height: 500px; /* Zwiększamy wysokość po kliknięciu */
-    opacity: 1;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
-}
-
-.faq-item.active .faq-description {
-    display: block;
-    opacity: 1; /* Pełna przezroczystość */
-    transform: translateY(0); /* Przesunięcie do normalnej pozycji */
-}
-
-/* Animacja dla rozsuwania całego kafelka */
+/* Animacja rozsuwania (możemy usunąć, bo nie będzie już używana) */
 @keyframes expandItem {
     0% {
         opacity: 0;
@@ -1551,27 +1531,39 @@ a {
     }
     100% {
         opacity: 1;
-        max-height: 500px; /* Końcowa wysokość */
+        max-height: 500px;
     }
 }
 
-/* Animacja chowania się (rozsuwanie w dół) */
-.faq-item:not(.active) {
-    opacity: 0;
-    max-height: 80px; /* Kiedy jest ukryty, ma małą wysokość */
+/* Ukrycie FAQ w domyślnym stanie na mobilnych i desktop */
+.faq-item {
+    opacity: 1;
+    max-height: 500px; /* Na wszystkich urządzeniach domyślnie rozwinięte */
     transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
     overflow: hidden;
 }
 
+/* Ikona FAQ */
 .faq-item i {
     margin-right: 10px;
     color: #4CAF50;
 }
 
-.faq-item.active i {
+/* Zmiana koloru ikony po aktywacji */
+.faq-item i {
     color: #A8FF00;
 }
 
+/* Responsywność na urządzeniach mobilnych */
+@media (max-width: 768px) {
+    .faq-item {
+        max-height: 500px; /* Domyślnie rozwinięte na telefonach */
+    }
+
+    .faq-description {
+        opacity: 1; /* Pełna widoczność na telefonach */
+    }
+}
 
 /* ----------------------------- */
 /* JOIN US SECTION
