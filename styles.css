@@ -2,6 +2,49 @@
 /* OTHER
 /* ----------------------------- */
 
+/* Cały pasek przewijania */
+::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  /* Tło paska przewijania */
+  ::-webkit-scrollbar-track {
+    background: #080808;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.7);
+    border: 1px solid #0f0;
+  }
+  
+  /* Uchwyt przewijania */
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #0f0, #0a0, #0f0);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0f0, 0 0 5px #0a0 inset;
+    animation: pulse 1.5s infinite alternate;
+  }
+  
+  /* Efekt hover na uchwycie */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, #0a0, #0f0, #0a0);
+    box-shadow: 0 0 20px #0f0, 0 0 7px #0a0 inset;
+  }
+  
+  /* Dla Firefox */
+  * {
+    scrollbar-color: #0f0 #080808;
+    scrollbar-width: thin;
+  }
+  
+  /* Animacja pulsowania */
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 10px #0f0, 0 0 3px #0a0 inset;
+    }
+    100% {
+      box-shadow: 0 0 20px #0f0, 0 0 7px #0a0 inset;
+    }
+  }
+
 /* Pulsating effect */
 .pulse {
     animation: pulse-animation 2s infinite;
@@ -1432,99 +1475,109 @@ header.scrolled {
 /* ----------------------------- */
 /* JOIN US SECTION
 /* ----------------------------- */
-.join {
-    background: linear-gradient(135deg, #2a2a2a, #1b1b1b);
-    padding: 80px 20px;
-    color: #fff;
-    border-radius: 20px;
-    position: relative;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
+
+.joinsection{
+    background-color: black;
 }
 
-/* Blinking Text */
-.blinking-text {
-    font-size: 3em;
-    color: #50fa7b;
-    font-weight: 600;
-    letter-spacing: 3px;
-    animation: blink 1.5s infinite ease-in-out;
+/* Blinking text effect */
+.joinsection-blinking-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #00FF00; /* Neon green */
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(80, 250, 123, 0.5), 0 0 20px rgba(80, 250, 123, 0.5);
+    letter-spacing: 4px;
+    animation: neon-blink 1.5s infinite alternate;
+    margin-bottom: 1em
 }
 
-@keyframes blink {
+@keyframes neon-blink {
     0% {
-        opacity: 1;
+        text-shadow: 0 0 8px #00FF00, 0 0 15px #00FF00, 0 0 30px #00FF00;
     }
-
     50% {
-        opacity: 0.7;
+        text-shadow: 0 0 15px #00FF00, 0 0 20px #00FF00, 0 0 35px #00FF00;
     }
-
     100% {
-        opacity: 1;
+        text-shadow: 0 0 25px #00FF00, 0 0 40px #00FF00, 0 0 50px #00FF00;
     }
 }
 
-/* Logo Image */
-.logo-img {
+/* Logo */
+.joinsection-logo-img {
+    width: 14em;
+    height: 14em;
+    margin-bottom: 2rem;
     border-radius: 50%;
-    box-shadow: 0 10px 40px rgba(0, 255, 0, 0.3);
+    border: 3px solid #00FF00; /* Subtle neon green border */
+    box-shadow: 0 4px 30px rgba(0, 255, 0, 0.4); /* Soft neon green shadow */
     transition: transform 0.3s ease;
 }
 
-.logo-img:hover {
-    transform: scale(1.1);
+.joinsection-logo-img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
-/* Description Text */
-.join-description {
-    font-size: 1.2em;
-    color: #ddd;
-    line-height: 1.6;
-    margin-bottom: 1.5em;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+/* Text description */
+.joinsection-description {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #d0d0d0; /* Light grey text */
+    line-height: 1.7;
+    text-shadow: 0 0 8px rgba(0, 255, 0, 0.3); /* Subtle neon green text shadow */
+    transition: color 0.3s ease;
+}
+
+.joinsection-description:hover {
+    color: #00FF00; /* Neon green on hover */
+    text-shadow: 0 0 15px #00FF00, 0 0 25px #00FF00;
 }
 
 /* Button */
-.join-btn {
-    background-color: #50fa7b;
-    color: #1a1a1a;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-size: 1.4em;
-    font-weight: 600;
+.joinsection-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #2b2b2b, #00FF00);
+    color: #121212;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
     text-transform: uppercase;
-    border: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    text-decoration: none
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 255, 0, 0.6); /* Subtle green shadow */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.join-btn:hover {
-    background-color: #39e15a;
-    transform: translateY(-5px);
-    box-shadow: 0 15px 45px rgba(0, 255, 0, 0.3);
+.joinsection-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 255, 0, 0.7);
+    background: #00FF00;
 }
 
-/* Responsive Design */
+/* Adding some hover effects */
+.joinsection-btn:active {
+    transform: scale(1.03);
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
-    .join-description {
-        font-size: 1em;
+    .joinsection-container {
+        padding: 3rem 1rem;
     }
 
-    .logo-img {
+    .joinsection-logo-img {
         width: 12em;
         height: 12em;
     }
 
-    .join-btn {
-        font-size: 1.2em;
-        padding: 12px 30px;
+    .joinsection-blinking-text {
+        font-size: 2rem;
+    }
+
+    .joinsection-description {
+        font-size: 1rem;
     }
 }
 

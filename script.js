@@ -14,7 +14,7 @@
     });
 
     // Slider functionality
-    let currentSlideIndex = 0;
+    let currentSlideIndex = 4;
     const slides = document.querySelectorAll('.slide');
     const dots = document.querySelectorAll('.dot');
 
