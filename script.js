@@ -246,5 +246,6 @@
     document.querySelector('.scroll-btn.right').addEventListener('click', () => {
         scrollFAQ(1);  // Przewijanie w prawo
     });
+    
 
 })();

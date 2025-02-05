@@ -1441,98 +1441,50 @@ a {
 .scroll-btn {
     background-color: transparent;
     border: none;
-    color: #4CAF50;
+    color: #ffffff;
     font-size: 30px;
     cursor: pointer;
     z-index: 2;
     transition: all 0.3s;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
-    /* Wyśrodkowanie pionowe */
-    visibility: visible;
-    /* Zapewnia, że przyciski są widoczne */
+    transform: translateY(-50%); /* Wyśrodkowanie pionowe */
+    visibility: visible; /* Zapewnia, że przyciski są widoczne */
 }
 
 .scroll-btn.left {
-    left: 10px;
-    /* Przesunięcie strzałki w lewo */
+    left: 10px; /* Przesunięcie strzałki w lewo */
 }
 
 .scroll-btn.right {
-    right: 10px;
-    /* Przesunięcie strzałki w prawo */
+    right: 10px; /* Przesunięcie strzałki w prawo */
 }
 
 .scroll-btn:hover {
-    color: #A8FF00;
+    color: rgb(255, 255, 255);
 }
 
 /* Dostosowanie na urządzenia mobilne */
 @media (max-width: 768px) {
     .scroll-btn {
-        font-size: 36px;
-        /* Zwiększamy rozmiar czcionki strzałek */
-        left: 50%;
-        /* Wyśrodkowanie poziome */
-        transform: translateX(-50%);
-        visibility: visible;
-        /* Zapewniamy, że przyciski są widoczne */
-    }
-
-    .scroll-btn.left {
-        top: 20px;
-        /* Przesunięcie strzałki w górę */
-        left: 10px;
-        /* Strzałka po lewej */
-    }
-
-    .scroll-btn.right {
-        top: 20px;
-        /* Przesunięcie strzałki w górę */
-        right: 10px;
-        /* Strzałka po prawej */
-    }
-
-    /* Zwiększenie rozmiaru przycisków na małych ekranach */
-    .scroll-btn.left,
-    .scroll-btn.right {
-        width: 50px;
-        /* Szerokość przycisku */
-        height: 50px;
-        /* Wysokość przycisku */
-        padding: 10px;
-        /* Dodatkowa przestrzeń w przyciskach */
-    }
-
-    /* Zwiększamy przestrzeń po bokach */
-    .faq-wrapper {
-        position: relative;
-        padding: 0 20px;
-        /* Mniejsza przestrzeń po bokach niż wcześniej */
+        display: none;  /* Ukrywamy strzałki na urządzeniach mobilnych */
     }
 }
-
 
 .faq-list {
     display: flex;
     gap: 20px;
     padding: 0 20px;
-    overflow-x: auto;
-    /* Tylko poziome przewijanie */
+    overflow-x: auto; /* Tylko poziome przewijanie */
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: #4CAF50 #121212;
-    /* Kolory paska przewijania */
-    width: 100%;
-    /* Pełna szerokość */
-    max-width: 100%;
-    /* Możliwość przewijania w poziomie */
+    scrollbar-color: #4CAF50 #121212; /* Kolory paska przewijania */
+    width: 100%; /* Pełna szerokość */
+    max-width: 100%; /* Możliwość przewijania w poziomie */
 }
 
 .faq-list::-webkit-scrollbar {
-    height: 8px;
-    /* wysokość paska przewijania */
+    height: 8px; /* wysokość paska przewijania */
 }
 
 .faq-list::-webkit-scrollbar-thumb {
@@ -1551,7 +1503,10 @@ a {
     width: 300px;
     flex-shrink: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, opacity 0.5s ease-in-out;
+    opacity: 1; /* Upewniamy się, że kafelek jest widoczny na początku */
+    max-height: 80px; /* Początkowa wysokość (tylko tytuł) */
+    overflow: hidden; /* Ukrycie nadmiarowego tekstu */
 }
 
 .faq-item:hover {
@@ -1567,25 +1522,45 @@ a {
 }
 
 .faq-description {
-    display: none;
     color: #bbb;
     font-size: 16px;
     padding-top: 15px;
+    opacity: 0; /* Początkowa przezroczystość */
+    transform: translateY(10px); /* Początkowe przesunięcie (z dołu) */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Płynna zmiana */
+}
+
+/* Animacja dla całego kafelka */
+.faq-item.active {
+    max-height: 500px; /* Zwiększamy wysokość po kliknięciu */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease;
 }
 
 .faq-item.active .faq-description {
     display: block;
-    animation: fadeIn 0.5s ease-in-out;
+    opacity: 1; /* Pełna przezroczystość */
+    transform: translateY(0); /* Przesunięcie do normalnej pozycji */
 }
 
-@keyframes fadeIn {
+/* Animacja dla rozsuwania całego kafelka */
+@keyframes expandItem {
     0% {
         opacity: 0;
+        max-height: 80px;
     }
-
     100% {
         opacity: 1;
+        max-height: 500px; /* Końcowa wysokość */
     }
+}
+
+/* Animacja chowania się (rozsuwanie w dół) */
+.faq-item:not(.active) {
+    opacity: 0;
+    max-height: 80px; /* Kiedy jest ukryty, ma małą wysokość */
+    transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+    overflow: hidden;
 }
 
 .faq-item i {
@@ -3075,164 +3050,140 @@ section:hover {
 /* PadnOS Section */
 /* ----------------------------- */
 
+/* ----------------------------- */
 /* Bot Info Section */
+/* ----------------------------- */
 .bot-info {
-    background: linear-gradient(145deg, rgba(10, 20, 40, 0.9), rgba(0, 50, 100, 0.7));
-    border-radius: 25px;
-    padding: 40px;
-    box-shadow: 0 15px 40px rgba(0, 200, 255, 0.6);
-    width: 90%;
-    /* Zmniejszamy szerokość, aby dać przestrzeń */
-    margin: 40px auto;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(0, 200, 255, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all 0.3s ease;
+    background-color: #121212;
+    color: #f1f1f1;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* Bot Info Container */
 .bot-info-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 30px;
-    gap: 40px;
-    /* Równomierne rozmieszczenie między elementami */
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-/* Left Section: Image and Read More Button */
 .bot-image-container {
-    text-align: center;
-    flex: 1;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .bot-image img {
-    width: 180px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 200, 255, 0.8);
-    transition: transform 0.3s ease-in-out;
+    width: 150px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    transition: all 0.3s ease-in-out;
 }
 
 .bot-image img:hover {
     transform: scale(1.1);
-}
-
-.bot-read-more {
-    margin-top: 20px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 1);
 }
 
 .bot-read-more button {
-    background: linear-gradient(90deg, #00ccff, #0044ff);
+    background-color: #4CAF50;
     border: none;
-    padding: 14px 30px;
-    color: #ffffff;
+    color: white;
+    padding: 12px 30px;
+    margin-top: 20px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
 }
 
 .bot-read-more button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 200, 255, 0.8);
+    background-color: #A8FF00;
 }
 
-/* Right Section: Bot Details */
+/* Right side: Bot Details */
 .bot-details-container {
-    flex: 2;
-    padding: 0 20px;
+    width: 50%;
+    color: #bbb;
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* Większe odstępy między elementami */
 }
 
 .bot-title {
     font-size: 28px;
-    color: #00eaff;
-    text-shadow: 0 0 15px rgba(0, 200, 255, 0.9);
-    text-transform: uppercase;
+    color: #4CAF50;
+    font-weight: bold;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
 
 .bot-info-item {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.5;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
 .bot-info-item strong {
-    color: #00eaff;
+    color: #4CAF50;
 }
 
-/* Server Logo */
+.bot-info-item span {
+    color: #bbb;
+}
+
+/* Technology Provider Section */
 .server-logo-container {
-    text-align: center;
     margin-top: 40px;
+    text-align: center;
 }
 
 .server-logo-container img {
-    width: 180px;
-    /* Zwiększamy rozmiar logo */
-    filter: drop-shadow(0 0 20px rgba(0, 200, 255, 0.9));
-    transition: transform 0.3s ease-in-out;
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    transition: all 0.3s ease;
 }
 
 .server-logo-container img:hover {
-    transform: rotate(10deg) scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(0, 255, 0, 1);
 }
 
 /* VPanda Studio Button */
 .vpanda-read-more {
-    text-align: center;
     margin-top: 30px;
 }
 
 .vpanda-read-more button {
-    background: linear-gradient(90deg, #00ccff, #0044ff);
+    background-color: #333;
+    color: #4CAF50;
     border: none;
-    padding: 14px 30px;
-    color: #ffffff;
+    padding: 12px 30px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .vpanda-read-more button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 200, 255, 0.8);
+    background-color: #A8FF00;
+    color: #121212;
 }
 
-/* Media Queries for Mobile */
 @media (max-width: 768px) {
     .bot-info-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .bot-image-container {
-        margin-right: 0;
+    .bot-image-container, .bot-details-container {
+        width: 100%;
         margin-bottom: 20px;
     }
 
-    .bot-details-container {
-        padding: 10px 0;
-    }
-
-    .server-logo-container img {
-        width: 140px;
-        /* Dopasowanie logo do mniejszych ekranów */
+    .bot-title {
+        font-size: 24px;
     }
 }
