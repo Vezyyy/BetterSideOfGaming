@@ -226,10 +226,6 @@
         faqItem.classList.toggle('active');
     }
 
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.addEventListener('click', toggleDescription);
-    });
-
     function scrollFAQ(direction) {
         const container = document.querySelector('.faq-list');
         container.scrollBy({
