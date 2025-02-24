@@ -3311,3 +3311,40 @@ p {
     text-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Neonowy cień tekstu */
 }
 
+.verification-container {
+    text-align: center; /* Wyśrodkowanie tekstu i obrazu */
+    margin: 40px 0; /* Odstępy z góry i dołu */
+    padding: 20px; /* Padding wokół kontenera */
+    background-color: rgba(255, 255, 255, 0.1); /* Lekko przezroczyste tło dla wyróżnienia */
+    border-radius: 15px; /* Zaokrąglenie rogów kontenera */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Cień kontenera */
+}
+
+.verification-title {
+    font-size: 24px; /* Rozmiar czcionki dla nagłówka */
+    color: #00FF00; /* Kolor tekstu - neonowy zielony */
+    font-weight: 700; /* Pogrubienie tekstu */
+    margin-bottom: 20px; /* Odstęp poniżej nagłówka */
+}
+
+.verification-image {
+    width: 100%; /* Umożliwia responsywność */
+    max-width: 600px; /* Maksymalna szerokość obrazka */
+    height: auto; /* Utrzymuje proporcje obrazka */
+    border-radius: 10px; /* Zaokrąglenie rogów obrazka */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neonowy cień wokół obrazka */
+}
+
+.verification-note {
+    font-size: 16px; /* Zwiększenie rozmiaru czcionki */
+    color: #00FF00; /* Zielony kolor dla notatki */
+    font-weight: bold; /* Pogrubienie tekstu */
+    margin-top: 10px; /* Margines powyżej notatki */
+    background-color: rgba(0, 0, 0, 0.7); /* Ciemne tło dla kontrastu */
+    padding: 10px; /* Wewnętrzny padding dla lepszego wyglądu */
+    border-radius: 5px; /* Zaokrąglone rogi */
+    box-shadow: 0 0 10px #00FF00; /* Neonowy efekt cienia */
+}
+
+
+
