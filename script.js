@@ -196,23 +196,6 @@
         });
     });
 
-    // Open Popup
-    function openPopup(content) {
-        const popup = document.createElement("div");
-        popup.classList.add("faq-popup");
-        popup.innerHTML = `
-            <span class="faq-popup-close">&times;</span>
-            <p>${content}</p>
-        `;
-        document.body.appendChild(popup);
-        popup.classList.add("active");
-
-        // Close Popup
-        popup.querySelector(".faq-popup-close").addEventListener("click", () => {
-            popup.classList.remove("active");
-            setTimeout(() => popup.remove(), 300);
-        });
-    }
 
     function toggleDescription(event) {
         const faqItem = event.currentTarget;
