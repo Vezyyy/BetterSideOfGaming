@@ -3042,9 +3042,6 @@ section:hover {
 /* PadnOS Section */
 /* ----------------------------- */
 
-/* ----------------------------- */
-/* Bot Info Section */
-/* ----------------------------- */
 .bot-info {
     background-color: #121212;
     color: #f1f1f1;
@@ -3179,3 +3176,138 @@ section:hover {
         font-size: 24px;
     }
 }
+
+/* ----------------------------- */
+/* Invite Section */
+/* ----------------------------- */
+
+/* Stylizacja sekcji zaproszenia */
+.invite {
+    height: 100vh; /* Wysokość całej strony */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00FF00; /* Neonowy zielony */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('images/your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+}
+
+.invite-background {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Tło na pełnej wysokości */
+    filter: blur(5px); /* Efekt rozmycia */
+}
+
+.invite-content {
+    z-index: 2; /* Ustaw zawartość nad tłem */
+    backdrop-filter: blur(5px); /* Rozmycie tła zawartości */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    padding: 40px;
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.5); /* Neonowy cień */
+    max-width: 600px; /* Maksymalna szerokość kontenera */
+    position: relative; /* Umożliwia ustawienie na tle */
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px #00FF00; /* Efekt świecenia */
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* Biały kolor dla lepszej widoczności */
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    text-shadow: 0 0 10px #00FF00; /* Efekt świecenia */
+}
+
+.invite-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Odstęp przed przyciskami */
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent; /* Przezroczyste tło */
+    color: #00FF00; /* Neonowy zielony */
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    border: 2px solid #00FF00; /* Neonowy zielony obramowanie */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #00FF00; /* Neonowy cień */
+    margin: 10px 0; /* Odstęp między przyciskami */
+}
+
+.btn:hover {
+    background-color: #00FF00; /* Neonowy zielony przy najeździe */
+    color: #000; /* Czarny tekst po najechaniu */
+    transform: scale(1.1); /* Powiększenie przy najeździe */
+}
+
+/* Zapytania medialne dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    .invite {
+        padding-top: 100px; /* Przyzwoity padding od góry na telefonach */
+        padding-bottom: 100px; /* Padding od dołu, aby nie był zbyt ciasny */
+        text-align: center; /* Wyśrodkowanie tekstu na małych ekranach */
+    }
+    .invite-content {
+        padding: 20px; /* Mniejszy padding wewnętrzny na telefonach */
+        margin: 0 10px; /* Odstęp od krawędzi dla lepszej widoczności */
+    }
+    h2 {
+        font-size: 2rem; /* Mniejsza czcionka nagłówka */
+    }
+    h3 {
+        font-size: 1.5rem; /* Mniejsza czcionka podtytułu */
+    }
+    p {
+        font-size: 1rem; /* Mniejsza czcionka dla tekstu */
+    }
+    .btn {
+        font-size: 1.2rem; /* Mniejsza czcionka przycisku */
+        padding: 10px 20px; /* Mniejszy padding w przycisku */
+    }
+}
+
+.invite-logo-container {
+    text-align: center; /* Wyśrodkowanie logo */
+    margin: 40px 0; /* Większy odstęp z góry i dołu */
+    padding: 20px; /* Padding wokół kontenera */
+}
+
+.invite-logo {
+    width: 150px; /* Dostosuj szerokość logo w razie potrzeby */
+    max-width: 100%; /* Umożliwia responsywność */
+    height: auto; /* Utrzymuje proporcje logo */
+    box-shadow: 0 0 20px #00FF00; /* Neonowy efekt wokół logo */
+    transition: transform 0.3s ease;
+    border-radius: 20%;
+}
+
+.invite-logo:hover {
+    transform: scale(1.1); /* Efekt powiększenia przy najechaniu */
+}
+
+.invite-logo-text {
+    margin-top: 15px; /* Odstęp nad tekstem */
+    font-size: 20px; /* Rozmiar czcionki */
+    color: #00FF00; /* Kolor tekstu - neonowy zielony */
+    font-weight: 700; /* Pogrubienie tekstu */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Neonowy cień tekstu */
+}
+

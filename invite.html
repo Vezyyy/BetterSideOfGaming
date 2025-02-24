@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Side Of Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Loader (appears before the page content loads) -->
+<div class="loader">
+    <div class="spinner">
+        <img src="images/BSOG Logo BG R.png" alt="Loading...">
+    </div>
+</div>
+
+<body>
+    <!-- Nawigacja -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">BetterSideOfGaming</a>
+
+            <!-- Ikona hamburgera (dla urządzeń mobilnych) -->
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Linki nawigacji -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#discordstats"><i class="fas fa-chart-line"></i> Discord Stats</a></li>
+                <li><a href="#aboutus"><i class="fas fa-users"></i> About Us</a></li>
+                <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="#community"><i class="fas fa-users"></i> Community</a></li>
+                <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                <li><a href="#joindiscord"><i class="fas fa-plug"></i> Join Discord</a></li>
+                <li><a href="#applytoadministrator"><i class="fas fa-user-shield"></i> Apply to Administrator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="invite" data-aos="fade-up">
+        <div class="invite-background"></div>
+        <div class="invite-content">
+            <h2>🎉 Invitation to the Better Side Of Gaming!</h2>
+            <p>You have received an invitation to our community, where we value true values and good fun!</p>
+
+            <h3>Why should you join us?</h3>
+            <p>We are a group that does not tolerate boring acquaintances! We play various games, chat, and chill
+                together.
+                The community is mainly for people 18+ who can behave and have a sense of humor. If you are
+                normal, this place is for you!</p>
+
+            <div class="invite-buttons">
+                <a href="https://discord.gg/Tr3BQPER34" target="_blank" class="btn join-discord-btn">Join the Server</a>
+                <a href="rules.html" class="btn rules-btn">Rules</a>
+                <a href="#aboutus" class="btn about-btn">About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="invite-logo-container">
+        <img src="images/BSOG Logo BG R.png" alt="Better Side Of Gaming Logo" class="invite-logo">
+        <p class="invite-logo-text">Our Discord for You</p> <!-- Dodany tekst -->
+    </div>
+
+
+    <footer class="footer">
+        <div class="container-center">
+            <p>&copy; 2024 - 2025 Better Side Of Gaming. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#" id="back-to-top" class="back-to-top-btn">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS (Animate On Scroll)
+        // Pobranie elementów
+        const modal = document.getElementById("popup");
+        const closeModalBtn = document.getElementById("close-btn");
+
+        // Funkcja zamykająca modal
+        closeModalBtn.onclick = function () {
+            modal.style.display = "none"; // Ukrywa modal
+        }
+
+        // Funkcja zamykająca modal, gdy klikniesz poza jego obszar
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Ukrywa modal, jeśli klikniesz poza jego obszar
+            }
+        }
+
+        // Funkcja, aby modal pokazał się automatycznie po załadowaniu strony
+        window.onload = function () {
+            setTimeout(function () {
+                modal.style.display = "block"; // Pokazuje modal po załadowaniu strony
+            }, 1000); // Zwykle stosuje się opóźnienie (np. 1 sekunda)
+        }
+
+    </script>
+
+</body>
+
+</html>
