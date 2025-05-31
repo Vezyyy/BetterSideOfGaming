@@ -3323,7 +3323,7 @@ h3 {
 
 .verification-image {
     width: 100%; /* Umożliwia responsywność */
-    max-width: 600px; /* Maksymalna szerokość obrazka */
+    max-width: auto; /* Maksymalna szerokość obrazka */
     height: auto; /* Utrzymuje proporcje obrazka */
     border-radius: 10px; /* Zaokrąglenie rogów obrazka */
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neonowy cień wokół obrazka */
