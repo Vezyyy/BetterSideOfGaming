@@ -4,7 +4,6 @@
         const loader = document.querySelector(".loader");
         setTimeout(() => {
             loader.classList.add("hidden");
-            // Slider functionality only if slider exists
             if (document.querySelector('.slider-container')) {
                 nextSlide();
                 nextSlide();
@@ -20,7 +19,6 @@
 
     // Only initialize slider if slides and dots exist
     if (slides.length > 0 && dots.length > 0) {
-        // Ensure the first slide is shown initially
         function showSlide(index) {
             slides.forEach((slide, i) => {
                 slide.classList.remove('active');
@@ -212,19 +210,17 @@
     function scrollFAQ(direction) {
         const container = document.querySelector('.faq-list');
         container.scrollBy({
-            left: direction * 300, // Adjust this value for more/less scrolling
+            left: direction * 300, 
             behavior: 'smooth'
         });
     }
 
-    // Dodajemy nasłuchiwanie na kliknięcia przycisków strzałek
     document.querySelector('.scroll-btn.left').addEventListener('click', () => {
-        scrollFAQ(-1);  // Przewijanie w lewo
+        scrollFAQ(-1);
     });
 
     document.querySelector('.scroll-btn.right').addEventListener('click', () => {
-        scrollFAQ(1);  // Przewijanie w prawo
+        scrollFAQ(1);
     });
-    
 
 })();
